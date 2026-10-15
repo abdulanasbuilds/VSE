@@ -1,0 +1,54 @@
+# VSE — Visual Science Explorer
+
+VSE is a research-first project exploring how to help people understand how the world works through clear explanations, trustworthy sources, diagrams, and interactive visual models.
+
+**The product principle:** do not merely show people information; help them build a mental model they can inspect, question, and explore.
+
+## Project status
+
+The repository was empty at initialization. This first phase establishes project direction, research practices, source provenance, and durable agent handoff instructions. It is **not** a request to build a large platform immediately.
+
+- Authentication and authorization: out of scope for now.
+- Monetization, payments, subscriptions, and ads: out of scope for now.
+- Stack and hosting: not locked; decide only after the smallest useful prototype is specified.
+- Research coverage: broad and ongoing. Never claim that all scientific knowledge has been collected.
+- AI answers: must not be presented as verified science by default.
+
+## Start here
+
+1. Read [AGENTS.md](AGENTS.md) before doing work.
+2. Read [STATE.md](STATE.md) to understand the current checkpoint and the next action.
+3. Read [SPEC.md](SPEC.md) for the product boundaries and user experience.
+4. Read [docs/AGENT_WORKFLOW.md](docs/AGENT_WORKFLOW.md) for the resume/continue protocol.
+5. Read [docs/research/SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md) and [docs/research/RESEARCH_BACKLOG.md](docs/research/RESEARCH_BACKLOG.md) before gathering material.
+6. Update [STATE.md](STATE.md) and [docs/research/RESEARCH_LOG.md](docs/research/RESEARCH_LOG.md) after meaningful work.
+
+## Documentation map
+
+- AGENTS.md — mandatory operating contract for coding/research agents.
+- STATE.md — current verified state, completed work, blockers, and exact next steps.
+- SPEC.md — product goal, target experience, constraints, and non-goals.
+- ROADMAP.md — staged milestones with explicit exit criteria.
+- docs/ARCHITECTURE.md — provisional system model; no premature stack commitments.
+- docs/CONTENT_SCHEMA.md — format for lessons, claims, visualizations, source records, and review status.
+- docs/QUALITY_AND_PROVENANCE.md — verification, citation, uncertainty, and reuse rules.
+- docs/AGENT_WORKFLOW.md — how agents resume work safely and avoid scope drift.
+- docs/research/SOURCE_CATALOG.md — verified starting sources and additional candidates.
+- docs/research/OPENAI_MATH_RELEASE.md — specific research plan for OpenAI's mathematics release.
+- docs/research/RESEARCH_BACKLOG.md — known gaps and ordered investigation queue.
+- docs/research/RESEARCH_LOG.md — dated notes on work actually performed.
+
+## Non-negotiable research rule
+
+Track each item as **verified**, **partially verified**, **candidate**, **blocked**, or **not started**. A link being listed is not the same as its content having been reviewed; a paper's claim is not the same as an independently verified result; a visually convincing demonstration is not evidence on its own.
+
+## First milestone
+
+Research and prototype **one** concept end-to-end:
+- a beginner-friendly question;
+- a simple explanation with a clear analogy;
+- one correct visual or interactive model;
+- a deeper explanation with relevant mathematics/science;
+- cited sources, limitations, and a visible verification state.
+
+Choose the first concept after reviewing the source catalogue and the hackathon requirements. Do not build authentication, billing, a general-purpose agent platform, or a massive ingestion pipeline as part of this milestone.
