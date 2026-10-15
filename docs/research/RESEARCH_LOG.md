@@ -2,29 +2,6 @@
 
 ## 2026-10-15 — Initial connection, product framing, and source pass
 
-## 2026-10-15 — OpenAI mathematics corpus and source-quality expansion
-
-### OpenAI mathematics collection: deeper inspection
-
-- Fetched the current upstream README and the first 120 lines of [CONTENTS.md](https://github.com/openai/math/blob/main/CONTENTS.md): both report 719 manuscripts across 372 result families. The full contents map has not been read end-to-end.
-- Fetched [overview.tex](https://github.com/openai/math/blob/main/overview.tex); its metadata repeats the 719/372 counts and lists 17 subject headings. The actual PDF was not visually reviewed: GitHub's PDF viewer could not be captured as a PDF page in this session. This limitation is explicit in the math audit.
-- Fetched [lean/README.md](https://github.com/openai/math/blob/main/lean/README.md): it says the formalizations cover some results in a single large library and recommends compiling small portions. Full compilation has not been attempted.
-- Fetched the beginning of [lean/formalization.yaml](https://github.com/openai/math/blob/main/lean/formalization.yaml), which declares the OpenAI math formalization project as Apache-2.0; checked the repository [LICENSE](https://github.com/openai/math/blob/main/LICENSE), also Apache-2.0. Individual manuscript/media/third-party asset rights still need checking before reuse.
-- Read [Comparator challenge instructions](https://github.com/openai/math/blob/main/lean/ComparatorChallenges/README.md). The listed examples explicitly include comparisons of supporting results that do not claim to verify corresponding papers' main theorems.
-- Read the scope note for result 003, [the quasi-Riemann hypothesis](https://github.com/openai/math/blob/main/lean/docs/003.md). It precisely states what parts are included in the Lean formalization, what later paper applications are excluded, the principal-pole exclusions, and that the constant in one zero-free statement is non-explicit. This is a good example of documenting a proof's scope rather than showing a misleading all-or-nothing badge.
-- Fetched [history.md](https://github.com/openai/math/blob/main/history.md). Its October 7 entry documents withdrawal of three manuscripts following a sign error that invalidated an argument behind dependent papers, along with revisions to 14 other manuscripts, reference updates to 13, and six new formalizations plus five supporting-result additions. It reports 300 of 719 top-line results formalized (~42%). The current 719 vs older 722 discrepancy likely reflects the three withdrawals, but the commit-level history still needs explicit audit before closure.
-- Opened the official [OpenAI math release announcement](https://openai.com/index/sharing-ai-progress-in-mathematics/), dated October 6, 2026. It explains the release and references the Advisory Group on Mathematics and AI; it should be attributed as OpenAI's own announcement, not as independent peer acceptance.
-- Opened the [AGMAI website](https://agmai.org/) and [September 29 responsible-release guidelines](https://agmai.org/general-sep29/). The group explicitly says its advisory role is not an endorsement of results. Its recommendations include clear exposition, citations, version history, disclosure of model/use where feasible, formalization when feasible, and support for community-led assessment. Added these as sources and added that nuance to the audit.
-- Rechecked [Heyprof's selected visual examples](https://www.heyprof.app/en/demo/fach/ki-forschungsmathematik) and [M0-AR's independent visual verifier](https://m0-ar.github.io/openai-math-verify-2026/preview.html): both are examples for source-linked visual presentation, not proof that the entire corpus is complete or independently verified.
-
-### Additional project and source changes
-
-- Completed the initial Markdown scaffold: AGENTS.md, SPEC.md, STATE.md (created later in this session), ROADMAP.md, ARCHITECTURE, CONTENT_SCHEMA, QUALITY_AND_PROVENANCE, AGENT_WORKFLOW, DECISIONS, CONTRIBUTING, SOURCE_CATALOG, RESOURCE_REVIEW_TEMPLATE, SCIENCE_DOMAIN_MAP, OPENAI_MATH_RELEASE, RESEARCH_BACKLOG, and this log.
-- Added governance rule that discoveries, proof status, source status, and visualization status are separate concepts.
-- First research/source pass is still not a complete corpus audit. No VSE frontend or interactive demo has been implemented.
-- Exact “World Dot Name weekend hackathon” official event page and terms were not confidently identified in search. The exact event name, deadline, judging rubric, and submission restrictions remain an active P0 task; do not assume requirements from an unrelated hackathon.
-
-
 ### Repository
 
 - Connected to [abdulanasbuilds/VSE](https://github.com/abdulanasbuilds/VSE).
@@ -93,3 +70,32 @@
 - Most candidate APIs and scientific portals are listed for future review but not individually verified.
 - No technical application code was created; repository initialization currently consists of project and research documentation.
 - The hackathon's official rules/deadline/judging criteria have not yet been verified.
+
+## 2026-10-15 — OpenAI mathematics corpus and source-quality expansion
+
+### OpenAI mathematics collection: deeper inspection
+
+- Fetched the current upstream README and the first 120 lines of [CONTENTS.md](https://github.com/openai/math/blob/main/CONTENTS.md): both report 719 manuscripts across 372 result families. The full contents map has not been read end-to-end.
+- Fetched [overview.tex](https://github.com/openai/math/blob/main/overview.tex); its metadata repeats the 719/372 counts and lists 17 subject headings. The actual PDF was not visually reviewed: GitHub's PDF viewer could not be captured as a PDF page in this session. This limitation is explicit in the math audit.
+- Fetched [lean/README.md](https://github.com/openai/math/blob/main/lean/README.md): it says the formalizations cover some results in a single large library and recommends compiling small portions. Full compilation has not been attempted.
+- Fetched the beginning of [lean/formalization.yaml](https://github.com/openai/math/blob/main/lean/formalization.yaml), which declares the OpenAI math formalization project as Apache-2.0; checked the repository [LICENSE](https://github.com/openai/math/blob/main/LICENSE), also Apache-2.0. Individual manuscript/media/third-party asset rights still need checking before reuse.
+- Read [Comparator challenge instructions](https://github.com/openai/math/blob/main/lean/ComparatorChallenges/README.md). The listed examples explicitly include comparisons of supporting results that do not claim to verify corresponding papers' main theorems.
+- Read the scope note for result 003, [the quasi-Riemann hypothesis](https://github.com/openai/math/blob/main/lean/docs/003.md). It precisely states what parts are included in the Lean formalization, what later paper applications are excluded, the principal-pole exclusions, and that the constant in one zero-free statement is non-explicit. This is a good example of documenting a proof's scope rather than showing a misleading all-or-nothing badge.
+- Fetched [history.md](https://github.com/openai/math/blob/main/history.md). Its October 7 entry documents withdrawal of three manuscripts following a sign error that invalidated an argument behind dependent papers, along with revisions to 14 other manuscripts, reference updates to 13, and six new formalizations plus five supporting-result additions. It reports 300 of 719 top-line results formalized (~42%). The current 719 vs older 722 discrepancy likely reflects the three withdrawals, but the commit-level history still needs explicit audit before closure.
+- Opened the official [OpenAI math release announcement](https://openai.com/index/sharing-ai-progress-in-mathematics/), dated October 6, 2026. It explains the release and references the Advisory Group on Mathematics and AI; it should be attributed as OpenAI's own announcement, not as independent peer acceptance.
+- Opened the [AGMAI website](https://agmai.org/) and [September 29 responsible-release guidelines](https://agmai.org/general-sep29/). The group explicitly says its advisory role is not an endorsement of results. Its recommendations include clear exposition, citations, version history, disclosure of model/use where feasible, formalization when feasible, and support for community-led assessment. Added these as sources and added that nuance to the audit.
+- Rechecked [Heyprof's selected visual examples](https://www.heyprof.app/en/demo/fach/ki-forschungsmathematik) and [M0-AR's independent visual verifier](https://m0-ar.github.io/openai-math-verify-2026/preview.html): both are examples for source-linked visual presentation, not proof that the entire corpus is complete or independently verified.
+
+### Additional project and source changes
+
+- Completed the initial Markdown scaffold: AGENTS.md, SPEC.md, STATE.md (created later in this session), ROADMAP.md, ARCHITECTURE, CONTENT_SCHEMA, QUALITY_AND_PROVENANCE, AGENT_WORKFLOW, DECISIONS, CONTRIBUTING, SOURCE_CATALOG, RESOURCE_REVIEW_TEMPLATE, SCIENCE_DOMAIN_MAP, OPENAI_MATH_RELEASE, RESEARCH_BACKLOG, and this log.
+- Added governance rule that discoveries, proof status, source status, and visualization status are separate concepts.
+- First research/source pass is still not a complete corpus audit. No VSE frontend or interactive demo has been implemented.
+- Exact “World Dot Name weekend hackathon” official event page and terms were not confidently identified in search. The exact event name, deadline, judging rubric, and submission restrictions remain an active P0 task; do not assume requirements from an unrelated hackathon.
+
+
+## 2026-10-15 — Hackathon event identification check
+
+- Searched web for the exact phrase “World Dot Name weekend hackathon”, “World.Name weekend hackathon”, and variants describing a current global weekend AI hackathon.
+- No authoritative event page matching that exact name was confidently identified during this pass. Search results included other unrelated or already-past October 2026 events; do not substitute their requirements or imply they are the user's intended event.
+- The official event identity, deadline and time zone, judging rubric, submission format, age/eligibility rules, rules about prior code, and required deployment remain **unverified**. Keep this as a P0 blocker before narrowing the build plan.
