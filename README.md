@@ -52,3 +52,11 @@ Research and prototype **one** concept end-to-end:
 - cited sources, limitations, and a visible verification state.
 
 Choose the first concept after reviewing the source catalogue and the hackathon requirements. Do not build authentication, billing, a general-purpose agent platform, or a massive ingestion pipeline as part of this milestone.
+
+## How research status works
+
+Research is intentionally incomplete until the records say otherwise. Use [the Research Coverage Ledger](docs/research/RESEARCH_COVERAGE.md) to see what was checked, what is only a candidate, and what remains missing or blocked. The project records failed searches and unverified claims so another agent can continue without repeating work or pretending it is complete.
+
+## Give any coding/research agent this prompt
+
+Read `AGENTS.md`, `STATE.md`, `ROADMAP.md`, and `docs/research/RESEARCH_COVERAGE.md` first. Continue VSE from its recorded state: do the next highest-priority unfinished task, research and verify from traceable sources, record what you checked and what you could not find, update the Markdown logs/state/backlog, and keep changes small. Never invent sources or claim verification you did not perform. Do not build a giant product, add authentication, or add monetization. Follow the current scope and leave an exact next step for the next agent.
