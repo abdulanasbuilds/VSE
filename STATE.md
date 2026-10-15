@@ -43,7 +43,7 @@ The GitHub repository was empty when connected. The following documentation now 
 - `docs/research/SOURCE_CATALOG.md`
 - `docs/research/SCIENCE_DOMAIN_MAP.md`
 - `docs/research/RESOURCE_REVIEW_TEMPLATE.md`
-- `docs/docs/docs/research/OPENAI_MATH_RELEASE.md`
+- `docs/research/OPENAI_MATH_RELEASE.md`
 - `docs/research/RESEARCH_BACKLOG.md`
 - `docs/research/RESEARCH_LOG.md`
 
@@ -82,7 +82,7 @@ Each source row includes a status and next research action. The catalogue is not
 - AGMAI explicitly says its advisory role is not an endorsement of the collection; the mathematical community still needs to evaluate the claims. Its guidance recommends clear exposition, citations, version history, model/use disclosure where feasible, formalization when feasible, and support for community-led understanding.
 - Heyprof covers selected examples, not all manuscripts. M0-AR is independent and must not be presented as official OpenAI verification.
 
-Details and task list: [OpenAI mathematics release audit](research/OPENAI_MATH_RELEASE.md).
+Details and task list: [OpenAI mathematics release audit](docs/research/OPENAI_MATH_RELEASE.md).
 
 ## 5. Research source status
 
