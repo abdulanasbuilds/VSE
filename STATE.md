@@ -43,7 +43,7 @@ The GitHub repository was empty when connected. The following documentation now 
 - `docs/research/SOURCE_CATALOG.md`
 - `docs/research/SCIENCE_DOMAIN_MAP.md`
 - `docs/research/RESOURCE_REVIEW_TEMPLATE.md`
-- `docs/research/OPENAI_MATH_RELEASE.md`
+- `docs/docs/research/OPENAI_MATH_RELEASE.md`
 - `docs/research/RESEARCH_BACKLOG.md`
 - `docs/research/RESEARCH_LOG.md`
 
