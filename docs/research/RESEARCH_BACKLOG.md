@@ -12,14 +12,14 @@ This is the explicit record of what VSE has not yet found, checked, or decided. 
 
 ## P1 — OpenAI mathematics release: inventory and interpretation
 
-- [ ] **P1-01: Version snapshot.** Record commit SHA, retrieval time, README count, CONTENTS count, and file tree.
-- [ ] **P1-02: Counts discrepancy.** Investigate current live count of 719 vs older search snapshots reporting 722. Preserve dates/versions rather than assuming a source is definitively wrong.
-- [ ] **P1-03: Full manuscript-family index.** Read current CONTENTS.md and identify all family IDs, disciplines, manuscript files, and supporting artefacts.
-- [ ] **P1-04: Overview review.** Inspect overview.pdf page-by-page and compare to overview.tex and current map.
-- [ ] **P1-05: Lean tree inventory.** Read current Lean README, formalization.yaml, dependency files, Comparator instructions, and proof-to-paper mapping.
-- [ ] **P1-06: Licence/citation.** Confirm current repository licence and manuscript-specific citation instructions.
+- [ ] **P1-01: Version snapshot.** Record commit SHA, retrieval time, README count, CONTENTS count, and file tree. Partial work: README/CONTENTS currently agree on 719 manuscripts / 372 families as of 2026-10-15; capture the repository commit and compare all tree entries before closing.
+- [ ] **P1-02: Counts discrepancy.** Older search snapshots show 722; live README, CONTENTS, and overview.tex show 719. Repository history documents three manuscript withdrawals on October 7, 2026 after a sign error invalidated a central argument used by dependent papers, which likely explains the change. Verify the commits and preserve version context before closing.
+- [ ] **P1-03: Full manuscript-family index.** Read current CONTENTS.md and identify all family IDs, disciplines, manuscript files, and supporting artefacts. The first 120 lines have been reviewed only; the whole map has not been indexed.
+- [ ] **P1-04: Overview review.** Compare overview.pdf, overview.tex, and current map. overview.tex was retrieved and its 17 subject headings inspected; visual page-by-page PDF review is still open because the browser's GitHub PDF viewer could not be screenshot as application/pdf.
+- [ ] **P1-05: Lean tree inventory.** Read current Lean README, formalization.yaml, dependency files, Comparator instructions, and proof-to-paper mapping. The top README, catalogue excerpt, Comparator README, and result 003 scope note were inspected; full tree audit and build are still open. The upstream Lean README recommends compiling small portions, not the whole large library.
+- [ ] **P1-06: Licence/citation.** Repository LICENSE is Apache-2.0 and formalization.yaml declares the same project licence. Still check per-file notices, third-party contributions, and manuscript-specific citation instructions.
 - [ ] **P1-07: Upstream case studies.** Open the original announcement and the linked math/physics/chemistry/biology cases on OpenAI's research page; locate their primary manuscripts/datasets.
-- [ ] **P1-08: Visual references.** Review Heyprof's 32 examples and the M0-AR independent viewer. Distinguish their own explanations from upstream theorem statements and independent checks.
+- [ ] **P1-08: Visual references.** Review Heyprof's 32 examples and the M0-AR independent viewer. The landing pages were opened; individual demos, repository code, and claims remain to be audited.
 - [ ] **P1-09: Pick one mathematical candidate.** Choose only after reviewing claim, audience prerequisite, proof status, visualization potential, and possible review.
 - [ ] **P1-10: Update policy.** Propose how to detect when upstream file counts or artefacts change without creating an unauditable bulk mirror.
 
