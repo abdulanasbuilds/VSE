@@ -8,7 +8,7 @@ Status: in progress.
 
 - [x] Confirm repository access and inspect repository state.
 - [x] Establish README and an agent-first working contract.
-- [ ] Finish the foundational product, research, and verification documents.
+- [x] Finish the foundational product, research, and verification documents.
 - [ ] Confirm hackathon requirements from an official event source.
 - [ ] Check for actual application code before proposing an implementation stack.
 - Exit gate: a new agent can resume from STATE.md and explain the goal, constraints, evidence, and next action.
