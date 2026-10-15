@@ -57,3 +57,17 @@ At the end of every meaningful task:
 ## How to interpret “continue”
 
 When the user says “continue”, resume from STATE.md and the latest committed files. Work on the next highest-priority task that is sufficiently specified, do not ask the user to repeat known decisions, and do not turn the request into an uncontrolled rewrite. If a meaningful product decision is not yet supported by research, conduct that research or record a bounded decision proposal before implementing it.
+
+## Mandatory research and verification rules
+
+- Read `STATE.md`, `ROADMAP.md`, `docs/research/RESEARCH_COVERAGE.md`, `docs/research/SOURCE_CATALOG.md`, and the specific audit/backlog before doing work.
+- Search the repository for existing notes before repeating research. Continue from the latest recorded state; don't restart, broaden scope, or build a giant product just because the task is open-ended.
+- Every source and claim must have a status. Use the status vocabulary in `RESEARCH_COVERAGE.md`; distinguish “page opened” from “claim checked”, “model tested”, and “independently reviewed”.
+- Record useful negative results: source not found, inaccessible page, failed API call, unavailable PDF, missing proof, uncertain licence, contradiction, or unresolved question. Include the search performed and the next best action so the next agent can continue.
+- Never invent citations, results, commit hashes, tests, verification, licensing, or source contents. State what you did and did not inspect.
+- Prefer primary sources, versioned data, official APIs, original papers, repositories and institutional datasets. For important claims, seek independent corroboration where feasible.
+- Check revisions, errata, withdrawals, retractions, assumptions, dependencies, data definitions, uncertainty, and asset reuse rights. A machine-checked formal statement is not automatically proof that an informal paper claim has been faithfully represented.
+- Use original summaries and link to sources. Do not bulk-copy papers, books, videos, or third-party educational explanations.
+- After meaningful work, update `STATE.md`, `docs/research/RESEARCH_LOG.md`, `docs/research/RESEARCH_COVERAGE.md`, the relevant backlog/catalogue, and `ROADMAP.md` if phase status changed. Include commit or exact file paths when possible.
+- Keep changes small and reviewable. Do not add a framework, authentication, billing, database, or AI integration until the current phase and user constraints justify it.
+
