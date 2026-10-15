@@ -1,0 +1,69 @@
+# Research Backlog
+
+This is the explicit record of what VSE has not yet found, checked, or decided. Missing research is not a failure if it is visible and prioritised. Do not claim full coverage.
+
+## P0 — Immediate foundation tasks
+
+- [ ] **P0-01: Confirm hackathon rules.** Find the official event page, exact deadline and time zone, project eligibility, judging criteria, required AI/tools, deployment rules, use of existing work, demo expectations, and submission format. Record source URLs. Do not design around an unverified event name or rule.
+- [ ] **P0-02: Validate this source inventory.** Open the official source and documentation links that are still marked CANDIDATE. Record any dead link, redirect, changed API, licence, or access restriction.
+- [ ] **P0-03: Select one concept.** Compare a short list using learner value, source quality, feasibility, visual clarity, source/licensing ease, and potential to test learning. Do not pick the concept merely because it is trendy.
+- [ ] **P0-04: Establish the first claim map.** For the chosen concept, list what it claims, supporting primary sources, uncertainty, caveats, and the intended visual mapping.
+- [ ] **P0-05: Confirm implementation path.** Only after P0-01 to P0-04, decide the smallest suitable framework/tools and whether a static application is sufficient.
+
+## P1 — OpenAI mathematics release: inventory and interpretation
+
+- [ ] **P1-01: Version snapshot.** Record commit SHA, retrieval time, README count, CONTENTS count, and file tree.
+- [ ] **P1-02: Counts discrepancy.** Investigate current live count of 719 vs older search snapshots reporting 722. Preserve dates/versions rather than assuming a source is definitively wrong.
+- [ ] **P1-03: Full manuscript-family index.** Read current CONTENTS.md and identify all family IDs, disciplines, manuscript files, and supporting artefacts.
+- [ ] **P1-04: Overview review.** Inspect overview.pdf page-by-page and compare to overview.tex and current map.
+- [ ] **P1-05: Lean tree inventory.** Read current Lean README, formalization.yaml, dependency files, Comparator instructions, and proof-to-paper mapping.
+- [ ] **P1-06: Licence/citation.** Confirm current repository licence and manuscript-specific citation instructions.
+- [ ] **P1-07: Upstream case studies.** Open the original announcement and the linked math/physics/chemistry/biology cases on OpenAI's research page; locate their primary manuscripts/datasets.
+- [ ] **P1-08: Visual references.** Review Heyprof's 32 examples and the M0-AR independent viewer. Distinguish their own explanations from upstream theorem statements and independent checks.
+- [ ] **P1-09: Pick one mathematical candidate.** Choose only after reviewing claim, audience prerequisite, proof status, visualization potential, and possible review.
+- [ ] **P1-10: Update policy.** Propose how to detect when upstream file counts or artefacts change without creating an unauditable bulk mirror.
+
+## P1 — Broaden source discovery with discipline
+
+- [ ] **P1-11: Literature APIs.** Compare arXiv, Crossref, OpenAlex, Semantic Scholar, Europe PMC, PubMed, and field-specific indices for coverage, policy, rate limits, IDs, updates, and licensing.
+- [ ] **P1-12: Dataset APIs.** Review NASA Earthdata, NOAA, USGS, World Bank, WHO, UNESCO, RCSB PDB, PubChem, and other candidate official portals.
+- [ ] **P1-13: Source-use rights.** Build a per-source/per-asset licensing table for text, data, code, figures, media, and embeds. Don't infer the rights of one content class from another.
+- [ ] **P1-14: Interactive resource audit.** Review PhET, NASA SVS, NASA interactives, Wolfram Demonstrations, GeoGebra, Desmos, Observable, explorable explanations, and other examples for pedagogical technique, access, rights, and mobile behaviour.
+- [ ] **P1-15: Subject map.** Build specific primary-source lists for math, physics, astronomy, chemistry/materials science, biology, climate/Earth science, engineering, computer science/AI, economics, and health.
+- [ ] **P1-16: Search quality.** Determine how VSE should show source quality, evidence type, publication status, retractions/corrections, and conflicting interpretations.
+- [ ] **P1-17: Ghana/global learner needs.** Validate usability constraints such as data cost, mobile-first access, accessibility, bandwidth, language, and familiarity. Do not assume these users' needs without testing.
+
+## P2 — Content quality and visualization research
+
+- [ ] **P2-01: Explanation template.** Test whether the progressive levels (intuition, visual, formal/deeper, limitations, sources) help real learners.
+- [ ] **P2-02: Visualization taxonomy.** Define when to choose static diagram, chart, animation, parameterized simulation, 3D view, graph, or linked third-party tool.
+- [ ] **P2-03: Misconception tracking.** Record misconceptions and how each visualization can inadvertently reinforce them.
+- [ ] **P2-04: Computational reproducibility.** Define the lightest useful checks for equations, simulated systems, and data transforms.
+- [ ] **P2-05: Accessibility.** Evaluate text alternatives, keyboard interactions, colour meaning, reduced motion, mobile usability, and screen-reader labels.
+- [ ] **P2-06: Update/review cadence.** Define triggers to revisit volatile data, new studies, software APIs, and disputed research.
+- [ ] **P2-07: User evaluation.** Create a short before/after learning test and test it with a real novice.
+
+## P3 — Only after the first prototype works
+
+- [ ] Search and filtering across vetted VSE topics.
+- [ ] A citation-aware retrieval layer for additional questions.
+- [ ] Change detection and source refresh reports.
+- [ ] Contributors' review process and correction handling.
+- [ ] Multi-language explanations, offline reading, and low-bandwidth visual fallbacks.
+- [ ] Researcher tools, saved journeys, accounts, and monetization only with a future explicit decision.
+
+## Explicitly not done
+
+The following must not be represented as completed:
+- the full OpenAI math collection has not been read end-to-end;
+- all 372 families have not been classified or individually verified;
+- all Lean formalizations have not been built or checked;
+- all named websites' full resource collections have not been exhaustively inspected;
+- all data APIs and licences have not been compared;
+- all scientific discovery sources have not been found;
+- no VSE visualization or application code has been implemented yet;
+- the hackathon's official terms have not yet been confirmed.
+
+## Backlog maintenance
+
+When a task is done, retain a short outcome rather than deleting the history. For a blocked task, write the blocker and the smallest way to unblock it. Promote a backlog item only when it is needed for the current milestone.
