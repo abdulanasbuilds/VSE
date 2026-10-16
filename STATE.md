@@ -1,10 +1,10 @@
 # VSE Project State and Agent Handoff
 
-**Last updated:** 2026-10-15 (UTC)  
+**Last updated:** 2026-10-16 (UTC)  
 **Current branch:** `main`  
-**Current phase:** Phase 0 — foundation and research inventory  
-**Product code status:** no application code yet  
-**Next action:** verify the exact hackathon identity/rules if possible; in parallel, continue a versioned, source-by-source inventory without starting a giant build.
+**Current phase:** Phase 2 — smallest demonstrable experience (in progress)  
+**Product code status:** single-file static frontend prototype committed; runtime and scientific-model verification pending  
+**Next action:** test the committed frontend model and controls, review responsive/accessibility behavior, and preserve the unresolved hackathon restrictions in the handoff.
 
 > This is the durable checkpoint. Every agent must read it first after AGENTS.md and must update it after meaningful work. Do not assume work exists unless the current repository confirms it.
 
@@ -47,7 +47,7 @@ The GitHub repository was empty when connected. The following documentation now 
 - `docs/research/RESEARCH_BACKLOG.md`
 - `docs/research/RESEARCH_LOG.md`
 
-No frontend, backend, tests, diagrams, simulations, API integrations, deploy configuration, package manager, or framework has been added. Do not claim a runnable application exists.
+An initial frontend now exists as root index.html: a static HTML/CSS/JavaScript page with an in-browser orbit model, progressive explanation, source links, caveats, and a short knowledge check. It has no build tooling, backend, database, external API, account system, or deployment configuration. Browser and real-device testing have not yet been completed.
 
 ## 4. Work completed in this pass
 
@@ -84,6 +84,14 @@ Each source row includes a status and next research action. The catalogue is not
 
 Details and task list: [OpenAI mathematics release audit](docs/research/OPENAI_MATH_RELEASE.md).
 
+### First demonstrable prototype added (2026-10-16)
+- Selected orbital motion as a provisional first topic because official NASA learning resources directly support the core conceptual explanation and the model is small enough to test. VSE remains a multi-science product direction.
+- Added docs/research/FIRST_PROTOTYPE_ORBIT.md with the learner outcome, candidate comparison, claim map, cited official sources, physics assumptions, limitations, and test plan.
+- Checked NASA Science “Gravity & Mechanics,” NASA “What Is an Orbit?,” NASA JPL Education “Modeling the Orbits of Planets,” and PhET licensing information on 2026-10-16. No third-party simulation code or imagery was copied.
+- Added index.html, a single-file frontend. It uses a dimensionless Newtonian two-body calculation in the browser; no database, backend, API key, or model API is needed for this narrow interaction.
+- The exact hackathon identity/rules remain unresolved. Do not claim the prototype is eligible or submit previously created code before the rules are checked.
+- The visual model and UI still need runtime testing, numerical reference-case tests, responsive/accessibility checks, and a novice learning test. No independent reviewer has reviewed the model.
+
 ## 5. Research source status
 
 Status means the item was checked to the recorded depth, not that everything it contains is verified.
@@ -98,33 +106,29 @@ Read [SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md), [SCIENCE_DOMAIN_MAP.m
 ## 6. Current blockers and uncertainties
 
 1. The official event page for “World Dot Name weekend hackathon” was not confidently identified by exact-phrase and variant searches. Deadline/time zone, eligibility, judging criteria, allowed pre-existing code, submission format, and deployment requirement remain unverified. Do not substitute an unrelated hackathon's rules.
-2. The first concept has not been selected. No topic is approved for implementation yet.
+2. Orbital motion is the provisional first prototype concept, documented in docs/research/FIRST_PROTOTYPE_ORBIT.md; it remains reversible pending numerical/runtime tests and learner feedback.
 3. The full OpenAI math family map has not been parsed. Only the current README, the first 120 lines of `CONTENTS.md`, overview TeX, selected Lean metadata/instructions, history, and one Lean scope note were inspected.
 4. The PDF overview still needs page-by-page visual review.
 5. No formal Lean build, no independent proof review, and no manuscript-by-manuscript verification have been performed.
 6. The other scientific databases, data APIs, licence terms, and visualization examples have only partial checks or are candidates. Do not represent them as fully audited.
-7. No user discovery interviews, learning tests, deployment tests, accessibility tests, or working visual demo exist.
+7. The static orbital demo exists in index.html, but no successful browser/runtime test, independent numerical validation, user learning test, deployment test, or real-device accessibility review has been recorded.
 
 ## 7. Ordered next actions
 
-### Next action A — confirm hackathon requirements
-Continue searching authoritative event/organizer pages for the exact “World Dot Name” event. Capture canonical URL, start/end time and timezone, submission deadline, theme, eligibility, rules about code created before kickoff, permitted AI tools, team constraints, judging rubric, deliverables, and judging/demo format. If the exact name remains ambiguous after reasonable search, keep it marked blocked and ask the project owner for the exact event URL only when it is necessary to tailor the submission. Continue independent research rather than waiting idle.
+### Next action A — test the actual frontend and numerical model
+1. Fetch the committed index.html; syntax-check the exact committed script and exercise the input/controls in a browser or equivalent harness.
+2. Test normalized model reference cases: circular speed (~1.0x) should remain near a circle; low speed (0.70x) should intersect the planet; speed at/above sqrt(2) times circular speed should be unbound in the ideal two-body model.
+3. Check slider labels, reset, preset buttons, answer feedback, keyboard use, reduced-motion behavior, SVG readability, and mobile-width overflow.
+4. Record each check and any failure. Do not mark MODEL TESTED until the interactive model has repeatable numerical and behavioral test evidence.
 
-### Next action B — finish the first OpenAI math inventory batch
-1. Capture current upstream commit/tree and date.
-2. Read the full `CONTENTS.md` in manageable ranges.
-3. Create a concise structured index of all result families and related manuscript links. Preserve upstream names and source links; write summaries in original wording rather than copying large text.
-4. Record changed/withdrawn/revised status as given by upstream history.
-5. Map formalization records from `lean/formalization.yaml`; do not infer that unlisted papers have or lack proofs without checking.
-6. Compare 722 vs 719 by commit history before closing this specific discrepancy.
-7. Inspect the PDF through a capable PDF renderer and record page-level checks; if not feasible, retain the documented blocker.
-8. Do not try to build/check all Lean results in one operation; choose a small representative check only after environment and resources are known.
+### Next action B — keep hackathon rules unresolved rather than guessing
+Continue searches for the exact official event. The exact phrase and variants have not led to a matching authoritative page. Before any event submission, get its official URL/name and check deadline/time zone, eligibility, code-preexistence rules, AI requirements, deliverables, and deployment/judging requirements. Do not infer eligibility from another event.
 
-### Next action C — select one prototype concept
-After event rules and a source shortlist are sufficiently clear, score a few candidates by novice learner value, source quality, truthful visual potential, implementation effort, source/licensing ease, and a testable learning outcome. Pick one concept and define its claim map before writing UI code.
+### Next action C — gather learning feedback
+After basic model checks, ask a beginner to explain why a satellite can orbit and compare their explanation before and after using VSE. Record sample size, questions, results and limitations honestly. This does not substitute for an expert model review.
 
-### Next action D — only then implement the first slice
-Build one source-backed progressive explanation with one meaningful interaction, visible limitations, and a repeatable accuracy/learning test. No sign-in, billing, full-corpus ingestion, AI agent orchestration, or general-purpose generated simulation engine.
+### Next action D — continue source research without expanding scope
+Continue the source-by-source inventory and the OpenAI math audit in bounded batches. Do not add more subjects, a backend, a database, AI inference, or external APIs until the current lesson passes its first checks and a concrete requirement exists.
 
 ## 8. Definition of done for the current phase
 
@@ -135,14 +139,17 @@ Build one source-backed progressive explanation with one meaningful interaction,
 - [x] First OpenAI math/source-quality pass documented honestly.
 - [ ] Exact hackathon rules confirmed, or exact event name/link identified as unresolved.
 - [ ] OpenAI math family inventory completed and versioned.
-- [ ] Initial concept selected using source quality and prototype feasibility.
-- [ ] Implementation plan based on a bounded concept and verified event requirements.
+- [x] Provisional orbital concept selected and a claim map recorded; numerical validation and learner feedback remain open.
+- [x] Minimal implementation path chosen for the reusable orbital prototype; event-specific submission path remains blocked pending official rules.
 
 ## 9. Last verified session summary
 
-- State timestamp: 2026-10-15 UTC.
-- Last action before writing this file: initial source catalogue and research log revisions; OpenAI math audit cleaned into a single workflow.
-- Branch: `main`.
-- Application status: documentation only.
-- No tests run because no application code exists.
-- Agent instruction: continue with Next action A and B; keep every change small, sourced, and recorded.
+- State timestamp: 2026-10-16 UTC.
+- Current branch: main.
+- Repository contains the project/source documentation, docs/research/FIRST_PROTOTYPE_ORBIT.md, and root index.html.
+- The frontend is a single static file with inline CSS/JavaScript, a dimensionless two-body orbit visualization, speed control, explanation layers, NASA source links, limitations, and a short understanding check.
+- No backend, database, API integration, AI model integration, framework, or deployment configuration exists or is currently required for this interaction.
+- Hackathon identity and terms remain blocked/unverified; this is a general reusable prototype and no event eligibility is claimed.
+- Exact committed-script runtime tests, browser/mobile/accessibility checks, numerical reference-case tests, and learner study remain to do.
+- Agent instruction: follow Next action A. Do not restart the documentation scaffold or broaden the build.
+
