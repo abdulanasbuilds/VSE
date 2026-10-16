@@ -162,7 +162,7 @@ The exact “World Dot Name weekend hackathon” page has not been identified co
 - Reviewed official data/API documentation for SPHEREx/IRSA, NASA Earthdata CMR, USGS water data, NOAA NCEI, Copernicus Data Space, World Bank Indicators, Crossref, OpenAlex and dataset-card practices. These are service-documentation checks; no representative source/data sample has yet been inspected end-to-end for the selected VSE experience.
 - No `LICENSE` file appears in the audited main tree. Do not infer reuse rights from public visibility or automatically choose a license without the owner's decision.
 - PR #2's new regex assertion causes the test file to fail to parse in CI with “Invalid regular expression flags”. No runtime or test code was changed in this documentation pass. A separate Cloudflare preview failure was noted but its logs were not inspected.
-- Current decision remains HOLD: no selected product route, no full data/claim packet, and no owner-facing readiness sign-off yet. See `docs/BUILD_READINESS.md`.
+- Current decision remains HOLD: VSE is the confirmed product direction, but the first bounded learning journey, its full source/claim and validation packet, and owner-facing readiness sign-off are not complete. The exact event identity/rules remain unverified. See `docs/BUILD_READINESS.md`.
 
 ## 9. Last verified session summary
 
