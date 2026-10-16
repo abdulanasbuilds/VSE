@@ -3,8 +3,8 @@
 **Last updated:** 2026-10-16 (UTC)  
 **Current branch:** `main`  
 **Current phase:** Phase 2 — smallest demonstrable experience (in progress)  
-**Product code status:** single-file static frontend prototype committed; runtime and scientific-model verification pending  
-**Next action:** test the committed frontend model and controls, review responsive/accessibility behavior, and preserve the unresolved hackathon restrictions in the handoff.
+**Product code status:** single-file static frontend prototype committed; bounded model/control harness checks passed; real-browser and independent scientific review pending  
+**Next action:** run the committed Node regression script locally or confirm CI, then perform real-browser/mobile/accessibility checks and obtain beginner feedback.
 
 > This is the durable checkpoint. Every agent must read it first after AGENTS.md and must update it after meaningful work. Do not assume work exists unless the current repository confirms it.
 
@@ -106,20 +106,20 @@ Read [SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md), [SCIENCE_DOMAIN_MAP.m
 ## 6. Current blockers and uncertainties
 
 1. The official event page for “World Dot Name weekend hackathon” was not confidently identified by exact-phrase and variant searches. Deadline/time zone, eligibility, judging criteria, allowed pre-existing code, submission format, and deployment requirement remain unverified. Do not substitute an unrelated hackathon's rules.
-2. Orbital motion is the provisional first prototype concept, documented in docs/research/FIRST_PROTOTYPE_ORBIT.md; it remains reversible pending numerical/runtime tests and learner feedback.
+2. Orbital motion is the provisional first concept, documented in docs/research/FIRST_PROTOTYPE_ORBIT.md. Three representative model cases and core controls passed a stub-DOM V8 harness; broader numeric/reference tests and learner feedback remain open.
 3. The full OpenAI math family map has not been parsed. Only the current README, the first 120 lines of `CONTENTS.md`, overview TeX, selected Lean metadata/instructions, history, and one Lean scope note were inspected.
 4. The PDF overview still needs page-by-page visual review.
 5. No formal Lean build, no independent proof review, and no manuscript-by-manuscript verification have been performed.
 6. The other scientific databases, data APIs, licence terms, and visualization examples have only partial checks or are candidates. Do not represent them as fully audited.
-7. The static orbital demo exists in index.html, but no successful browser/runtime test, independent numerical validation, user learning test, deployment test, or real-device accessibility review has been recorded.
+7. A stub-DOM V8 harness successfully executed the inline script and checked circular, impact, and escape cases plus presets/reset/quiz feedback. No real-browser/device test, comprehensive numerical validation, learner study, deployment test, or independent physics review has been recorded. `tests/orbit-model.test.mjs` and `.github/workflows/orbit-model-tests.yml` are committed; execution of the Node test file / CI result is not yet confirmed.
 
 ## 7. Ordered next actions
 
-### Next action A — test the actual frontend and numerical model
-1. Fetch the committed index.html; syntax-check the exact committed script and exercise the input/controls in a browser or equivalent harness.
-2. Test normalized model reference cases: circular speed (~1.0x) should remain near a circle; low speed (0.70x) should intersect the planet; speed at/above sqrt(2) times circular speed should be unbound in the ideal two-body model.
-3. Check slider labels, reset, preset buttons, answer feedback, keyboard use, reduced-motion behavior, SVG readability, and mobile-width overflow.
-4. Record each check and any failure. Do not mark MODEL TESTED until the interactive model has repeatable numerical and behavioral test evidence.
+### Next action A — run reproducible regression tests and inspect in a browser
+1. Run `node tests/orbit-model.test.mjs` in a local checkout or verify the GitHub Actions run; record the exact result.
+2. Extend numerical cases around the impact boundary (for example 0.84x vs 0.85x), circular stability, escape threshold, and finite trajectory values.
+3. Check the page in a real browser on desktop and mobile sizes: slider labels, reset, presets, quiz, keyboard access, reduced motion, SVG labels, scrolling, and overflow.
+4. Keep the status `MODEL TESTED (bounded harness cases)` until broader numerical evidence exists. Browser and independent physics review are separate statuses.
 
 ### Next action B — keep hackathon rules unresolved rather than guessing
 Continue searches for the exact official event. The exact phrase and variants have not led to a matching authoritative page. Before any event submission, get its official URL/name and check deadline/time zone, eligibility, code-preexistence rules, AI requirements, deliverables, and deployment/judging requirements. Do not infer eligibility from another event.
@@ -139,7 +139,7 @@ Continue the source-by-source inventory and the OpenAI math audit in bounded bat
 - [x] First OpenAI math/source-quality pass documented honestly.
 - [ ] Exact hackathon rules confirmed, or exact event name/link identified as unresolved.
 - [ ] OpenAI math family inventory completed and versioned.
-- [x] Provisional orbital concept selected and a claim map recorded; numerical validation and learner feedback remain open.
+- [x] Provisional orbital concept selected and claim map recorded; bounded trajectory/control harness cases pass, while broader validation and learner feedback remain open.
 - [x] Minimal implementation path chosen for the reusable orbital prototype; event-specific submission path remains blocked pending official rules.
 
 ## 9. Last verified session summary
@@ -150,6 +150,6 @@ Continue the source-by-source inventory and the OpenAI math audit in bounded bat
 - The frontend is a single static file with inline CSS/JavaScript, a dimensionless two-body orbit visualization, speed control, explanation layers, NASA source links, limitations, and a short understanding check.
 - No backend, database, API integration, AI model integration, framework, or deployment configuration exists or is currently required for this interaction.
 - Hackathon identity and terms remain blocked/unverified; this is a general reusable prototype and no event eligibility is claimed.
-- Exact committed-script runtime tests, browser/mobile/accessibility checks, numerical reference-case tests, and learner study remain to do.
+- Exact committed script compiled and its inline logic was exercised in a stub-DOM V8 harness: 0.70x impact, 1.00x near-circular radius stability, 1.50x escape, finite coordinates, preset/reset/quiz interactions. Reproducible Node test execution and the CI result are not confirmed yet; browser/mobile/accessibility checks, broader reference cases, independent review, and learner study remain to do.
 - Agent instruction: follow Next action A. Do not restart the documentation scaffold or broaden the build.
 
