@@ -42,10 +42,19 @@ The repository includes durable research/agent documentation and a tested satell
 - docs/research/OPENAI_MATH_RELEASE.md — specific research plan for OpenAI's mathematics release.
 - docs/research/RESEARCH_BACKLOG.md — known gaps and ordered investigation queue.
 - docs/research/RESEARCH_LOG.md — dated notes on work actually performed.
+- docs/PROJECT_AUDIT.md — remote repository integrity, CI findings, and current gaps.
+- docs/BUILD_READINESS.md — the mandatory hold/ready gate; no implementation while on hold.
+- docs/DATA_AND_RESEARCH_PIPELINE.md — how sources become claims, data transformations, visuals, and learning packets.
+- docs/research/DATASET_AND_API_REGISTER.md — data/API candidates, what was actually checked, and outstanding access/rights work.
+- docs/research/RESEARCH_BATCH_PLAN.md — bounded research steps leading to an owner-reviewed build decision.
 
 ## Non-negotiable research rule
 
 Track each item as **verified**, **partially verified**, **candidate**, **blocked**, or **not started**. A link being listed is not the same as its content having been reviewed; a paper's claim is not the same as an independently verified result; a visually convincing demonstration is not evidence on its own.
+
+## Research-before-build gate
+
+The project owner explicitly requires structured research, source/data checks, and a bounded product decision before implementation. Read [docs/BUILD_READINESS.md](docs/BUILD_READINESS.md) and follow [docs/research/RESEARCH_BATCH_PLAN.md](docs/research/RESEARCH_BATCH_PLAN.md). While the build gate says **HOLD**, do not start frontend, backend, database, API, model integration, or training work. A passing gate requires an owner-facing readiness recommendation; do not treat research completion as automatic permission to start building.
 
 ## First milestone
 
