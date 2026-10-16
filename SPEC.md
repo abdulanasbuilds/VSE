@@ -4,7 +4,7 @@
 
 ## 1. Purpose
 
-VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine for understanding how things work. A person can ask about an AI language model, mathematics, physics, biology, space, engineering, or another scientific/technical subject. VSE should turn the question into an understandable explanation, a visual model that reveals the key relationships, and meaningful interaction that helps a learner explore how it works.
+VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine for understanding how things work. A person can ask about mathematics, physics, an AI language model, biology, space, engineering, or another scientific/technical subject. VSE should turn the question into an understandable explanation, a visual model that reveals the key relationships, and meaningful interaction that helps a learner explore how it works. Its north star is **make knowledge visible, in the world**: help people understand an idea and continue into connected ideas across disciplines. A hackathon can demonstrate this vision, but it is not the product's identity or long-term limit.
 
 The complete learning journey belongs inside VSE. Do not substitute a list of external links for the explanation or send learners away to finish understanding elsewhere.
 
@@ -12,7 +12,7 @@ The complete learning journey belongs inside VSE. Do not substitute a list of ex
 
 Information is abundant but understanding is not. Explanations may assume prior knowledge, diagrams can be static, and important details can be scattered across many sources. People who missed some basics should still be able to begin with an intuitive explanation and then build toward precise terminology and mathematics.
 
-VSE should help someone progress from question to mental model, from mental model to exploration, and from intuitive understanding to evidence and deeper concepts.
+VSE should help someone progress from question to mental model, from mental model to exploration, and from intuitive understanding to evidence and deeper concepts—then show useful ways to continue through prerequisites, related concepts, and applications.
 
 ## 3. Audience and depth
 
@@ -43,7 +43,7 @@ Display relevant source titles, author/organization, date/version, source type, 
 5. **Explore:** provide a few meaningful controls, step-through states, comparisons, or parameter changes.
 6. **Go deeper:** reveal the actual mechanism, technical vocabulary, data, equations, and mathematical foundations where relevant.
 7. **Assess:** show what evidence supports the claims, what is simplified, and what remains uncertain inside the app.
-8. **Continue:** explore related topics within VSE rather than being pushed to another website.
+8. **Continue:** explore related topics within VSE rather than being pushed to another website; explain why a next concept connects so learning can build from one idea to another.
 
 ## 6. First hackathon experience
 
