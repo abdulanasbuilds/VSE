@@ -3,8 +3,8 @@
 **Last updated:** 2026-10-16 (UTC)  
 **Current branch:** `main`  
 **Current phase:** Phase 2 — smallest demonstrable experience (in progress)  
-**Product code status:** single-file static frontend prototype committed; bounded model/control harness checks passed; real-browser and independent scientific review pending  
-**Next action:** run the committed Node regression script locally or confirm CI, then perform real-browser/mobile/accessibility checks and obtain beginner feedback.
+**Product code status:** single-file static frontend prototype committed; bounded model harness and Node 22 regression suite passed; real-browser and independent scientific review pending
+**Next action:** inspect the interface in a real browser on desktop and mobile, check accessibility/overflow, then obtain beginner feedback.
 
 > This is the durable checkpoint. Every agent must read it first after AGENTS.md and must update it after meaningful work. Do not assume work exists unless the current repository confirms it.
 
@@ -111,16 +111,17 @@ Read [SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md), [SCIENCE_DOMAIN_MAP.m
 4. The PDF overview still needs page-by-page visual review.
 5. No formal Lean build, no independent proof review, and no manuscript-by-manuscript verification have been performed.
 6. The other scientific databases, data APIs, licence terms, and visualization examples have only partial checks or are candidates. Do not represent them as fully audited.
-7. A stub-DOM V8 harness successfully executed the inline script and checked circular, impact, and escape cases plus presets/reset/quiz feedback. No real-browser/device test, comprehensive numerical validation, learner study, deployment test, or independent physics review has been recorded. `tests/orbit-model.test.mjs` and `.github/workflows/orbit-model-tests.yml` are committed; execution of the Node test file / CI result is not yet confirmed.
+7. A stub-DOM V8 harness checked circular, impact, and escape boundaries plus controls; GitHub Actions run #38836368258 passed the committed Node 22 regression suite in PR #1, which was merged as `bead3c078e5651f64f3407618584e44a438fb698`. No real-browser/device test, comprehensive numerical validation, learner study, deployment test, or independent physics review has been recorded.
 
 ## 7. Ordered next actions
 
-### Next action A — run reproducible regression tests and inspect in a browser
-1. Run `node tests/orbit-model.test.mjs` in a local checkout or verify the GitHub Actions run; record the exact result.
-2. Extend numerical cases around the impact boundary (for example 0.84x vs 0.85x), circular stability, escape threshold, and finite trajectory values.
-3. Check the page in a real browser on desktop and mobile sizes: slider labels, reset, presets, quiz, keyboard access, reduced motion, SVG labels, scrolling, and overflow.
-4. Keep the status `MODEL TESTED (bounded harness cases)` until broader numerical evidence exists. Browser and independent physics review are separate statuses.
+### Next action A — real-browser and accessibility review
+1. Open root `index.html` in a real browser on desktop and mobile sizes; inspect layout, SVG clipping, horizontal overflow, font/readability, and response to controls.
+2. Check keyboard operation, range-slider labeling, focus visibility, screen-reader announcements for status/quiz feedback, and reduced-motion behavior.
+3. Record exact browser/device/viewport and any issue. The current Node/V8 tests do not count as browser accessibility testing.
+4. The regression suite already passed on GitHub Actions; repeat it after any code changes.
 
+### Next action B — keep hackathon rules unresolved rather than guessing
 ### Next action B — keep hackathon rules unresolved rather than guessing
 Continue searches for the exact official event. The exact phrase and variants have not led to a matching authoritative page. Before any event submission, get its official URL/name and check deadline/time zone, eligibility, code-preexistence rules, AI requirements, deliverables, and deployment/judging requirements. Do not infer eligibility from another event.
 
@@ -150,6 +151,6 @@ Continue the source-by-source inventory and the OpenAI math audit in bounded bat
 - The frontend is a single static file with inline CSS/JavaScript, a dimensionless two-body orbit visualization, speed control, explanation layers, NASA source links, limitations, and a short understanding check.
 - No backend, database, API integration, AI model integration, framework, or deployment configuration exists or is currently required for this interaction.
 - Hackathon identity and terms remain blocked/unverified; this is a general reusable prototype and no event eligibility is claimed.
-- Exact committed script compiled and its inline logic was exercised in a stub-DOM V8 harness: 0.70x impact, 1.00x near-circular radius stability, 1.50x escape, finite coordinates, preset/reset/quiz interactions. Reproducible Node test execution and the CI result are not confirmed yet; browser/mobile/accessibility checks, broader reference cases, independent review, and learner study remain to do.
+- Exact committed inline script was exercised in a stub-DOM V8 harness at 0.70x, 0.84x, 0.85x, 1.00x, 1.414x, 1.415x, and 1.50x; trajectory coordinates were finite and control checks passed. GitHub Actions run #38836368258 passed `node tests/orbit-model.test.mjs` under Node.js 22, and PR #1 was merged as `bead3c078e5651f64f3407618584e44a438fb698`. Real-browser/mobile/accessibility checks, broad scientific review, and a learner study remain to do.
 - Agent instruction: follow Next action A. Do not restart the documentation scaffold or broaden the build.
 
