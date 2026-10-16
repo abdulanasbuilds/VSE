@@ -146,3 +146,15 @@
 
 ### Immediate next step
 Run the committed regression script locally or inspect a confirmed GitHub Actions run, add impact-boundary tests, then check the exact page in an actual browser at mobile and desktop widths. Keep the source/claim status separate from model-test status.
+
+
+## 2026-10-16 — Additional near-boundary orbit checks
+
+- Re-executed the committed inline JavaScript in a stub-DOM V8 harness with added near-boundary speed settings. At 0.84x, the trajectory crossed the planet radius and reported Impact (minimum displayed radius about 0.99971). At 0.85x, the displayed minimum radius was about 1.01797 and outcome was Elliptical. This brackets the impact threshold for the chosen normalized starting setup; it is not a universal speed threshold for all orbits.
+- At 1.414x (slightly below sqrt(2)), the model reported a bound Elliptical path; at 1.415x and 1.50x it reported Escape. The escape and high-eccentricity bound paths reach the view boundary and are clipped, as described in the caveats.
+- Rechecked finite displayed coordinates, preset selection, reset, correct/incorrect quiz feedback, and a user-requested step under reduced-motion mode. These are stub-DOM harness results, not a real browser run.
+- Updated `tests/orbit-model.test.mjs` to preserve checks for the 0.84x/0.85x impact boundary and 1.414x/1.415x escape boundary. GitHub Actions is configured but no CI result has been confirmed through the available connector yet.
+
+### Next step
+
+Run the committed Node test file or obtain a confirmed CI run; then test the actual page in a real browser and inspect keyboard, reduced-motion, mobile layout, and accessibility behavior.
