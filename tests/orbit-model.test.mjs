@@ -96,7 +96,9 @@ assert.ok(Math.max(...radii) >= 3.99, "the high-eccentricity bound path may reac
 ids.speed.value = "1.415";
 ids.speed.listeners.input();
 assert.equal(ids["outcome-stat"].textContent, "Escape", "a speed just above sqrt(2) times circular speed is unbound");
-
+radii = radiiFromPath(ids.trajectory.attrs.d);
+assert.ok(Math.max(...radii) >= 3.99, "the just-unbound trajectory should reach the view boundary");
+  
 ids.speed.value = "1.50";
 ids.speed.listeners.input();
 assert.equal(ids["outcome-stat"].textContent, "Escape", "1.50x circular speed should be unbound");
