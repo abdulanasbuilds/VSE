@@ -2,15 +2,15 @@
 
 **Last updated:** 2026-10-16 (UTC)  
 **Current branch:** `main`  
-**Current phase:** Phase 2 — smallest demonstrable experience (in progress)  
-**Product code status:** single-file static frontend prototype committed; bounded model harness and Node 22 regression suite passed; real-browser and independent scientific review pending
-**Next action:** inspect the interface in a real browser on desktop and mobile, check accessibility/overflow, then obtain beginner feedback.
+**Current phase:** Phase 1 — define the VSE hackathon experience (in progress)  
+**Product code status:** one standalone orbit visualization experiment exists and its bounded Node 22 regression suite passed; the intended question-first VSE user experience has not yet been built
+**Next action:** define the first hackathon slice around VSE's question → in-app explanation → interactive visual → deeper understanding journey; keep event eligibility unresolved until the exact official event is identified.
 
 > This is the durable checkpoint. Every agent must read it first after AGENTS.md and must update it after meaningful work. Do not assume work exists unless the current repository confirms it.
 
 ## 1. Product in one paragraph
 
-VSE (Visual Science Explorer) aims to help curious learners understand how the world works through progressive explanations, source-backed claims, diagrams, and genuinely interactive visual models. It is broader than mathematics: candidate fields include AI/computer science, physics, astronomy, chemistry, biology, Earth/climate science, engineering, statistics, health, and other sciences. It should help a learner move from intuition to a visual mental model, then to deeper concepts and mathematics, with citations and explicit simplifications.
+VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine: ask how something works, receive a progressive explanation, inspect and manipulate a meaningful visual model, go deeper into terms/math, and inspect the evidence—all inside VSE. Domains include AI/LLMs, mathematics, physics, astronomy, chemistry, biology, Earth/climate, engineering and other scientific/technical subjects. The orbit page is only one sample module, not the product direction.
 
 ## 2. Confirmed constraints
 
@@ -19,11 +19,13 @@ VSE (Visual Science Explorer) aims to help curious learners understand how the w
 - Do not build a huge science encyclopedia, a generic chatbot, autonomous multi-agent infrastructure, or a massive scraping pipeline as the first deliverable.
 - Do not choose a framework, backend, model provider, database, or hosting before selecting the first concept and checking actual hackathon rules.
 - Prefer a small, carefully verified, visibly interactive explanation over a large unreviewed content pile.
+- Do not send learners to external sites to receive or finish the explanation. External research/data APIs may be used behind the scenes where permitted; show source provenance, claim support, and limitations within VSE.
+- The core product is the built-in question-to-visual-understanding experience, combining a growing knowledge library, AI-assisted retrieval/explanation, and an interactive visual renderer—not a static encyclopedia, a gallery of diagrams, or a generic chatbot.
 - Use AI for discovery/retrieval/drafting only when helpful; AI output does not certify itself.
 - Preserve sources and missing work. Do not claim the research collection is exhaustive.
 - Agents should continue from this state; no restart or repeated setup without a concrete reason.
 
-See [DECISIONS.md](docs/DECISIONS.md), [SPEC.md](SPEC.md), [AGENTS.md](AGENTS.md), and [QUALITY_AND_PROVENANCE.md](docs/QUALITY_AND_PROVENANCE.md).
+See [PRODUCT_CONCEPT.md](PRODUCT_CONCEPT.md), [DECISIONS.md](docs/DECISIONS.md), [SPEC.md](SPEC.md), [AGENTS.md](AGENTS.md), and [QUALITY_AND_PROVENANCE.md](docs/QUALITY_AND_PROVENANCE.md).
 
 ## 3. Repository reality
 
@@ -32,6 +34,7 @@ The GitHub repository was empty when connected. The following documentation now 
 - `README.md`
 - `AGENTS.md`
 - `SPEC.md`
+- `PRODUCT_CONCEPT.md` — canonical product direction
 - `STATE.md` — this file
 - `ROADMAP.md`
 - `CONTRIBUTING.md`
@@ -47,7 +50,7 @@ The GitHub repository was empty when connected. The following documentation now 
 - `docs/research/RESEARCH_BACKLOG.md`
 - `docs/research/RESEARCH_LOG.md`
 
-An initial frontend now exists as root index.html: a static HTML/CSS/JavaScript page with an in-browser orbit model, progressive explanation, source links, caveats, and a short knowledge check. It has no build tooling, backend, database, external API, account system, or deployment configuration. Browser and real-device testing have not yet been completed.
+Root index.html is a standalone satellite-orbit visualization experiment with a local calculation, controls, limitations and a knowledge check. Its regression suite passed under Node.js 22 in GitHub Actions. It is not the intended question-first VSE app: no question interpreter, LLM explanation/retrieval layer, structured visual-plan renderer, or complete in-app evidence workflow exists yet. The orbit module currently contains outbound source links; the self-contained user-journey requirement is recorded and should be applied when shaping the VSE-facing experience.
 
 ## 4. Work completed in this pass
 
@@ -105,52 +108,48 @@ Read [SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md), [SCIENCE_DOMAIN_MAP.m
 
 ## 6. Current blockers and uncertainties
 
-1. The official event page for “World Dot Name weekend hackathon” was not confidently identified by exact-phrase and variant searches. Deadline/time zone, eligibility, judging criteria, allowed pre-existing code, submission format, and deployment requirement remain unverified. Do not substitute an unrelated hackathon's rules.
-2. Orbital motion is the provisional first concept, documented in docs/research/FIRST_PROTOTYPE_ORBIT.md. Three representative model cases and core controls passed a stub-DOM V8 harness; broader numeric/reference tests and learner feedback remain open.
-3. The full OpenAI math family map has not been parsed. Only the current README, the first 120 lines of `CONTENTS.md`, overview TeX, selected Lean metadata/instructions, history, and one Lean scope note were inspected.
-4. The PDF overview still needs page-by-page visual review.
-5. No formal Lean build, no independent proof review, and no manuscript-by-manuscript verification have been performed.
-6. The other scientific databases, data APIs, licence terms, and visualization examples have only partial checks or are candidates. Do not represent them as fully audited.
-7. A stub-DOM V8 harness checked circular, impact, and escape boundaries plus controls; GitHub Actions run #38836368258 passed the committed Node 22 regression suite in PR #1, which was merged as `bead3c078e5651f64f3407618584e44a438fb698`. No real-browser/device test, comprehensive numerical validation, learner study, deployment test, or independent physics review has been recorded.
+1. Hackathon identity: searches for “World Dot Name weekend hackathon” and close variants did not identify a matching official event page. Deadline/time zone, eligibility, theme, judging criteria, allowed prior work, AI requirements, submission format, and deployment requirements remain unverified. Do not substitute unrelated events.
+2. First VSE-facing hackathon slice: not selected yet. “How does an AI language model generate an answer?” is a strong candidate because it aligns with the owner's interest in AI and can demonstrate a step-based, interactive visual explanation, but it should remain a candidate until the event constraints are known.
+3. Product experience not yet built: the current index.html is an orbit experiment, not a general question-first product. There is no end-to-end flow that takes a natural-language question, retrieves evidence, constructs a progressive explanation and safe visual plan, and presents it all in-app.
+4. Self-contained UI: the existing orbit experiment still has outbound source links. For the actual product, source metadata/provenance must remain visible in VSE, but learners should not be sent to other sites to receive the explanation. This should be applied when building the VSE-facing interface; retain source URLs in the internal research/provenance records.
+5. Orbit model status: bounded model/control checks passed in a stub-DOM V8 harness, and GitHub Actions run #38836368258 passed the Node.js 22 regression suite in PR #1, merged as bead3c078e5651f64f3407618584e44a438fb698. This is not independent physics review or real-browser testing.
+6. Scientific research remains partial: the OpenAI mathematics family map has not been indexed end-to-end; the overview PDF was not reviewed page-by-page; no full Lean build or independent proof review was performed; most other scientific APIs/resources still require bounded source/rights checks.
 
 ## 7. Ordered next actions
 
-### Next action A — real-browser and accessibility review
-1. Open root `index.html` in a real browser on desktop and mobile sizes; inspect layout, SVG clipping, horizontal overflow, font/readability, and response to controls.
-2. Check keyboard operation, range-slider labeling, focus visibility, screen-reader announcements for status/quiz feedback, and reduced-motion behavior.
-3. Record exact browser/device/viewport and any issue. The current Node/V8 tests do not count as browser accessibility testing.
-4. The regression suite already passed on GitHub Actions; repeat it after any code changes.
+### Next action A — define the first hackathon VSE experience
+1. Start from PRODUCT_CONCEPT.md, not from the orbit demo. Define one question-first experience that demonstrates explanation plus meaningful visual interaction plus a deeper level and in-app evidence.
+2. Keep “How does an AI language model generate an answer?” as the leading candidate, not an irreversible product choice. A simple built-in orbit example may remain a second example only if it helps demonstrate cross-topic range.
+3. Decide the smallest supported question set and a graceful fallback for unsupported questions or missing evidence. Do not promise that every global question will work perfectly from day one.
+4. Record the exact scope and learner success test in a dedicated hackathon-slice brief before choosing technology.
 
-### Next action B — keep hackathon rules unresolved rather than guessing
-### Next action B — keep hackathon rules unresolved rather than guessing
-Continue searches for the exact official event. The exact phrase and variants have not led to a matching authoritative page. Before any event submission, get its official URL/name and check deadline/time zone, eligibility, code-preexistence rules, AI requirements, deliverables, and deployment/judging requirements. Do not infer eligibility from another event.
+### Next action B — resolve event constraints without guessing
+Searches did not identify a definitive official page for “World Dot Name weekend hackathon.” If the owner supplies the exact event URL/name, inspect the official deadline/time zone, eligibility, theme, prior-code policy, allowed AI/services, team rules, submission and judging requirements. Until then, plan a reusable VSE prototype but do not claim event eligibility.
 
-### Next action C — gather learning feedback
-After basic model checks, ask a beginner to explain why a satellite can orbit and compare their explanation before and after using VSE. Record sample size, questions, results and limitations honestly. This does not substitute for an expert model review.
+### Next action C — design the in-app evidence/visual pipeline
+Specify how the question is matched to built-in concept packets, how permitted external research/model services might supply missing evidence behind the scenes, how results become a validated structured explanation/visual plan, and how sources, claim support and limitations are shown within VSE. Do not run arbitrary LLM-generated browser code.
 
-### Next action D — continue source research without expanding scope
-Continue the source-by-source inventory and the OpenAI math audit in bounded batches. Do not add more subjects, a backend, a database, AI inference, or external APIs until the current lesson passes its first checks and a concrete requirement exists.
+### Next action D — continue targeted research
+Research the actual chosen flagship question and selected visual technique. Continue the broader scientific/source inventory in bounded batches, but do not let completing every field become a prerequisite for a demonstrable product. Do not add authentication or monetization.
 
 ## 8. Definition of done for the current phase
 
-- [x] Repository connected and initial state checked.
-- [x] Product intent and current non-goals documented.
-- [x] Agent continuation and source provenance rules documented.
-- [x] Broad initial research catalogue and domain map committed.
-- [x] First OpenAI math/source-quality pass documented honestly.
-- [ ] Exact hackathon rules confirmed, or exact event name/link identified as unresolved.
-- [ ] OpenAI math family inventory completed and versioned.
-- [x] Provisional orbital concept selected and claim map recorded; bounded trajectory/control harness cases pass, while broader validation and learner feedback remain open.
-- [x] Minimal implementation path chosen for the reusable orbital prototype; event-specific submission path remains blocked pending official rules.
+- [x] Repository connected; durable handoff and research records exist.
+- [x] VSE's broad visual question-engine concept is documented in PRODUCT_CONCEPT.md and SPEC.md.
+- [x] Self-contained in-app learning experience and AI-assisted retrieval layers are specified.
+- [x] One separate orbit visualization experiment exists and its bounded Node regression suite passed in GitHub Actions.
+- [ ] Exact hackathon event and official rules verified.
+- [ ] First VSE-facing hackathon slice selected and scoped.
+- [ ] In-app source/evidence UX and structured visual-rendering contract defined for that slice.
+- [ ] First question-to-visual-understanding experience built and tested with a real beginner.
 
 ## 9. Last verified session summary
 
 - State timestamp: 2026-10-16 UTC.
 - Current branch: main.
-- Repository contains the project/source documentation, docs/research/FIRST_PROTOTYPE_ORBIT.md, and root index.html.
-- The frontend is a single static file with inline CSS/JavaScript, a dimensionless two-body orbit visualization, speed control, explanation layers, NASA source links, limitations, and a short understanding check.
-- No backend, database, API integration, AI model integration, framework, or deployment configuration exists or is currently required for this interaction.
-- Hackathon identity and terms remain blocked/unverified; this is a general reusable prototype and no event eligibility is claimed.
-- Exact committed inline script was exercised in a stub-DOM V8 harness at 0.70x, 0.84x, 0.85x, 1.00x, 1.414x, 1.415x, and 1.50x; trajectory coordinates were finite and control checks passed. GitHub Actions run #38836368258 passed `node tests/orbit-model.test.mjs` under Node.js 22, and PR #1 was merged as `bead3c078e5651f64f3407618584e44a438fb698`. Real-browser/mobile/accessibility checks, broad scientific review, and a learner study remain to do.
-- Agent instruction: follow Next action A. Do not restart the documentation scaffold or broaden the build.
+- PRODUCT_CONCEPT.md is now the canonical statement of intent: a broad visual learning engine that takes questions about science/technology and delivers explanation, interaction, depth, and evidence within VSE.
+- The root orbit page is an engineering experiment and must not be mistaken for the full VSE product or the chosen hackathon submission.
+- Current regression result: GitHub Actions run #38836368258 passed the dependency-free Node.js 22 suite; merged PR #1 is commit bead3c078e5651f64f3407618584e44a438fb698.
+- Event identity/rules remain unresolved. No question-first LLM layer, retrieval pipeline, constrained visual-plan renderer, or deployed VSE-facing experience exists yet.
+- Next agent action: scope the first hackathon experience around the core product concept, while keeping AI/cost/event constraints explicit.
 
