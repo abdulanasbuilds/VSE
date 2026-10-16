@@ -1,10 +1,11 @@
 # VSE Project State and Agent Handoff
 
 **Last updated:** 2026-10-16 (UTC)  
-**Current branch:** `main`  
-**Current phase:** Phase 1 — define the VSE hackathon experience (in progress)  
-**Product code status:** one standalone orbit visualization experiment exists and its bounded Node 22 regression suite passed; the intended question-first VSE user experience has not yet been built
-**Next action:** define the first hackathon slice around VSE's question → in-app explanation → interactive visual → deeper understanding journey; keep event eligibility unresolved until the exact official event is identified.
+**Base branch audited:** `main` at `88fd17700c44a175ee3fa010f0486aeae4e059b8`  
+**Documentation review branch:** `docs/research-readiness-2026-10-16`  
+**Current phase:** Research readiness — compare first-experience candidates and inspect supporting evidence (in progress)  
+**Product code status:** one standalone orbit visualization experiment exists; the intended question-first VSE user experience has not yet been built
+**Next action:** compare the question-to-visual explainer, SPHEREx explorer, Earth/environment explorer, and ML-dataset route; inspect evidence and a small real data sample where applicable. Keep implementation on HOLD until `docs/BUILD_READINESS.md` is satisfied and the project owner receives the readiness recommendation. The exact hackathon identity remains unresolved.
 
 > This is the durable checkpoint. Every agent must read it first after AGENTS.md and must update it after meaningful work. Do not assume work exists unless the current repository confirms it.
 
@@ -44,6 +45,11 @@ The GitHub repository was empty when connected. The following documentation now 
 - `docs/CONTENT_SCHEMA.md`
 - `docs/QUALITY_AND_PROVENANCE.md`
 - `docs/AGENT_WORKFLOW.md`
+- `docs/PROJECT_AUDIT.md` — current remote-tree, CI and repository-readiness audit
+- `docs/BUILD_READINESS.md` — current no-build gate and required evidence
+- `docs/DATA_AND_RESEARCH_PIPELINE.md` — source-to-learning packet process
+- `docs/research/DATASET_AND_API_REGISTER.md` — current service candidates and sample-inspection gaps
+- `docs/research/RESEARCH_BATCH_PLAN.md` — staged research plan before owner sign-off
 - `docs/research/SOURCE_CATALOG.md`
 - `docs/research/SCIENCE_DOMAIN_MAP.md`
 - `docs/research/RESOURCE_REVIEW_TEMPLATE.md`
@@ -51,7 +57,7 @@ The GitHub repository was empty when connected. The following documentation now 
 - `docs/research/RESEARCH_BACKLOG.md`
 - `docs/research/RESEARCH_LOG.md`
 
-Root index.html is a standalone satellite-orbit visualization experiment with a local calculation, controls, limitations and a knowledge check. Its regression suite passed under Node.js 22 in GitHub Actions. It is not the intended question-first VSE app: no question interpreter, LLM explanation/retrieval layer, structured visual-plan renderer, or complete in-app evidence workflow exists yet. The orbit module currently contains outbound source links; the self-contained user-journey requirement is recorded and should be applied when shaping the VSE-facing experience.
+Root index.html is a standalone satellite-orbit visualization experiment with a local calculation, controls, limitations and a knowledge check. Its regression suite passed under Node.js 22 in GitHub Actions. It is not the intended question-first VSE app: no question interpreter, LLM explanation/retrieval layer, structured visual-plan renderer, or complete in-app evidence workflow exists yet. The orbit module currently displays source identities/descriptions in-page and has no outbound HTTP(S) source anchors in the audited `index.html`; canonical URLs remain in research records. PR #2 adds a regression assertion for this requirement, but that PR's test currently fails to parse because of an invalid regular expression.
 
 ## 4. Work completed in this pass
 
@@ -118,20 +124,22 @@ Read [SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md), [SCIENCE_DOMAIN_MAP.m
 
 ## 7. Ordered next actions
 
-### Next action A — define the first hackathon VSE experience
-1. Start from PRODUCT_CONCEPT.md, not from the orbit demo. Define one question-first experience that demonstrates explanation plus meaningful visual interaction plus a deeper level and in-app evidence.
-2. Keep “How does an AI language model generate an answer?” as the leading candidate, not an irreversible product choice. A simple built-in orbit example may remain a second example only if it helps demonstrate cross-topic range.
-3. Decide the smallest supported question set and a graceful fallback for unsupported questions or missing evidence. Do not promise that every global question will work perfectly from day one.
-4. Record the scope and learner-success test in HACKATHON_SLICE_BRIEF.md before choosing technology; this brief is now present as a candidate, but remains unconfirmed pending event research.
+Follow `docs/research/RESEARCH_BATCH_PLAN.md` in order. Do not skip ahead to implementation.
 
-### Next action B — resolve event constraints without guessing
-Searches did not identify a definitive official page for “World Dot Name weekend hackathon.” If the owner supplies the exact event URL/name, inspect the official deadline/time zone, eligibility, theme, prior-code policy, allowed AI/services, team rules, submission and judging requirements. Until then, plan a reusable VSE prototype but do not claim event eligibility.
+### Next action A — compare candidate experiences
+Compare the question-to-visual explainer, SPHEREx sky-data explorer, Earth/environment investigation, and ML-dataset/benchmark investigation. Use the evidence-backed rubric in `docs/BUILD_READINESS.md`; leave scores blank until the relevant evidence is reviewed. Record why VSE adds learning value beyond an existing search or archive interface. Do not treat the LLM question as a final decision yet.
 
-### Next action C — design the in-app evidence/visual pipeline
-Specify how the question is matched to built-in concept packets, how permitted external research/model services might supply missing evidence behind the scenes, how results become a validated structured explanation/visual plan, and how sources, claim support and limitations are shown within VSE. Do not run arbitrary LLM-generated browser code.
+### Next action B — inspect evidence and a real sample
+For data-driven options, inspect one small actual data/API sample or cutout and record its exact product/release, schema, units, missingness/quality fields, geographic/time scope, size, access path, quotas, and item-specific rights. For concept-explainer options, write a bounded claim/source map from authoritative references and explicitly label analogy limits. Update `docs/research/DATASET_AND_API_REGISTER.md`, `RESEARCH_COVERAGE.md`, and `RESEARCH_LOG.md`.
 
-### Next action D — continue targeted research
-Research the actual chosen flagship question and selected visual technique. Continue the broader scientific/source inventory in bounded batches, but do not let completing every field become a prerequisite for a demonstrable product. Do not add authentication or monetization.
+### Next action C — prepare one publishable research packet
+Use `docs/CONTENT_SCHEMA.md` and `docs/DATA_AND_RESEARCH_PIPELINE.md` to record the learner outcome, progressive explanation, claims/evidence, visual concept, controlled inputs, assumptions, validation cases, failure behavior, access/privacy/cost, and accessibility. Research broadly enough to select; do not attempt an exhaustive global science index.
+
+### Next action D — complete the build gate and notify the owner
+Resolve applicable gates in `docs/BUILD_READINESS.md`. Also track the unrelated PR #2 regex-test failure in `docs/PROJECT_AUDIT.md`; do not silently merge it or assume the preview failure is diagnosed. When the evidence packet is ready, present the smallest recommended first build, reasons, costs, risks and remaining unknowns. **Stop and notify the project owner. Do not begin frontend/backend/database/API work automatically after preparing the recommendation.**
+
+### Event research
+The exact “World Dot Name weekend hackathon” page has not been identified confidently. If a link becomes available, check official deadline/time zone, eligibility, theme, judging, prior-code policy, AI/API rules, deployment and submission requirements. Do not borrow terms from unrelated events.
 
 ## 8. Definition of done for the current phase
 
@@ -143,6 +151,16 @@ Research the actual chosen flagship question and selected visual technique. Cont
 - [ ] First VSE-facing hackathon slice selected and scoped.
 - [ ] In-app source/evidence UX and structured visual-rendering contract defined for that slice.
 - [ ] First question-to-visual-understanding experience built and tested with a real beginner.
+
+### Repository readiness and no-build gate (2026-10-16)
+
+- Audited the remote `main` tree at `88fd17700c44a175ee3fa010f0486aeae4e059b8`; 29 tracked paths were returned and the recursive tree was not truncated.
+- Opened a separate documentation branch, `docs/research-readiness-2026-10-16`, to avoid changing `main` or the unrelated open PR #2.
+- Added `docs/PROJECT_AUDIT.md`, `docs/BUILD_READINESS.md`, `docs/DATA_AND_RESEARCH_PIPELINE.md`, `docs/research/DATASET_AND_API_REGISTER.md`, and `docs/research/RESEARCH_BATCH_PLAN.md`.
+- Reviewed official data/API documentation for SPHEREx/IRSA, NASA Earthdata CMR, USGS water data, NOAA NCEI, Copernicus Data Space, World Bank Indicators, Crossref, OpenAlex and dataset-card practices. These are service-documentation checks; no representative source/data sample has yet been inspected end-to-end for the selected VSE experience.
+- No `LICENSE` file appears in the audited main tree. Do not infer reuse rights from public visibility or automatically choose a license without the owner's decision.
+- PR #2's new regex assertion causes the test file to fail to parse in CI with “Invalid regular expression flags”. No runtime or test code was changed in this documentation pass. A separate Cloudflare preview failure was noted but its logs were not inspected.
+- Current decision remains HOLD: no selected product route, no full data/claim packet, and no owner-facing readiness sign-off yet. See `docs/BUILD_READINESS.md`.
 
 ## 9. Last verified session summary
 
