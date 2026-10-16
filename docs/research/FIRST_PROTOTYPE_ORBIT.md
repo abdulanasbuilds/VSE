@@ -48,7 +48,7 @@ Evaluation should be lightweight and honest: ask the learner the same concept qu
 
 4. **PhET — Licensing Information**: https://phet.colorado.edu/en/licensing  
 5. **NASA GSFC archive — Kepler's Third Law / orbital velocity**: https://pwg.gsfc.nasa.gov/stargaze/Skepl3rd.htm
-   The page derives circular-orbit velocity and escape velocity, including the √2 relationship. It explicitly warns that the material is archival and no longer updated (last updated 2008). It is supporting educational material, not current independent model validation.
+   The page derives circular-orbit velocity and escape velocity, including the √2 relationship. It explicitly warns that the material is archival and no longer updated (last updated 2008). The Earth-radius values differ in adjacent text (6,317,000 vs 6,371,000 m), so VSE uses only the symbolic relationship and does not reuse its numerical example. This is supporting educational material, not current independent model validation.
    Reviewed as a rights warning, not as a simulation to embed. Regular HTML simulation files are described as CC BY-NC 4.0; PhET separately addresses commercial use and brand/logo requirements. VSE should not reuse its simulation code/assets for this prototype.
 
 ## Visual model specification
