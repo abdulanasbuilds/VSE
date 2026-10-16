@@ -1,0 +1,31 @@
+name: Orbit model regression tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "tests/orbit-model.test.mjs"
+      - ".github/workflows/orbit-model-tests.yml"
+  pull_request:
+    paths:
+      - "index.html"
+      - "tests/orbit-model.test.mjs"
+      - ".github/workflows/orbit-model-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  orbit-model:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run dependency-free regression tests
+        run: node tests/orbit-model.test.mjs
