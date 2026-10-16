@@ -35,6 +35,7 @@ The GitHub repository was empty when connected. The following documentation now 
 - `AGENTS.md`
 - `SPEC.md`
 - `PRODUCT_CONCEPT.md` — canonical product direction
+- `HACKATHON_SLICE_BRIEF.md` — provisional first hackathon experience
 - `STATE.md` — this file
 - `ROADMAP.md`
 - `CONTRIBUTING.md`
@@ -87,13 +88,13 @@ Each source row includes a status and next research action. The catalogue is not
 
 Details and task list: [OpenAI mathematics release audit](docs/research/OPENAI_MATH_RELEASE.md).
 
-### First demonstrable prototype added (2026-10-16)
-- Selected orbital motion as a provisional first topic because official NASA learning resources directly support the core conceptual explanation and the model is small enough to test. VSE remains a multi-science product direction.
-- Added docs/research/FIRST_PROTOTYPE_ORBIT.md with the learner outcome, candidate comparison, claim map, cited official sources, physics assumptions, limitations, and test plan.
-- Checked NASA Science “Gravity & Mechanics,” NASA “What Is an Orbit?,” NASA JPL Education “Modeling the Orbits of Planets,” and PhET licensing information on 2026-10-16. No third-party simulation code or imagery was copied.
-- Added index.html, a single-file frontend. It uses a dimensionless Newtonian two-body calculation in the browser; no database, backend, API key, or model API is needed for this narrow interaction.
-- The exact hackathon identity/rules remain unresolved. Do not claim the prototype is eligible or submit previously created code before the rules are checked.
-- The visual model and UI still need runtime testing, numerical reference-case tests, responsive/accessibility checks, and a novice learning test. No independent reviewer has reviewed the model.
+### Orbit engineering experiment and product-direction correction (2026-10-16)
+- Built a self-contained orbit page as one possible interactive science module, and its bounded Node.js 22 regression suite passed in GitHub Actions. It is not the overall VSE product or the chosen hackathon entry.
+- Added PRODUCT_CONCEPT.md as the canonical explanation of VSE, HACKATHON_SLICE_BRIEF.md as a provisional first-question proposal, and rewrote SPEC.md, ROADMAP.md and ARCHITECTURE.md accordingly.
+- The leading question candidate is “How does an AI language model generate an answer?” because it expresses the intended question-first, step-by-step, interactive, deeper-learning flow. It is still a candidate, not an irreversible decision.
+- The orbit page's external source links were removed. Source identities are displayed inside its lesson while canonical URLs and rights notes remain in internal research documents. Apply this in-app-only journey to the VSE-facing experience.
+- The exact hackathon identity/rules remain unresolved; no eligibility or allowance for pre-existing code is claimed.
+- No VSE-wide question input, live AI/retrieval pipeline, constrained visual-plan renderer, deployment, or beginner study exists yet. No independent physics reviewer has reviewed the orbit model.
 
 ## 5. Research source status
 
@@ -111,7 +112,7 @@ Read [SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md), [SCIENCE_DOMAIN_MAP.m
 1. Hackathon identity: searches for “World Dot Name weekend hackathon” and close variants did not identify a matching official event page. Deadline/time zone, eligibility, theme, judging criteria, allowed prior work, AI requirements, submission format, and deployment requirements remain unverified. Do not substitute unrelated events.
 2. First VSE-facing hackathon slice: not selected yet. “How does an AI language model generate an answer?” is a strong candidate because it aligns with the owner's interest in AI and can demonstrate a step-based, interactive visual explanation, but it should remain a candidate until the event constraints are known.
 3. Product experience not yet built: the current index.html is an orbit experiment, not a general question-first product. There is no end-to-end flow that takes a natural-language question, retrieves evidence, constructs a progressive explanation and safe visual plan, and presents it all in-app.
-4. Self-contained UI: the existing orbit experiment still has outbound source links. For the actual product, source metadata/provenance must remain visible in VSE, but learners should not be sent to other sites to receive the explanation. This should be applied when building the VSE-facing interface; retain source URLs in the internal research/provenance records.
+4. Self-contained UI: the orbit experiment's outbound source links have been removed; source identities/descriptions are shown in-page, while canonical URLs stay in internal research records. The VSE-facing experience should keep the explanation, visual interaction, deeper material and evidence inside the app.
 5. Orbit model status: bounded model/control checks passed in a stub-DOM V8 harness, and GitHub Actions run #38836368258 passed the Node.js 22 regression suite in PR #1, merged as bead3c078e5651f64f3407618584e44a438fb698. This is not independent physics review or real-browser testing.
 6. Scientific research remains partial: the OpenAI mathematics family map has not been indexed end-to-end; the overview PDF was not reviewed page-by-page; no full Lean build or independent proof review was performed; most other scientific APIs/resources still require bounded source/rights checks.
 
@@ -121,7 +122,7 @@ Read [SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md), [SCIENCE_DOMAIN_MAP.m
 1. Start from PRODUCT_CONCEPT.md, not from the orbit demo. Define one question-first experience that demonstrates explanation plus meaningful visual interaction plus a deeper level and in-app evidence.
 2. Keep “How does an AI language model generate an answer?” as the leading candidate, not an irreversible product choice. A simple built-in orbit example may remain a second example only if it helps demonstrate cross-topic range.
 3. Decide the smallest supported question set and a graceful fallback for unsupported questions or missing evidence. Do not promise that every global question will work perfectly from day one.
-4. Record the exact scope and learner success test in a dedicated hackathon-slice brief before choosing technology.
+4. Record the scope and learner-success test in HACKATHON_SLICE_BRIEF.md before choosing technology; this brief is now present as a candidate, but remains unconfirmed pending event research.
 
 ### Next action B — resolve event constraints without guessing
 Searches did not identify a definitive official page for “World Dot Name weekend hackathon.” If the owner supplies the exact event URL/name, inspect the official deadline/time zone, eligibility, theme, prior-code policy, allowed AI/services, team rules, submission and judging requirements. Until then, plan a reusable VSE prototype but do not claim event eligibility.
