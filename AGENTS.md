@@ -14,13 +14,13 @@ If STATE.md is missing or contradicts the actual repository, inspect the actual 
 
 ## Scope discipline
 
-- VSE means Visual Science Explorer: a question-first, AI-assisted visual learning engine that turns questions about scientific/technical concepts into progressive explanations, meaningful interactive visuals, deeper understanding, and in-app evidence.
+- VSE means Visual Science Explorer: a question-first learning environment guided by “make knowledge visible, in the world.” It should explain how and why concepts, processes, systems, and everyday objects work across mathematics, physics, AI, technology, nature, engineering, and other knowledge domains where trustworthy coverage is possible. Its experience combines progressive explanations, meaningful visuals, hands-on exploration or practice where appropriate, deeper understanding, in-app evidence, and pathways to connected ideas.
 - Read PRODUCT_CONCEPT.md as the canonical product thesis. Do not mistake index.html or the orbit module for the full product; it is an engineering experiment and reusable example only.
 - Do not send users out to external pages to receive the explanation. Keep source/provenance metadata and evidence visible inside VSE; external research/API calls may happen behind the scenes when permitted.
-- The immediate goal is a small, trustworthy prototype, not a complete encyclopaedia or autonomous research platform.
+- The long-term ambition is broad, cross-domain understanding supported by internal learning resources and connected concepts; the first prototype must still be small, trustworthy, and testable. Do not mistake a bounded first slice for the whole vision or try to ingest everything at once.
 - No authentication, authorization, accounts, payments, subscriptions, advertising, or monetization in the current phase.
 - Do not assume or install a framework, database, hosting provider, vector database, or paid API before the smallest product requirement justifies it.
-- Prefer reliable curated records and hand-built interactive models over a large unreviewed scraping pipeline.
+- Prefer reliable curated records, original explanations, and validated interactive models over a large unreviewed scraping pipeline. Add guided practice or a safe virtual experiment when it materially improves learning.
 - Do not copy entire books, papers, research repositories, visual assets, or websites into VSE. Record source links, metadata, lawful short summaries, citations, and only materials whose reuse terms have been checked.
 - If the task is broader than the current milestone, document it in the backlog rather than expanding the implementation automatically.
 
