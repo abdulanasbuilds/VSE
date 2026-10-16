@@ -11,6 +11,9 @@ This is the explicit record of what VSE has not yet found, checked, or decided. 
 - [ ] **P0-05: Choose only the stack required for the scoped experience.** Decide whether built-in content alone suffices or whether secure server-side model/retrieval calls are needed; consider available credits, cost, rate limits, deployment rules, and secrets before choosing a provider/backend/database.
 - [x] **P0-06: Establish a reproducible test for the orbit engineering experiment.** tests/orbit-model.test.mjs passed under Node.js 22 in GitHub Actions run #38836368258 on PR #1, which was merged. This is a test of one example module, not the overall VSE product.
 - [ ] **P0-07: Build and evaluate the first complete VSE learning loop.** No question-first application flow, retrieval/explanation orchestrator, constrained visual renderer, or learner study exists yet. Acceptance criteria should be recorded in the hackathon slice brief before implementation.
+- [ ] **P0-08: Compare the first-experience routes before selecting one.** Compare the question-to-visual explainer, SPHEREx data explorer, Earth/environment investigation, and ML-dataset/benchmark route. Apply the evidence-backed rubric in `docs/BUILD_READINESS.md`; do not score a route on aesthetic appeal alone.
+- [ ] **P0-09: Inspect a representative source/data sample for the leading route.** Record exact source/product version, schema, units, data scope, transformations, access requirements, quotas, rights and validation method. The current dataset/API register documents service pages only; no selected data integration is ready.
+- [ ] **P0-10: Resolve the open PR #2 regression-test parse failure.** The new regular expression in `tests/orbit-model.test.mjs` fails to parse in CI with “Invalid regular expression flags.” Fix and test it in a separate code-focused change; do not merge the PR until the workflow succeeds. The research-readiness branch does not change runtime/test code.
 
 
 
