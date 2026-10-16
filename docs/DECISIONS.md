@@ -63,7 +63,7 @@ A diagram is not decoration. Every visual should express the concept's relations
 
 ### D-015 — Research and owner sign-off precede implementation (2026-10-16)
 
-Before frontend, backend, database, external API, model integration/training, data-ingestion pipeline, or production architecture work begins, agents must complete the applicable requirements in `docs/BUILD_READINESS.md` and follow `docs/research/RESEARCH_BATCH_PLAN.md`. While the readiness status is HOLD, only bounded research, documentation, data/source inspection, evidence mapping, and test planning are authorized. The first product route and tech stack remain open until supporting evidence exists. Once the required packet is ready, report the recommendation to the project owner and stop; a READY status does not grant agents permission to start implementation automatically.
+Before frontend, backend, database, external API, model integration/training, data-ingestion pipeline, or production architecture work begins, agents must complete the applicable requirements in `docs/BUILD_READINESS.md` and follow `docs/research/RESEARCH_BATCH_PLAN.md`. While the readiness status is HOLD, only bounded research, documentation, data/source inspection, evidence mapping, and test planning are authorized. The first bounded learning journey and tech stack remain open until supporting evidence exists. Once the required packet is ready, report the recommendation to the project owner and stop; a READY status does not grant agents permission to start implementation automatically.
 
 
 ### D-016 — VSE is the chosen project for the named weekend hackathon (2026-10-16)
