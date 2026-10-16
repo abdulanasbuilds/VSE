@@ -5,7 +5,7 @@ These instructions apply to every AI coding agent, research agent, and human con
 ## First action on every session
 
 1. Inspect the working tree and current branch before making changes.
-2. Read README.md, AGENTS.md, STATE.md, SPEC.md, and ROADMAP.md.
+2. Read README.md, AGENTS.md, STATE.md, PRODUCT_CONCEPT.md, SPEC.md, and ROADMAP.md.
 3. Read only the relevant supporting documents next, including the source catalogue and research backlog for research tasks.
 4. Identify the current milestone and the single next action already recorded in STATE.md.
 5. Continue from that checkpoint. Do not restart, re-scaffold, or replace the project merely because a new session started.
@@ -14,7 +14,9 @@ If STATE.md is missing or contradicts the actual repository, inspect the actual 
 
 ## Scope discipline
 
-- VSE means Visual Science Explorer: an evidence-led way to understand how the world works through explanations, sources, diagrams, and interactive visual models.
+- VSE means Visual Science Explorer: a question-first, AI-assisted visual learning engine that turns questions about scientific/technical concepts into progressive explanations, meaningful interactive visuals, deeper understanding, and in-app evidence.
+- Read PRODUCT_CONCEPT.md as the canonical product thesis. Do not mistake index.html or the orbit module for the full product; it is an engineering experiment and reusable example only.
+- Do not send users out to external pages to receive the explanation. Keep source/provenance metadata and evidence visible inside VSE; external research/API calls may happen behind the scenes when permitted.
 - The immediate goal is a small, trustworthy prototype, not a complete encyclopaedia or autonomous research platform.
 - No authentication, authorization, accounts, payments, subscriptions, advertising, or monetization in the current phase.
 - Do not assume or install a framework, database, hosting provider, vector database, or paid API before the smallest product requirement justifies it.
@@ -31,7 +33,7 @@ If STATE.md is missing or contradicts the actual repository, inspect the actual 
 - Log the source URL, source type, date checked, what was checked, and what remains uncertain.
 - A listed source is not reviewed source material. Use explicit statuses: verified, partially verified, candidate, blocked, or not started.
 - For scientific findings, record the original claim and the verification path. For mathematics, distinguish paper proof, proof formalization, successful kernel checking, correct formal statement, and independent expert assessment.
-- Respect the source's license, attribution, terms, and third-party rights. If reuse permission is unclear, link to the source instead of copying or embedding it.
+- Respect the source's license, attribution, terms, and third-party rights. If in-app reproduction is not permitted, use an original summary and retain source metadata internally; do not copy whole content. This internal research discipline does not mean the user-facing experience should redirect externally.
 
 ## Implementation discipline
 
@@ -60,7 +62,7 @@ When the user says “continue”, resume from STATE.md and the latest committed
 
 ## Mandatory research and verification rules
 
-- Read `STATE.md`, `ROADMAP.md`, `docs/research/RESEARCH_COVERAGE.md`, `docs/research/SOURCE_CATALOG.md`, and the specific audit/backlog before doing work.
+- Read `STATE.md`, `PRODUCT_CONCEPT.md`, `ROADMAP.md`, `docs/research/RESEARCH_COVERAGE.md`, `docs/research/SOURCE_CATALOG.md`, and the specific audit/backlog before doing work.
 - Search the repository for existing notes before repeating research. Continue from the latest recorded state; don't restart, broaden scope, or build a giant product just because the task is open-ended.
 - Every source and claim must have a status. Use the status vocabulary in `RESEARCH_COVERAGE.md`; distinguish “page opened” from “claim checked”, “model tested”, and “independently reviewed”.
 - Record useful negative results: source not found, inaccessible page, failed API call, unavailable PDF, missing proof, uncertain licence, contradiction, or unresolved question. Include the search performed and the next best action so the next agent can continue.
