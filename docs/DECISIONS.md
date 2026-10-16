@@ -64,3 +64,8 @@ A diagram is not decoration. Every visual should express the concept's relations
 ### D-015 — Research and owner sign-off precede implementation (2026-10-16)
 
 Before frontend, backend, database, external API, model integration/training, data-ingestion pipeline, or production architecture work begins, agents must complete the applicable requirements in `docs/BUILD_READINESS.md` and follow `docs/research/RESEARCH_BATCH_PLAN.md`. While the readiness status is HOLD, only bounded research, documentation, data/source inspection, evidence mapping, and test planning are authorized. The first product route and tech stack remain open until supporting evidence exists. Once the required packet is ready, report the recommendation to the project owner and stop; a READY status does not grant agents permission to start implementation automatically.
+
+
+### D-016 — VSE is the chosen project for the named weekend hackathon (2026-10-16)
+
+The project owner has reaffirmed VSE as the project to pursue for the event they call the “World Dot Name weekend hackathon”. The exact official event page/name and its rules remain unverified, so no eligibility or submission claim may be made until those details are checked. This does not make the broad, universal topic coverage a first-demo requirement: select one small, evidence-backed question-to-visual learning journey, make it work well, and keep expanding VSE if the event submission does not win or the event passes. Do not pivot to a separate environmental dashboard or ML benchmark product as part of the current project.
