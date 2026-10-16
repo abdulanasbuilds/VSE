@@ -1,6 +1,6 @@
 # Provisional Architecture
 
-Status: conceptual only. This document does not authorize installing a stack or building all components. Pick technologies after the first concept and hackathon constraints are known.
+Status: future architecture remains conceptual. The first orbital-motion vertical slice now uses a single static `index.html` with inline CSS and JavaScript. That choice is limited to this prototype and does not lock a long-term framework. The unidentified hackathon's rules remain unverified.
 
 ## Main conceptual parts
 
@@ -64,11 +64,13 @@ A topic can link to multiple claims, sources, explanations, visualizations, and 
 
 ## Technology decision gate
 
-Do not lock a framework or deploy service until:
-1. the first concept and visualization are defined;
-2. the hackathon submission requirements are checked;
+For any expansion beyond the current prototype, do not lock a framework or deploy service until:
+1. the next concept and visualization are defined;
+2. event-specific submission rules are known before an event submission is made;
 3. the smallest implementation path is compared against available skills, devices, cost, and time;
 4. the need for client-side computation, backend search, model access, or data storage is explicit.
+
+The current orbital slice is intentionally exempt from a multi-layer stack: one static page and an in-browser physics calculation are enough.
 
 ## Initial deployment assumption
 
