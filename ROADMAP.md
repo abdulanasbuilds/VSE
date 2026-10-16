@@ -25,13 +25,13 @@ Status: foundation docs are complete except for the unresolved official event id
 
 ## Phase 2 — Smallest demonstrable experience
 
-Status: in progress. Root index.html is the first static frontend slice; testing and user validation are not complete.
+Status: in progress. Root index.html is the first static frontend slice. The bounded Node regression suite passed in GitHub Actions; real-browser, accessibility, independent scientific, and learner validation remain open.
 
 - Implement one question/concept entry path.
 - Present progressive explanations.
-- [x] Build an original, in-browser orbital-motion visualization; simulation verification remains pending.
+- [x] Build an original orbital-motion visualization. The bounded trajectory/control cases pass; independent scientific review remains pending.
 - [x] Display source links, model limitations, and assumptions; keep model-test status honest and make verification status visible.
-- [ ] Test mobile usability, accessibility basics, numerical accuracy, and the intended learner outcome.
+- [x] Add dependency-free Node regression tests and run them in GitHub Actions (run #38836368258, successful; PR #1 merged).\n- [ ] Test real-browser mobile usability, accessibility basics, additional numerical accuracy, and the intended learner outcome.
 - Exit gate: model tests pass, accessibility/mobile checks are documented, and a real novice can explain the core idea better after use. No evidence for this gate has been collected yet.
 
 ## Phase 3 — Small controlled content expansion
