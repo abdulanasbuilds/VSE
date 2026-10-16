@@ -95,10 +95,11 @@ assert.match(ids["quiz-feedback"].textContent, /Not quite/, "incorrect quiz choi
 
 const reduced = createHarness(true);
 const startX = reduced.ids["satellite-dot"].attrs.cx;
+const startY = reduced.ids["satellite-dot"].attrs.cy;
 reduced.ids.play.listeners.click();
 const movedX = reduced.ids["satellite-dot"].attrs.cx;
 const movedY = reduced.ids["satellite-dot"].attrs.cy;
-assert.ok(startX !== movedX || reduced.ids["satellite-dot"].attrs.cy !== movedY, "reduced-motion control should permit a user-requested step");
+assert.ok(startX !== movedX || startY !== movedY, "reduced-motion control should permit a user-requested step");
 
 console.log("PASS: inline script parses and initializes");
 console.log("PASS: circular orbit radius remains stable within tolerance");
