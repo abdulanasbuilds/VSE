@@ -148,3 +148,23 @@ The current stage is **research and content compilation only**. The GitHub repos
 >
 > Start with one bounded research batch selected from the current backlog. Inspect real source context, not snippets alone, and inspect actual data/API samples where applicable. Produce a complete research packet using Section 9 of the brief. Create original learning content, a claim-source matrix, source/data/license records, a concept relationship map, a concept-appropriate visual contract, practice/validation plan, and explicit gaps. Keep all evidence statuses honest. Propose changes on a separate branch or as a patch for review, update the research log/coverage/backlog/state, and stop with a concise evidence-based recommendation. Do not state that VSE covers all knowledge; prioritize the next verifiable batch.
 
+## 12. First research batch: compile before building
+
+The first batch should not attempt to catalogue the whole universe. Select a small, connected cluster that proves the full VSE learning method. Compare candidate clusters against these criteria: clear mechanism, visual/interactivity potential, quality of inspectable sources, ability to validate, beginner accessibility, meaningful next concepts, manageable rights/safety constraints, and usefulness as a reusable pattern for later topics.
+
+For the chosen cluster, compile the complete evidence-backed learning packet and its concept relationships before any frontend/backend/database/API/model work. The packet should be detailed enough that a later implementation agent can build from stable requirements rather than making up the science, lesson flow, visualization, or evidence during coding. It should specify:
+- the questions in scope and examples explicitly out of scope;
+- what a beginner should understand and how success can be tested;
+- original explanations at intuitive, intermediate, and deeper levels;
+- mechanism steps and any required prerequisites;
+- the chosen visual representation and why it suits the concept;
+- equations/rules and units where relevant, plus assumptions and edge cases;
+- interactive controls and their pedagogical purpose, if any;
+- expected outputs and validation cases;
+- claim-level evidence and source/data reuse permissions;
+- misconception handling, safety and accessibility requirements;
+- related concepts with a reasoned relationship for each;
+- known gaps and what VSE should say when asked beyond the packet.
+
+Do not mark the batch complete because several agents returned long reports. It is complete only when the evidence, original learning content, visual contract, validation plan, rights review, and relationship map are all present and reviewed.
+
