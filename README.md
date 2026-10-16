@@ -61,7 +61,7 @@ The first orbit prototype has dependency-free checks for path outcomes, approxim
 node tests/orbit-model.test.mjs
 ```
 
-GitHub Actions is configured to run these checks on relevant pushes and pull requests. The last documented V8 harness results are bounded checks, not a real-browser test or independent physics review; do not claim those broader checks passed unless they are run.
+GitHub Actions run #38836368258 passed the Node.js 22 regression suite on PR #1, which was merged into `main`. These checks exercise the JavaScript and a stub DOM; they are not a real-browser test or independent physics review.
 
 ## How research status works
 
