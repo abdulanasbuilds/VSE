@@ -4,7 +4,8 @@ This is the explicit record of what VSE has not yet found, checked, or decided. 
 
 ## P0 — Immediate foundation tasks
 
-- [ ] **P0-06: Run reproducible prototype regression tests and browser checks.** Run `tests/orbit-model.test.mjs` from a local checkout; compare circular speed, impact, escape, finite values, and clipping with documented expectations. Then check the page in a real browser at mobile and desktop widths, including keyboard navigation and reduced-motion behavior. A V8 stub-DOM harness passed representative cases, but that is not a browser test or independent scientific validation.
+- [x] **P0-06: Add and execute the reproducible regression test suite.** `tests/orbit-model.test.mjs` checks path outcomes and control behavior without third-party dependencies. GitHub Actions run #38836368258 passed on PR #1 under Node.js 22; PR #1 was merged. This confirms the script assertions, not independent scientific validation.
+- [ ] **P0-07: Complete real-browser and accessibility checks.** Test `index.html` at mobile and desktop widths; check layout/overflow, keyboard behavior, range slider labels, visible focus, reduced motion, screen-reader announcements, and status/quiz feedback. Record browser, viewport, and findings. The current test suite uses a stub DOM and is not a browser test.
 
 - [ ] **P0-01: Confirm hackathon rules.** Find the official event page, exact deadline and time zone, project eligibility, judging criteria, required AI/tools, deployment rules, use of existing work, demo expectations, and submission format. Record source URLs. Do not design around an unverified event name or rule.
 - [ ] **P0-02: Validate this source inventory.** Open the official source and documentation links that are still marked CANDIDATE. Record any dead link, redirect, changed API, licence, or access restriction.
