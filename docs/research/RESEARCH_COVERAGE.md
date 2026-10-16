@@ -39,6 +39,10 @@ Do not upgrade a status because a page loaded, an LLM agreed, a diagram looks pl
 | DATA-002 | World Bank / WHO / UNESCO / OECD / UN data | Official social, economic, health, and education data | CANDIDATE | Dataset-level source/definition, country comparability, update frequency, rights and uncertainty |
 | EARTH-001 | NASA Earthdata / NOAA / USGS / Copernicus | Earth observation, climate, weather, geology and hazards | CANDIDATE | Dataset-specific resolution, time range, processing, licence, observation-vs-model distinction |
 | SCHOLAR-001 | arXiv / Crossref / OpenAlex / PubMed | Scholarly discovery and metadata | CANDIDATE | APIs, rate limits, DOI/version relationships, retractions, publication status, abstracts licensing |
+| ORB-001 | NASA Science — Gravity & Mechanics | Conceptual mechanics of orbital motion and the limits of Newton's cannonball analogy | PARTIALLY CHECKED | Relevant sections opened 2026-10-16; quantitative claims and VSE simulation implementation still need technical checks |
+| ORB-002 | NASA — What Is an Orbit? (Grades 5–8) | Beginner explanation of gravity, sideways motion, and orbit | PARTIALLY CHECKED | Page opened 2026-10-16; don't treat an education page as independent review of the VSE model |
+| ORB-003 | NASA JPL Education — Modeling the Orbits of Planets | Learning objectives connecting gravitational interactions and motion | PARTIALLY CHECKED | Lesson page opened; original activity/media not copied |
+| ORB-004 | PhET licensing information | Rights constraints for possible future reuse of a simulation | PARTIALLY CHECKED | Current license page reviewed; no PhET assets or code used in VSE |
 | EVENT-001 | “World Dot Name weekend hackathon” | Event eligibility, timing, judging, deliverables and rules | BLOCKED / NOT IDENTIFIED | Exact official event page has not been confidently identified; don't invent rules or use an unrelated event. Search more, then request exact link only if still ambiguous |
 
 ## Research completeness rule
