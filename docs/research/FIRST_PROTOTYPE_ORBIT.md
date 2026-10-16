@@ -1,10 +1,10 @@
-# First Prototype Research Packet — Satellite Orbits
+# Engineering Experiment — Satellite-Orbit Module
 
 **Prepared:** 2026-10-16  
-**Status:** Provisional concept selected; bounded model/control checks and the dependency-free Node regression suite passed on 2026-10-16. Not an independent physics review or confirmed hackathon submission.
+**Status:** Bounded model/control checks and the dependency-free Node regression suite passed on 2026-10-16. This is one reusable visualization module, not VSE's overall product direction or the selected hackathon entry. It has not received independent physics review.
 **Concept question:** Why does a satellite stay in orbit instead of falling straight back to Earth?
 
-## Why this is the current best first slice
+## Why this was useful as an engineering experiment
 
 This concept is narrow enough to build and review, yet it demonstrates VSE's core promise: intuition, a meaningful interactive visual, a deeper equation, visible assumptions, and source links. Official NASA learning materials describe orbital motion in terms of inward gravitational acceleration and sideways motion. A custom, dimensionless model can demonstrate the relationship without calling a paid service or copying a third-party simulation.
 
@@ -14,9 +14,9 @@ The choice is provisional and reversible. It was chosen because of source qualit
 
 | Candidate | Evidence available | Visual potential | Implementation / evidence risk | Decision |
 |---|---|---|---|---|
-| Why satellites stay in orbit | NASA Science, NASA Space Place, NASA JPL education materials directly explain orbital motion | High: manipulate initial sideways speed and observe path | Manageable with a declared Newtonian two-body model; numerical model still requires testing | **Choose provisionally** |
+| Why satellites stay in orbit | NASA Science, NASA Space Place, NASA JPL education materials directly explain orbital motion | High: manipulate initial sideways speed and observe path | Manageable with a declared Newtonian two-body model; numerical model still requires testing | Engineering experiment only |
 | Explore SPHEREx sky observations | NASA mission and data pages are strong candidate sources | Very high: real observations, filters, comparison | Higher: mission data schema, retrieval, calibration and visualization design need dedicated investigation | Keep for a later data-explorer slice |
-| Explain a selected AI/LLM concept | Potentially strong papers and official technical reports | High for selected mechanisms | Risk of oversimplifying learned internal representations or implying diagrams are literal internal traces | Defer until one claim and primary-source set are selected |
+| Explain a selected AI/LLM concept | Potentially strong papers and official technical reports | High for selected mechanisms | Risk of oversimplifying learned internal representations or implying diagrams are literal internal traces | Leading candidate for the first VSE-facing hackathon slice; define the exact scope after event rules and source checks |
 
 This is not a complete comparison of VSE topics. It is a shortlist for the first demonstrable vertical slice.
 
@@ -61,9 +61,9 @@ Evaluation should be lightweight and honest: ask the learner the same concept qu
 - Bounded V8 harness checks passed on 2026-10-16 for seven speed settings: 0.70x and 0.84x were Impact (minimum displayed radius ~0.99810 and ~0.99971); 0.85x was Elliptical and cleared the modeled surface (minimum radius ~1.01797); 1.00x remained nearly circular (radius 1.79988–1.80012 around 1.8); 1.414x remained bound/elliptical; and 1.415x and 1.50x were Escape. All inspected trajectory coordinates were finite.
 - The dependency-free Node regression test is `tests/orbit-model.test.mjs`, with GitHub Actions workflow `.github/workflows/orbit-model-tests.yml`. GitHub Actions run #38836368258 (PR #1) completed successfully under Node.js 22, including the regression-test step. The PR was squash-merged into `main` as commit `bead3c078e5651f64f3407618584e44a438fb698`.
 - These harness checks do not validate real-browser behavior, arbitrary numerical cases, long-term integration error, or the underlying physics independently.
-- This does not validate real-browser behavior, all numerical cases, conservation error across arbitrary trajectories, or underlying physics independently. The committed Node regression script is `tests/orbit-model.test.mjs` and still needs to be run in a local checkout.
 
 ## Decisions and unresolved work
+- The orbit lesson now displays source identities and short descriptions inside the page without outbound source links. Canonical URLs and rights notes remain in this internal research packet and source catalogue.
 
 - Do not use a database, backend, model API, or third-party embed for the initial page. Static, version-controlled content plus in-browser calculation is enough.
 - The hackathon identity and terms remain unresolved. This prototype must not be represented as eligible for an unidentified event; check rules before submitting or assuming that pre-existing code is allowed.
