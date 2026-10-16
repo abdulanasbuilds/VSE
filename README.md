@@ -38,7 +38,7 @@ The repository includes durable research/agent documentation and a tested satell
 - docs/CONTENT_SCHEMA.md — format for lessons, claims, visualizations, source records, and review status.
 - docs/QUALITY_AND_PROVENANCE.md — verification, citation, uncertainty, and reuse rules.
 - docs/AGENT_WORKFLOW.md — how agents resume work safely and avoid scope drift.
-- docs/research/SOURCE_CATALOG.md — verified starting sources and additional candidates.
+- docs/research/SOURCE_CATALOG.md — source leads and candidates with explicit review statuses.
 - docs/research/OPENAI_MATH_RELEASE.md — specific research plan for OpenAI's mathematics release.
 - docs/research/RESEARCH_BACKLOG.md — known gaps and ordered investigation queue.
 - docs/research/RESEARCH_LOG.md — dated notes on work actually performed.
@@ -83,4 +83,4 @@ Research is intentionally incomplete until the records say otherwise. Use [the R
 
 ## Give any coding/research agent this prompt
 
-Read `AGENTS.md`, `STATE.md`, `PRODUCT_CONCEPT.md`, `HACKATHON_SLICE_BRIEF.md`, `ROADMAP.md`, and `docs/research/RESEARCH_COVERAGE.md` first. Treat the orbit page as an engineering experiment, not the product definition. Keep the explanation, interaction, depth, and evidence inside VSE. Continue VSE from its recorded state: do the next highest-priority unfinished task, research and verify from traceable sources, record what you checked and what you could not find, update the Markdown logs/state/backlog, and keep changes small. Never invent sources or claim verification you did not perform. Do not build a giant product, add authentication, or add monetization. Follow the current scope and leave an exact next step for the next agent.
+Read `AGENTS.md`, `STATE.md`, `PRODUCT_CONCEPT.md`, `HACKATHON_SLICE_BRIEF.md`, `ROADMAP.md`, `docs/BUILD_READINESS.md`, `docs/research/RESEARCH_BATCH_PLAN.md`, `docs/research/DATASET_AND_API_REGISTER.md`, and `docs/research/RESEARCH_COVERAGE.md` first. Treat the orbit page as an engineering experiment, not the product definition. Keep the explanation, interaction, depth, and evidence inside VSE. Continue from the recorded checkpoint, inspect traceable sources, and record what was and was not checked. If the build gate is HOLD, do not implement frontend/backend/database/API/model/data-pipeline work; proceed with bounded research and documentation only. Compare the candidate product routes rather than assuming the LLM explainer is final. Never invent sources or claim verification you did not perform. Keep changes small, maintain the research logs/state/backlog, and leave an exact next step for the next agent.
