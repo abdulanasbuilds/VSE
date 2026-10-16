@@ -1,7 +1,7 @@
 # First Prototype Research Packet — Satellite Orbits
 
 **Prepared:** 2026-10-16  
-**Status:** Provisional concept selected for a reusable prototype; not a confirmed hackathon submission.  
+**Status:** Provisional concept selected; initial model/control checks passed in a stub-DOM V8 harness on 2026-10-16. Not a confirmed hackathon submission or independent physics review.  
 **Concept question:** Why does a satellite stay in orbit instead of falling straight back to Earth?
 
 ## Why this is the current best first slice
@@ -28,17 +28,17 @@ Evaluation should be lightweight and honest: ask the learner the same concept qu
 
 ## Claim map
 
-| Claim ID | Intended statement | Primary support | Scope / caveat | VSE status |
+| Claim ID | Intended statement | Supporting source | Scope / caveat | VSE status |
 |---|---|---|---|---|
 | ORB-CL-001 | Gravity remains active during an orbit; orbital motion can be described as continuous falling around the planet. | NASA Science, “Gravity & Mechanics”; NASA “What Is an Orbit?” | Beginner explanation; real spacecraft may perform engine burns and are affected by perturbations. | CLAIM CHECKED against the cited NASA explanations; no independent scientific review |
 | ORB-CL-002 | Sideways motion plus inward gravitational acceleration can produce a closed orbit; changing speed changes the trajectory. | NASA Science, “Gravity & Mechanics”; NASA JPL “Modeling the Orbits of Planets” | A specific orbit depends on initial position and velocity as well as gravitational parameters. Too little speed from this chosen start can intersect the planet; escape requires meeting the energy/speed condition. | CLAIM CHECKED at the conceptual level; the VSE implementation has not had a scientific model review |
-| ORB-CL-003 | Circular-orbit speed in an ideal Newtonian two-body model is (v=\sqrt{\mu/r}\), with (\mu=GM\). | The equation follows from equating Newtonian gravitational acceleration (\mu/r^2\) to circular centripetal acceleration (v^2/r\); NASA's mechanics page supplies orbital-mechanics context. | Explicit idealized derivation; not a complete real mission model. Add a specialist source and test calculation cases before labeling the quantitative implementation verified. | Derivation documented; numerical implementation not yet tested against reference cases |
-| ORB-CL-004 | A satellite can escape rather than follow a closed orbit if its speed reaches the escape threshold at the chosen radius in the idealized two-body model. | NASA orbital-mechanics learning context; further primary/technical source audit recommended. | The threshold depends on the central body's gravitational parameter and starting radius. This UI uses dimensionless scaled values. | CLAIM CHECKED conceptually; formula and implementation require test cases |
+| ORB-CL-003 | Circular-orbit speed in an ideal Newtonian two-body model is (v=\sqrt{\mu/r}\), with (\mu=GM\). | The equation follows from equating Newtonian gravitational acceleration (\mu/r^2\) to circular centripetal acceleration (v^2/r\); NASA's mechanics page supplies orbital-mechanics context. | Explicit idealized derivation; not a complete real mission model. Add a specialist source and test calculation cases before labeling the quantitative implementation verified. | Equation derivation documented; basic trajectory behavior tested in a harness; numerical reference cases and independent review remain open |
+| ORB-CL-004 | A satellite can escape rather than follow a closed orbit if its speed reaches the escape threshold at the chosen radius in the idealized two-body model. | NASA orbital-mechanics learning context; further primary/technical source audit recommended. | The threshold depends on the central body's gravitational parameter and starting radius. This UI uses dimensionless scaled values. | Conceptual threshold is consistent with ideal two-body mechanics; one escape case tested; a technical source audit and independent review remain open |
 
 ## Sources reviewed on 2026-10-16
 
 1. **NASA Science — Chapter 3: Gravity & Mechanics**, especially “How Orbits Work” and “The Key to Space Flight”: https://science.nasa.gov/learn/basics-of-space-flight/chapter3-4/  
-   Primary institutional learning resource. The page explicitly marks its cannonball diagrams as simplifications, explains the no-atmosphere scope, and describes an orbit as falling around Earth. The specific lesson content was opened and read; no separate NASA-authored numerical dataset was used.
+   Official institutional learning resource. The page explicitly marks its cannonball diagrams as simplifications, explains the no-atmosphere scope, and describes an orbit as falling around Earth. The specific lesson content was opened and read; no separate NASA-authored numerical dataset was used.
 
 2. **NASA — What Is an Orbit? (Grades 5–8)**: https://www.nasa.gov/solar-system/what-is-an-orbit-grades-5-8/  
    Beginner-friendly account of straight-line motion without gravity, inward gravitational pull, sideways speed, and how too much or too little speed affects the path. Page opened; specific facts should still be paired with technical references before being used beyond the educational scope.
@@ -56,11 +56,12 @@ Evaluation should be lightweight and honest: ask the learner the same concept qu
 - Use normalized distance and time for the picture. State that its size and speed are not mission-grade measurements.
 - Let the user adjust initial tangential speed as a multiple of circular-orbit speed at the same starting radius.
 - Distinguish path outcome from scientific confidence. Include a fallback text explanation, keyboard-operable controls, reduced-motion handling, and a visible caveat list.
-- Tests must check at least circular-orbit stability, a deliberately low-speed impact, an escape-speed trajectory, finite numeric output, and reset/slider behaviour.
+- Basic harness checks passed: the 1.00x path stayed between radii 1.7998769 and 1.8001231 (starting radius 1.8); 0.70x reached radius about 0.9981 and was classified as impact; 1.50x reached radius about 4.0023 and was classified as escape. Coordinates were finite. Preset, reset, and knowledge-check feedback also passed in a stub-DOM harness.
+- This does not validate real-browser behavior, all numerical cases, conservation error across arbitrary trajectories, or underlying physics independently. The committed Node regression script is `tests/orbit-model.test.mjs` and still needs to be run in a local checkout.
 
 ## Decisions and unresolved work
 
 - Do not use a database, backend, model API, or third-party embed for the initial page. Static, version-controlled content plus in-browser calculation is enough.
 - The hackathon identity and terms remain unresolved. This prototype must not be represented as eligible for an unidentified event; check rules before submitting or assuming that pre-existing code is allowed.
 - No qualified external reviewer has reviewed the numerical model; no browser, screen-reader, real-device, or learner study has been completed yet.
-- Next action: test the numerical model and controls, review mobile/accessibility behaviour, then ask a beginner to try the explanation and record what they understood.
+- Next action: run `tests/orbit-model.test.mjs` in a local checkout, check real-browser/mobile/accessibility behavior, extend numerical reference tests, and then ask a beginner to try the explanation.
