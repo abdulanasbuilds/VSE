@@ -14,9 +14,11 @@ Status: complete except for the unresolved official event identity.
 
 Exit gate: a new agent understands the real product intent, current repository state, what is only an experiment, and the next unfinished task.
 
-## Phase 1 — Define the first hackathon slice
+## Phase 1 — Research and define the first VSE experience
 
-Status: in progress.
+Status: in progress. Product-route selection is unresolved; the LLM explainer remains a candidate, not a final choice.
+
+Before any implementation, complete the applicable checklist in [docs/BUILD_READINESS.md](docs/BUILD_READINESS.md) and the ordered research work in [docs/research/RESEARCH_BATCH_PLAN.md](docs/research/RESEARCH_BATCH_PLAN.md). The project owner explicitly asked for the source/data/requirements packet before frontend, backend, database, API, model, or pipeline work begins. While the gate is **HOLD**, this roadmap authorizes research and documentation only.
 
 - [ ] Identify the official event, deadline and time zone, eligibility, theme, judging rubric, code-preexistence policy, required demo, and submission method.
 - [ ] Select one coherent question-first user journey to implement, based on VSE's core concept and event rules.
@@ -30,6 +32,8 @@ Status: in progress.
 Exit gate: the first experience can be described as a testable end-to-end journey, with a bounded topic/claim scope, a visual interaction, in-app evidence, cost/credential plan, and demo success criteria.
 
 ## Phase 2 — Build the first VSE question-to-understanding experience
+
+**Entry condition:** applicable gates in `docs/BUILD_READINESS.md` are complete, the recommendation has been presented to the project owner, and the owner has explicitly instructed the project to proceed. A READY label alone does not authorize automatic implementation.
 
 - [ ] Build the question input and a supported concept-discovery path.
 - [ ] Retrieve a built-in concept packet and assemble an explanation at an accessible level.
