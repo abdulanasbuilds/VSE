@@ -19,16 +19,19 @@ The repository includes durable research/agent documentation and a tested satell
 
 1. Read [AGENTS.md](AGENTS.md) before doing work.
 2. Read [STATE.md](STATE.md) to understand the current checkpoint and the next action.
-3. Read [SPEC.md](SPEC.md) for the product boundaries and user experience.
-4. Read [docs/AGENT_WORKFLOW.md](docs/AGENT_WORKFLOW.md) for the resume/continue protocol.
-5. Read [docs/research/SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md) and [docs/research/RESEARCH_BACKLOG.md](docs/research/RESEARCH_BACKLOG.md) before gathering material.
-6. Update [STATE.md](STATE.md) and [docs/research/RESEARCH_LOG.md](docs/research/RESEARCH_LOG.md) after meaningful work.
+3. Read [PRODUCT_CONCEPT.md](PRODUCT_CONCEPT.md) for the canonical product thesis.
+4. Read [HACKATHON_SLICE_BRIEF.md](HACKATHON_SLICE_BRIEF.md) for the leading but still provisional first experience.
+5. Read [SPEC.md](SPEC.md) for the product boundaries and user experience.
+6. Read [docs/AGENT_WORKFLOW.md](docs/AGENT_WORKFLOW.md) for the resume/continue protocol.
+7. Read [docs/research/SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md) and [docs/research/RESEARCH_BACKLOG.md](docs/research/RESEARCH_BACKLOG.md) before gathering material.
+8. Update [STATE.md](STATE.md) and [docs/research/RESEARCH_LOG.md](docs/research/RESEARCH_LOG.md) after meaningful work.
 
 ## Documentation map
 
 - AGENTS.md — mandatory operating contract for coding/research agents.
 - STATE.md — current verified state, completed work, blockers, and exact next steps.
 - PRODUCT_CONCEPT.md — canonical statement of the visual question engine, built-in user experience, AI/retrieval layer, and scope boundaries.
+- HACKATHON_SLICE_BRIEF.md — provisional LLM-explainer candidate and acceptance criteria; not a locked decision or confirmed submission.
 - SPEC.md — product goal, target experience, constraints, and non-goals.
 - ROADMAP.md — staged milestones with explicit exit criteria.
 - docs/ARCHITECTURE.md — provisional system model; no premature stack commitments.
@@ -71,4 +74,4 @@ Research is intentionally incomplete until the records say otherwise. Use [the R
 
 ## Give any coding/research agent this prompt
 
-Read `AGENTS.md`, `STATE.md`, `ROADMAP.md`, and `docs/research/RESEARCH_COVERAGE.md` first. Continue VSE from its recorded state: do the next highest-priority unfinished task, research and verify from traceable sources, record what you checked and what you could not find, update the Markdown logs/state/backlog, and keep changes small. Never invent sources or claim verification you did not perform. Do not build a giant product, add authentication, or add monetization. Follow the current scope and leave an exact next step for the next agent.
+Read `AGENTS.md`, `STATE.md`, `PRODUCT_CONCEPT.md`, `HACKATHON_SLICE_BRIEF.md`, `ROADMAP.md`, and `docs/research/RESEARCH_COVERAGE.md` first. Treat the orbit page as an engineering experiment, not the product definition. Keep the explanation, interaction, depth, and evidence inside VSE. Continue VSE from its recorded state: do the next highest-priority unfinished task, research and verify from traceable sources, record what you checked and what you could not find, update the Markdown logs/state/backlog, and keep changes small. Never invent sources or claim verification you did not perform. Do not build a giant product, add authentication, or add monetization. Follow the current scope and leave an exact next step for the next agent.
