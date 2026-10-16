@@ -6,12 +6,12 @@ VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning e
 
 ## Project status
 
-The repository includes durable research/agent documentation and a tested satellite-orbit engineering experiment. That experiment is a sample visual module, not the definition of the product and not the chosen hackathon entry. The intended VSE experience is a built-in question-to-visual-understanding journey across scientific and technical domains.
+The repository includes durable research/agent documentation and a tested satellite-orbit engineering experiment. That experiment is a sample visual module, not the definition of the product or the complete hackathon entry. The project owner has confirmed VSE—the built-in question-to-visual-understanding engine—as the project direction for the event they call the “World Dot Name weekend hackathon”. The exact official event page/rules and the first bounded demonstration topic are still unverified.
 
 - Authentication and authorization: out of scope for now.
 - Monetization, payments, subscriptions, and ads: out of scope for now.
 - User experience: people should be able to understand answers and explore visual models inside VSE; external sources are research/provenance inputs, not destinations the app sends learners to.
-- Architecture: built-in knowledge library + AI-assisted retrieval/explanation + a constrained interactive visualization renderer. First hackathon scope and long-term stack remain to be chosen.
+- Architecture direction: built-in knowledge library + AI-assisted retrieval/explanation + a constrained interactive visualization renderer. The product direction is confirmed; the first learning slice, event requirements and long-term stack remain to be determined.
 - Research coverage: broad and ongoing. Never claim that all scientific knowledge has been collected.
 - AI answers: must not be presented as verified science by default.
 
