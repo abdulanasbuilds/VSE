@@ -69,3 +69,7 @@ Before frontend, backend, database, external API, model integration/training, da
 ### D-016 — VSE is the chosen project for the named weekend hackathon (2026-10-16)
 
 The project owner has reaffirmed VSE as the project to pursue for the event they call the “World Dot Name weekend hackathon”. The exact official event page/name and its rules remain unverified, so no eligibility or submission claim may be made until those details are checked. This does not make the broad, universal topic coverage a first-demo requirement: select one small, evidence-backed question-to-visual learning journey, make it work well, and keep expanding VSE if the event submission does not win or the event passes. Do not pivot to a separate environmental dashboard or ML benchmark product as part of the current project.
+
+### D-017 — VSE is a long-term, cross-domain learning product, not hackathon-only (2026-10-16)
+
+The guiding idea is **“make knowledge visible, in the world.”** Mathematics and physics are major pillars, alongside the wider sciences and technology. A learner should be able to understand a concept through a progressive explanation and meaningful visual, then continue to connected ideas, prerequisites, consequences, or applications within VSE. A hackathon is one occasion to demonstrate and validate this core loop; it does not define the product's identity, disciplinary scope, or future. Keep early builds narrow for quality and testability without confusing the first slice with the full ambition.
