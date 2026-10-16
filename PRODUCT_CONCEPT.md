@@ -8,6 +8,16 @@ VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning e
 
 **The product's central value is not the number of facts collected. It is making the relationships behind those facts visible and explorable.**
 
+## Owner-confirmed direction — 2026-10-16
+
+The project owner has reaffirmed VSE as the project to pursue for the named **“World Dot Name weekend hackathon”**. The exact official event page/name has not yet been identified confidently, so event eligibility, deadline, submission rules and permitted prior work remain unverified. This uncertainty must not be misread as uncertainty about the product's direction.
+
+The long-term ambition is for a person to be able to ask how something works across science and technology and learn through a self-contained visual experience. The interface should not assume that the learner already knows the technical vocabulary or every mathematical prerequisite. Start with an accurate intuitive explanation, then reveal the mechanism, a concept-appropriate visual, meaningful interaction, deeper science/mathematics and evidence in stages.
+
+The hackathon version must be **small enough to research and validate properly**, not a claim that VSE already handles every question on Earth. Decide a narrow first learning journey and be honest about which questions are supported. If a question or evidence path is unsupported, explain the limitation rather than inventing an answer or rendering a plausible-looking but ungrounded model.
+
+The product direction is confirmed; the first question, event compliance and technical stack are still open decisions. Other domains and data sources should be explored as possible lessons or future capabilities inside VSE—not as automatic replacements for this project.
+
 ## 2. The problem VSE is trying to solve
 
 A person can find lots of information online and still not understand how a thing works. The material may be too advanced, scattered between sources, mostly text, or shown as a picture that cannot be explored. Someone who missed some foundational mathematics or science should not need to master every prerequisite before taking the first step into a new concept.
