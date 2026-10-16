@@ -8,6 +8,7 @@ const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const html = readFileSync(path.join(root, "index.html"), "utf8");
 const scriptMatch = html.match(/<script>([\s\S]*?)<\/script>/);
 assert.ok(scriptMatch, "index.html must contain the inline application script");
+assert.doesNotMatch(html, /<a\\b[^>]*href=["\']https?:\\/\\//i, "the in-app lesson must not send the learner to an external source page");
 const script = scriptMatch[1];
 
 function makeElement(id, dataset = {}) {
@@ -126,6 +127,7 @@ const movedY = reduced.ids["satellite-dot"].attrs.cy;
 assert.ok(startX !== movedX || startY !== movedY, "reduced-motion control should permit a user-requested step");
 
 console.log("PASS: inline script parses and initializes");
+console.log("PASS: lesson has no outbound external-source anchors");
 console.log("PASS: circular orbit radius remains stable within tolerance");
 console.log("PASS: 0.70x impact and 1.50x escape cases produce finite paths");
 console.log("PASS: preset, reset, knowledge-check feedback, and reduced-motion control");
