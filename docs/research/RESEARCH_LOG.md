@@ -199,7 +199,7 @@ Verify the exact hackathon event if possible, then decide the smallest implement
 - All of these checks are source/service documentation checks only; no sample data has been fetched and validated for a selected product slice. These rows must not be described as API integrations or completed source verification.
 
 ### Current decision and next actions
-- Product-route choice remains open: compare question-to-visual explainer, SPHEREx explorer, Earth/environment investigation and ML dataset/benchmark route.
+- At the time of this earlier entry, product-route choice was recorded as open. The owner's later clarification below supersedes that framing: VSE itself is confirmed; only the first bounded lesson remains to be selected.
 - The build gate remains **HOLD** until a bounded learner question, source/evidence packet, real sample where relevant, rights/access notes, visualization contract, validation plan, accessibility/failure behavior, cost/privacy assessment and success measure are documented.
 - Next action: follow `docs/research/RESEARCH_BATCH_PLAN.md` beginning with route comparison and then inspect a bounded representative sample for the leading candidate. Present the readiness memo to the project owner and stop before implementation.
 
