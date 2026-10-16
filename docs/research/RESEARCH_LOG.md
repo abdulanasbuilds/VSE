@@ -165,3 +165,15 @@ Run the committed Node test file or obtain a confirmed CI run; then test the act
 - Merged PR #1 into `main` with squash merge commit `bead3c078e5651f64f3407618584e44a438fb698`.
 - This confirms the committed Node regression assertions execute successfully in CI. It does not independently validate the physics, prove every trajectory numerically correct, or replace real-browser, device, accessibility, and learner testing.
 - Next action is a real-browser/mobile accessibility review of the prototype before any broader feature work.
+
+## 2026-10-16 — Product concept clarified and handoff corrected
+
+- The product owner clarified that VSE is a question-first visual learning engine across AI/LLMs, mathematics and broader scientific/technical subjects. The goal is not an orbit app, an encyclopedia to scroll through, a gallery of static diagrams, or a generic text chatbot. It should turn a person's question into an accessible explanation, a meaningful visual model, user-controlled exploration, deeper terms/mathematics, and in-app evidence/limitations.
+- A core user-experience constraint is that learners should not have to leave VSE to understand the answer. Source identities and relevant evidence should be displayed inside the app; canonical source URLs, claim support, dates, and rights notes remain in internal records. Permitted external research/API calls may inform answers behind the scenes, but should not be a substitute for the in-app explanation. This also does not authorize copying whole copyrighted sources.
+- Reframed the satellite-orbit page explicitly as an engineering experiment/reusable topic module, not the product direction or confirmed hackathon entry. Removed outbound source links from the orbit page and kept source identities/descriptions in-page.
+- Added PRODUCT_CONCEPT.md as the canonical product statement and HACKATHON_SLICE_BRIEF.md as a candidate-first-experience document. Rewrote SPEC.md, docs/ARCHITECTURE.md, ROADMAP.md and the STATE.md handoff; updated decisions, agent rules, content schema and backlog.
+- The leading hackathon concept candidate is “How does an AI language model generate an answer?” with a staged explanation, an explicitly illustrative next-token interaction, a deeper technical layer, and in-app source/limitations panel. This is not locked until event rules and a feasible implementation plan are verified.
+- Searched the exact phrase “World Dot Name weekend hackathon” and variants again. No matching official event page was confidently identified; search results did not establish the specific event's deadline, theme, eligibility, judging, prior-code policy, or deployment requirements. Do not borrow terms from other events.
+
+### Next action
+Verify the exact hackathon event if possible, then decide the smallest implementation that proves the question → explanation → interactive visual → deeper layer → in-app evidence loop. Continue from STATE.md; do not restart or treat the orbit experiment as the complete project.
