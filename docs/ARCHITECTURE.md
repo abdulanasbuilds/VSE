@@ -1,77 +1,111 @@
-# Provisional Architecture
+# VSE Conceptual Architecture
 
-Status: future architecture remains conceptual. The first orbital-motion vertical slice now uses a single static `index.html` with inline CSS and JavaScript. That choice is limited to this prototype and does not lock a long-term framework. The unidentified hackathon's rules remain unverified.
+**Status:** Product architecture proposal; not a final technology selection. This describes the intended visual question engine, not the current one-topic orbit experiment.
 
-## Main conceptual parts
+## Product flow
 
-### 1. Content and source registry
+A natural-language question should pass through a small set of clear layers:
 
-Stores structured topic records, sources, citations, source dates, content status, rights notes, review notes, and relationships among concepts. The first prototype may use version-controlled Markdown or JSON instead of a database.
+**Question input → built-in knowledge search → evidence/retrieval → progressive explanation plan → visual plan → constrained renderer → in-app exploration and evidence panel.**
 
-### 2. Explanation layer
+The flow should work with curated content when no LLM or external service is available. AI retrieval can extend it, but the app must state its limits when material is missing.
 
-Organizes one concept into progressive stages:
-- intuition and plain-language summary;
-- analogy, explicitly labelled as analogy;
-- visual explanation;
-- formal mechanism, equation, or data where relevant;
-- limitations and common misconceptions;
-- further reading.
+## 1. User experience layer
 
-### 3. Visualization layer
+The central screen should help someone ask a question, see a concise simple explanation, and explore the underlying idea without leaving VSE. Keep these elements distinct but connected:
+- question input and related concept discovery;
+- level/depth control: simple, standard, deeper;
+- step-by-step explanation;
+- visual model and small number of meaningful controls;
+- “what changed and why” explanation;
+- technical layer with accurate terminology, equations, data, or mechanisms when relevant;
+- in-app evidence and assumptions panel;
+- related concepts that stay inside VSE.
 
-A visualization record declares its type, inputs, units, assumptions, expected relationships, tested ranges, and fallback explanation. The renderer may eventually support:
-- static figure or diagram;
-- data chart;
-- step-by-step animated diagram;
-- parameterized simulation;
-- interactive geometry or 3D model;
-- embedded third-party experience, only after its terms and privacy implications are reviewed.
+The visual and explanation should be one learning experience. Do not show a generic chat answer beside a disconnected decorative image.
 
-Do not use a decorative image as a substitute for a model. Do not imply a schematic is a literal internal view of a real system.
+## 2. Built-in knowledge library
 
-### 4. Retrieval and question interpretation
+Store curated concept packets in a versioned format. For each concept, keep:
+- the question it answers, domain, prerequisites, and reading depth;
+- original short summaries at progressive levels;
+- a sequence of explanation steps;
+- a structured visual plan and allowed interactions;
+- claim records with source IDs, evidence status, and limits;
+- related topics, misconceptions, update triggers, and review history;
+- source provenance and rights/attribution metadata.
 
-If needed, map user language to topics and retrieve relevant, approved content. The system should favour source-backed records and expose retrieval gaps. Do not scrape or send user input to external services without understanding the privacy and terms implications.
+The initial library may be a few version-controlled JSON/Markdown records; a database is not a default requirement. Grow it through bounded, reviewed packets rather than copying large swathes of external content.
 
-### 5. Optional AI explanation service
+## 3. Question interpretation and retrieval
 
-AI may draft beginner-friendly language and propose visual representations from the retrieved records. The design should allow the source library and curated demos to work without AI. Mark generated content and require a claim-checking path before it is promoted to reviewed content.
+When a question arrives:
+1. Normalize it and identify the likely domain, concept, and learner depth.
+2. Search the local curated library first.
+3. Determine which relevant claims and source records support an answer and which gaps remain.
+4. If evidence is missing, optionally request permitted retrieval or research through an API/service. Respect licensing, API rules, latency, rate limits, privacy, and available budget.
+5. Return a structured answer plan with claim/source associations and uncertainty, not merely an unsourced text completion.
 
-### 6. Review and quality process
+Possible retrieval sources and model providers are not selected. The system may use external services behind the scenes; the user's learning experience remains in the VSE interface. An external URL should not be used as the answer itself.
 
-A lightweight record/review process checks:
-- source authority and recency;
-- scientific claim and context;
-- consistency between explanation and visualization;
-- calculations and edge cases;
-- uncertainty, analogy limits, and known simplifications;
-- licensing, attribution, and accessibility;
-- regression tests after changes.
+## 4. AI explanation and visual-plan service
 
-## Data relationships
+An LLM can help:
+- restate the question in accessible language;
+- propose an analogy and state where it stops being accurate;
+- draft a step sequence using retrieved material;
+- select an appropriate visualization type;
+- suggest parameters and expected behavior;
+- generate related follow-up questions.
 
-A topic can link to multiple claims, sources, explanations, visualizations, and related topics. One source may support several claims, but a general source relationship must not be used to suggest that it supports every displayed sentence. Use claim-level references when the content is substantive.
+The model must not certify its own claims. Generated output stays a draft until checked against source records and any relevant calculations or tests.
 
-## Quality and safety concerns
+Do not execute arbitrary code generated by the model in a user's browser. Return a constrained visual specification referencing approved VSE components. Example component types could include sequence, labeled-node graph, annotated diagram, chart, simple parameterized physics model, or step-through comparison. Each type defines valid parameters, bounds, validation rules, and accessible fallback text. The list should only grow when a real use case justifies it.
 
-- Incorrect science can be made more persuasive by polished visual design.
-- Data visualizations can mislead if units, scales, uncertainty, or selection filters are hidden.
-- AI-generated explanations may hallucinate references or merge conflicting results.
-- Third-party widgets can introduce licensing, privacy, access, availability, and mobile usability issues.
-- Simulations often depend on assumptions or numerical approximations.
-- Research that is new, contested, preprint-only, or not independently replicated needs a visible evidence label.
+## 5. Visualization and interaction renderer
 
-## Technology decision gate
+Choose the representation based on the learning objective:
+- use a sequence or state diagram to explain a process such as an LLM handling an input;
+- use an adjustable curve or simulation for a quantitative relationship;
+- use a labeled structure for parts and connections;
+- use a plot for data, probability, uncertainty, or comparison;
+- use a 3D model only when depth materially improves understanding.
 
-For any expansion beyond the current prototype, do not lock a framework or deploy service until:
-1. the next concept and visualization are defined;
-2. event-specific submission rules are known before an event submission is made;
-3. the smallest implementation path is compared against available skills, devices, cost, and time;
-4. the need for client-side computation, backend search, model access, or data storage is explicit.
+Every visual specification should state what is represented, relevant variables/units, what the learner can manipulate, assumptions, omitted variables, tests, and how the concept should be described in text. An illustrative LLM diagram must clearly state that it is a teaching simplification and not a literal trace of every internal computation.
 
-The current orbital slice is intentionally exempt from a multi-layer stack: one static page and an in-browser physics calculation are enough.
+## 6. In-app sources and evidence
 
-## Initial deployment assumption
+The app must not send people away to external articles, videos, or documentation to finish the learning journey. Instead, display an in-app source panel with useful source identity, author/organization, date/version, source type, relevant claim support, evidence status, uncertainty, and limitations.
 
-The first demo should be usable without accounts and should store no unnecessary personal information. Avoid a backend entirely if a static application can deliver the intended experience. If a backend or external AI service is later necessary, document its data flow, keys, cost, rate limits, failure modes, and privacy implications before implementation.
+Behind the scenes, retain exact canonical URLs, DOIs, API identifiers, retrieval dates, rights records, and exact locations needed to audit claims. “Self-contained” means the learner experience is inside VSE; it does not mean hiding provenance or copying copyrighted sources wholesale. Reproduce or cache content only when its terms permit it; otherwise write an original summary and store the needed provenance.
+
+## 7. Validation layer
+
+Keep four distinct kinds of checks:
+- source discovery: a relevant source was located;
+- claim review: a specific statement was compared with evidence;
+- model test: an implementation was checked against repeatable expected cases;
+- independent review: a qualified or genuinely independent reviewer assessed the specific claim/model.
+
+Use unit or regression tests for deterministic visual behavior. Use known inputs and expected relationships for calculations. Test visual outputs for boundary conditions, accessibility, reduced motion, small-screen layout, and performance. Run a small learner evaluation to see whether the interaction improves understanding. Do not label a visual “scientifically verified” simply because its code runs.
+
+## 8. Security, privacy, and reliability
+
+- Keep model/API secrets on a server-side boundary if one is introduced.
+- Do not send unnecessary personal information to model/retrieval services.
+- Validate model-produced structured output before rendering it.
+- Put bounds on variables, loops, generated steps, response sizes, and external calls.
+- Provide an honest fallback when APIs, network access, or evidence are unavailable.
+- Make no accounts, personalization store, or other persistent personal data necessary for the first demo.
+- Do not claim every possible question is supported when the library and visual renderer only cover a subset.
+
+## 9. Technology decision gate
+
+Choose the smallest stack only after deciding the first hackathon experience and checking the official rules:
+- a static frontend may be enough for a built-in-only demo;
+- a backend is needed if secrets, live retrieval, caching, or server-side model calls are required;
+- a database is justified only if a concrete storage/query requirement exceeds simple versioned content files;
+- API/model choices depend on the event rules, available free credits, cost, quality, latency, and terms;
+- choose frontend visualization tools to fit the approved visual schema and available device/testing resources.
+
+No long-term framework, database, model provider, or hosting platform is locked by the current orbit experiment.
