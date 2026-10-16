@@ -1,16 +1,17 @@
 # VSE — Visual Science Explorer
 
-VSE is a research-first project exploring how to help people understand how the world works through clear explanations, trustworthy sources, diagrams, and interactive visual models.
+VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine that helps people understand how things work across AI, mathematics, physics, biology, space, engineering, and other subjects. It turns questions into progressive explanations, interactive visual models, and deeper evidence-aware learning—all inside VSE.
 
 **The product principle:** do not merely show people information; help them build a mental model they can inspect, question, and explore.
 
 ## Project status
 
-The repository was empty at initialization and now contains the research/agent handoff documents plus a first single-file interactive prototype about satellite orbits. VSE remains an evidence-led project, not a complete multi-science platform.
+The repository includes durable research/agent documentation and a tested satellite-orbit engineering experiment. That experiment is a sample visual module, not the definition of the product and not the chosen hackathon entry. The intended VSE experience is a built-in question-to-visual-understanding journey across scientific and technical domains.
 
 - Authentication and authorization: out of scope for now.
 - Monetization, payments, subscriptions, and ads: out of scope for now.
-- First slice: static HTML/CSS/JavaScript with local calculation; long-term stack/hosting remain undecided.
+- User experience: people should be able to understand answers and explore visual models inside VSE; external sources are research/provenance inputs, not destinations the app sends learners to.
+- Architecture: built-in knowledge library + AI-assisted retrieval/explanation + a constrained interactive visualization renderer. First hackathon scope and long-term stack remain to be chosen.
 - Research coverage: broad and ongoing. Never claim that all scientific knowledge has been collected.
 - AI answers: must not be presented as verified science by default.
 
@@ -27,6 +28,7 @@ The repository was empty at initialization and now contains the research/agent h
 
 - AGENTS.md — mandatory operating contract for coding/research agents.
 - STATE.md — current verified state, completed work, blockers, and exact next steps.
+- PRODUCT_CONCEPT.md — canonical statement of the visual question engine, built-in user experience, AI/retrieval layer, and scope boundaries.
 - SPEC.md — product goal, target experience, constraints, and non-goals.
 - ROADMAP.md — staged milestones with explicit exit criteria.
 - docs/ARCHITECTURE.md — provisional system model; no premature stack commitments.
@@ -51,7 +53,7 @@ Research and prototype **one** concept end-to-end:
 - a deeper explanation with relevant mathematics/science;
 - cited sources, limitations, and a visible verification state.
 
-The current first concept is provisional and documented in `docs/research/FIRST_PROTOTYPE_ORBIT.md`. The hackathon identity/rules remain unresolved, so don't claim the prototype is eligible or that existing code may be submitted. Do not build authentication, billing, a general-purpose agent platform, or a massive ingestion pipeline as part of this milestone.
+The orbit demo is an engineering experiment only. The initial hackathon slice should demonstrate the question → simple explanation → interactive visual → deeper explanation → in-app evidence loop. The LLM question is a natural candidate, but the precise slice is not locked until the event rules and a feasible plan are confirmed. The event identity is still unresolved; do not claim eligibility or permission to submit pre-existing code. Do not build authentication, billing, or a massive ingestion pipeline.
 
 ## Prototype regression tests
 
