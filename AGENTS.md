@@ -5,7 +5,7 @@ These instructions apply to every AI coding agent, research agent, and human con
 ## First action on every session
 
 1. Inspect the working tree and current branch before making changes.
-2. Read README.md, AGENTS.md, STATE.md, PRODUCT_CONCEPT.md, SPEC.md, and ROADMAP.md.
+2. Read README.md, AGENTS.md, STATE.md, PRODUCT_CONCEPT.md, SPEC.md, ROADMAP.md, and `docs/BUILD_READINESS.md`.
 3. Read only the relevant supporting documents next, including the source catalogue and research backlog for research tasks.
 4. Identify the current milestone and the single next action already recorded in STATE.md.
 5. Continue from that checkpoint. Do not restart, re-scaffold, or replace the project merely because a new session started.
