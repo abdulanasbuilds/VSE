@@ -1,13 +1,15 @@
 # VSE Build Readiness Gate
 
-**Current decision (2026-10-16): HOLD — research and product-slice selection first.**  
-**Authority:** This gate supplements PRODUCT_CONCEPT.md, ROADMAP.md, docs/ARCHITECTURE.md and docs/research/RESEARCH_BATCH_PLAN.md. It does not select a product route or technology stack.
+**Current decision (2026-10-16): HOLD — research and selection of the first bounded VSE learning journey.**  
+**Authority:** This gate supplements PRODUCT_CONCEPT.md, ROADMAP.md, docs/ARCHITECTURE.md and docs/research/RESEARCH_BATCH_PLAN.md. The owner-confirmed project direction is VSE, the question-first visual learning engine. This gate does not lock the first topic, event rules or technology stack.
 
 ## Why the gate exists
 
-VSE is broad enough to become several different products if scope is not controlled: a question-to-visual concept explainer, a real scientific-data explorer, an environmental data investigation tool, or an ML dataset/benchmark workspace. These share a learning goal but have materially different data, validation, infrastructure, cost and user-experience needs.
+VSE's product direction is already clear: help a person understand how a scientific or technical concept works through simple explanation, a meaningful visual, interaction, deeper detail, and in-app evidence. The remaining risk is scope—trying to support every possible question before one complete learning journey is accurate, useful and testable. Research should compare possible first topics and experiences *inside VSE*, not reopen the overall product direction.
 
-The project must not choose a frontend framework, backend, database, external API, model provider, vector store, or hosting architecture simply because an agent can generate it. First establish what one learner needs to understand, what evidence/data supports that journey, and how the result can be checked.
+The project owner intends to pursue this VSE concept for the event they call the “World Dot Name weekend hackathon”. The exact official event page/rules have not yet been identified confidently. Event deadline, eligibility, prior-code policy, AI/API rules and submission constraints must be verified before the demo is tailored to the event.
+
+Do not choose a frontend framework, backend, database, external API, model provider, vector store, or hosting architecture simply because an agent can generate it. First establish what one learner needs to understand, what evidence/data supports that journey, and how the result can be checked.
 
 **The gate applies to any agent or contributor. Do not start frontend, backend, database, API, model-training or production architecture implementation before this gate is passed. Documentation, source research and bounded paper-level analysis are allowed while the gate is on hold.**
 
@@ -43,16 +45,18 @@ All mandatory gates must be checked before the status changes to READY FOR A SCO
 | BG-13 | Success measure | Small beginner evaluation, before/after question or task, acceptance criteria, and clear failure threshold are defined | NOT READY |
 | BG-14 | Repository hygiene | Open CI failures and deployment signals affecting the selected route are understood; project/code license decision recorded before external reuse is invited | IN PROGRESS |
 
-## Candidate experiences to compare
+## Candidate first learning journeys inside VSE
 
-These are research hypotheses, not selected features or commitments:
+The project itself is VSE; this comparison is only about which small, verifiable learning journey should lead the first demo. These are examples to investigate, not a final selection:
 
-1. **Question-to-visual explainer.** A learner asks how a concept works; VSE presents simple explanation, an interactive model, deeper science/mathematics and in-app evidence. The current AI language-model answer-generation question belongs here. Main risks: generic-chatbot behavior, unsupported AI claims, and a visual that is decorative rather than explanatory.
-2. **SPHEREx sky-data explorer.** The learner explores actual SPHEREx observations, compares wavelength bands/observations, filters relevant metadata and understands scientific context. Main risks: IRSA already provides a Data Explorer and analysis tools; VSE must add real learning value, while the data formats, calibrations and scientific interpretation may be technically demanding.
-3. **Earth/environment data explorer.** A learner uses public earth-observation, climate, water or global-indicator data to investigate a meaningful question. Main risks: mismatched units/resolutions/periods, geographic gaps, data-quality assumptions and a dashboard that never teaches why a pattern appears.
-4. **ML dataset/benchmark investigation.** A learner inspects a dataset, trains or compares models and checks results against a defined evaluation set. Main risks: license and privacy restrictions, dataset leakage, biased benchmarks, compute requirements and poor reproducibility. This is a different build class; do not select it merely because a leaderboard looks compelling.
+1. **How does an AI language model generate an answer?** Potential visual: a token-by-token, step-by-step teaching sequence with a bounded illustrative next-token interaction. Main risks: implying the teaching diagram reveals the exact internals of a deployed model, oversimplifying tokenization/attention, or presenting illustrative scores as measured probabilities.
+2. **Why does a satellite stay in orbit?** The existing orbit page can be reused as a sample module, but it needs real-browser/accessibility review and stronger numerical/scientific validation before it is presented as a finished learning experience. Main risk: mistaking a toy module for the product's question-first journey.
+3. **Why does the sky appear blue?** Potential visual: compare wavelengths and scattering through a clearly bounded atmosphere illustration. Main risks: incorrect scale/colour encoding, weak treatment of wavelength dependence, and confusing an illustration with a photographic observation.
+4. **How does an electric circuit work?** Potential visual: inspect a simple circuit and change one parameter to compare predicted behavior. Main risks: choosing an unsafe or inaccurate physical analogy, hiding assumptions, or creating a model that does not match the stated circuit law.
 
-Score candidates against documented evidence using a 0–5 scale for: learner value; source/data quality; visual interactivity; differentiating value; accessibility for phone/low bandwidth; feasible access and rights; cost/effort; ease of validating correctness. Record the reason for each score. Do not manufacture numerical scores before completing the relevant research.
+A sky-data or environmental dataset may be investigated as a future VSE topic when it offers a well-defined learning outcome. An ML dataset/benchmark is a separate future capability, not a replacement product direction. Do not spend the first batch researching every data platform; select topics based on learner value, primary evidence, a truthful visual, reasonable effort and testability.
+
+Compare candidate learning journeys using documented evidence for: learner value; source quality; meaningful interactivity; difference from passive search; accessibility on phone/low bandwidth; access and rights; cost/effort; and ease of validating correctness. Qualitative ratings are acceptable before there is enough evidence for a numeric score. Do not manufacture precise scores.
 
 ## What does not need to be complete before the first build
 
