@@ -5,7 +5,7 @@
 **Documentation review branch:** `docs/research-readiness-2026-10-16`  
 **Current phase:** Research readiness — compare first-experience candidates and inspect supporting evidence (in progress)  
 **Product code status:** one standalone orbit visualization experiment exists; the intended question-first VSE user experience has not yet been built
-**Next action:** compare the question-to-visual explainer, SPHEREx explorer, Earth/environment explorer, and ML-dataset route; inspect evidence and a small real data sample where applicable. Keep implementation on HOLD until `docs/BUILD_READINESS.md` is satisfied and the project owner receives the readiness recommendation. The exact hackathon identity remains unresolved.
+**Next action:** research the first bounded learning journey inside the confirmed VSE project, starting with the AI-language-model explanation as a leading example; compare it with a small number of concept lessons such as orbit, light scattering or circuits. Verify the exact official event page/rules if identifiable, prepare claim/source evidence and a repeatable validation plan, and keep implementation on HOLD until the project owner receives the readiness recommendation. Do not pivot to a separate dashboard or ML-benchmark project.
 
 > This is the durable checkpoint. Every agent must read it first after AGENTS.md and must update it after meaningful work. Do not assume work exists unless the current repository confirms it.
 
@@ -128,8 +128,8 @@ Read [SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md), [SCIENCE_DOMAIN_MAP.m
 
 Follow `docs/research/RESEARCH_BATCH_PLAN.md` in order. Do not skip ahead to implementation.
 
-### Next action A — compare candidate experiences
-Compare the question-to-visual explainer, SPHEREx sky-data explorer, Earth/environment investigation, and ML-dataset/benchmark investigation. Use the evidence-backed rubric in `docs/BUILD_READINESS.md`; leave scores blank until the relevant evidence is reviewed. Record why VSE adds learning value beyond an existing search or archive interface. Do not treat the LLM question as a final decision yet.
+### Next action A — choose the first VSE learning journey
+The owner-confirmed project is VSE. Compare a small number of candidate lesson topics within this project—led by “How does an AI language model generate an answer?”—based on beginner learning value, primary evidence, a truthful interactive visual, validation feasibility and effort. Do not compare against unrelated products or assume the broad long-term goal requires universal coverage in the first demo.
 
 ### Next action B — inspect evidence and a real sample
 For data-driven options, inspect one small actual data/API sample or cutout and record its exact product/release, schema, units, missingness/quality fields, geographic/time scope, size, access path, quotas, and item-specific rights. For concept-explainer options, write a bounded claim/source map from authoritative references and explicitly label analogy limits. Update `docs/research/DATASET_AND_API_REGISTER.md`, `RESEARCH_COVERAGE.md`, and `RESEARCH_LOG.md`.
@@ -171,6 +171,6 @@ The exact “World Dot Name weekend hackathon” page has not been identified co
 - PRODUCT_CONCEPT.md remains the canonical intent: turn questions into explanation, meaningful interaction, depth and evidence inside VSE.
 - The root orbit page is an engineering experiment, not the VSE product or a confirmed hackathon entry.
 - Node.js 22 CI regression runs passed for earlier main/PR #1 commits; the separate open PR #2 currently fails to parse due to its new regex assertion. See `docs/PROJECT_AUDIT.md`.
-- Product-route selection and event identity/rules remain unresolved. No full selected-topic source/data packet exists yet.
+- VSE is the confirmed product direction. The first bounded learning journey and the exact official “World Dot Name weekend hackathon” identity/rules remain unresolved. No complete selected-topic source/claim packet exists yet.
 - Current decision is HOLD. Continue from `docs/research/RESEARCH_BATCH_PLAN.md`; do not begin implementation until the readiness report has been presented and the owner has explicitly authorized the scoped build.
 
