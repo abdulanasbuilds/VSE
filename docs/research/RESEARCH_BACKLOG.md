@@ -2,16 +2,17 @@
 
 This is the explicit record of what VSE has not yet found, checked, or decided. Missing research is not a failure if it is visible and prioritised. Do not claim full coverage.
 
-## P0 — Immediate foundation tasks
+## P0 — Immediate product and hackathon tasks
 
-- [x] **P0-06: Add and execute the reproducible regression test suite.** `tests/orbit-model.test.mjs` checks path outcomes and control behavior without third-party dependencies. GitHub Actions run #38836368258 passed on PR #1 under Node.js 22; PR #1 was merged. This confirms the script assertions, not independent scientific validation.
-- [ ] **P0-07: Complete real-browser and accessibility checks.** Test `index.html` at mobile and desktop widths; check layout/overflow, keyboard behavior, range slider labels, visible focus, reduced motion, screen-reader announcements, and status/quiz feedback. Record browser, viewport, and findings. The current test suite uses a stub DOM and is not a browser test.
+- [ ] **P0-01: Confirm the exact hackathon event.** The phrase “World Dot Name weekend hackathon” and close variants have not been matched to an official event page. Verify deadline/time zone, eligibility, theme, judging rubric, allowed pre-existing code, AI/API rules, team rules, deployment, and submission format before claiming eligibility. Do not substitute rules from unrelated events.
+- [ ] **P0-02: Define the first VSE-facing hackathon experience.** Follow PRODUCT_CONCEPT.md, not the satellite-orbit experiment. The core loop is question → built-in/retrieved evidence → simple explanation → meaningful visual interaction → deeper explanation → in-app evidence. “How does an AI language model generate an answer?” is a strong candidate, not a locked decision until event constraints are known.
+- [ ] **P0-03: Scope the supported question set and fallback.** Define what the demo can truly answer, which concepts are prebuilt, when permitted retrieval/LLM assistance may be used, and what the app says when evidence is missing. Do not promise perfect support for every question.
+- [ ] **P0-04: Specify in-app evidence and visual-plan contracts.** Source identities, source dates/version, claim support, uncertainty, and limitations must appear inside VSE. Keep canonical source URLs and rights records internally, but do not make outbound links the user's learning path. Use a validated visual schema/components; never execute arbitrary model-generated browser code.
+- [ ] **P0-05: Choose only the stack required for the scoped experience.** Decide whether built-in content alone suffices or whether secure server-side model/retrieval calls are needed; consider available credits, cost, rate limits, deployment rules, and secrets before choosing a provider/backend/database.
+- [x] **P0-06: Establish a reproducible test for the orbit engineering experiment.** tests/orbit-model.test.mjs passed under Node.js 22 in GitHub Actions run #38836368258 on PR #1, which was merged. This is a test of one example module, not the overall VSE product.
+- [ ] **P0-07: Build and evaluate the first complete VSE learning loop.** No question-first application flow, retrieval/explanation orchestrator, constrained visual renderer, or learner study exists yet. Acceptance criteria should be recorded in the hackathon slice brief before implementation.
 
-- [ ] **P0-01: Confirm hackathon rules.** Find the official event page, exact deadline and time zone, project eligibility, judging criteria, required AI/tools, deployment rules, use of existing work, demo expectations, and submission format. Record source URLs. Do not design around an unverified event name or rule.
-- [ ] **P0-02: Validate this source inventory.** Open the official source and documentation links that are still marked CANDIDATE. Record any dead link, redirect, changed API, licence, or access restriction.
-- [x] **P0-03: Select one concept provisionally.** A source-backed orbital-motion explainer is the first reusable prototype because its learning objective, NASA learning sources, and interactive path are tractable. The decision is recorded in `FIRST_PROTOTYPE_ORBIT.md`; it can be changed after learner testing. Do not imply hackathon eligibility while event rules remain unknown.
-- [x] **P0-04: Establish the initial claim map.** `FIRST_PROTOTYPE_ORBIT.md` records the learner outcome, individual orbit claims, NASA source links, assumptions, and caveats. The math/model has passed bounded harness cases; broader numeric tests, local regression-script execution, and independent review remain open.
-- [x] **P0-05: Confirm the implementation path for this slice.** A single-file HTML/CSS/JavaScript frontend with an in-browser dimensionless model is sufficient; no backend, database, external API, account system, model key, or package install is needed for this first interaction. This is not a permanent stack decision for future VSE features.
+
 
 ## P1 — OpenAI mathematics release: inventory and interpretation
 
