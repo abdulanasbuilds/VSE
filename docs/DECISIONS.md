@@ -42,3 +42,10 @@ Keep a visible source inventory and a backlog of anything not yet found, not rev
 ## Changes to these decisions
 
 Append the date, prior decision, new evidence, and reason for any substantive change. Do not silently remove earlier constraints.
+
+
+### D-010 — Provisional first concept: orbital motion
+The first reusable vertical slice explains why satellites stay in orbit and lets a learner vary initial sideways speed. This is a reversible product experiment, not a commitment to make VSE a space-only product and not a declaration that the unidentified hackathon permits previously created code. The supporting claim map is `docs/research/FIRST_PROTOTYPE_ORBIT.md`.
+
+### D-011 — No backend or database for the first slice
+A static, single-file HTML/CSS/JavaScript frontend can deliver the initial lesson, citations, and local calculation. A backend, database, AI API, or scientific data API would add cost and failure/privacy surface without improving this specific interaction. Revisit only when a concrete later requirement needs persistence, remote data, shared content, or model inference.
