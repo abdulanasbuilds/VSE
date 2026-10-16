@@ -54,6 +54,12 @@ Do not design every screen for a toddler, a child, a general learner, a speciali
 
 The prototype should be small enough to complete and test in a hackathon context. Confirm the actual event rules, deadline, judging criteria, required deployment, and available tools before tailoring the submission.
 
+## 6A. Current prototype slice
+
+The provisional first slice is a source-linked interactive explanation of orbital motion: the learner changes a satellite's initial sideways speed and compares impact, closed-path, and escape outcomes in an idealized Newtonian two-body model. The claim map, sources, limitations, and validation plan live in `docs/research/FIRST_PROTOTYPE_ORBIT.md`.
+
+The initial implementation is a static frontend with in-browser calculation. It deliberately has no backend, database, model API, external data API, authentication, or deployment promise. The hackathon identity/rules remain unresolved; the prototype is not yet confirmed as eligible for any event.
+
 ## 7. AI role
 
 AI may help interpret a question, search or rank relevant material, create a first-draft explanation, propose visual forms, and suggest follow-up questions. Where practical, the system should use retrieved source material and structured content rather than invent details from memory.
@@ -85,9 +91,9 @@ A first milestone is successful when:
 ## 10. Open decisions
 
 The following decisions need evidence before commitment:
-- First scientific topic and proof-of-learning test.
+- Later topic expansion and proof-of-learning test; the first orbital topic is provisional and needs usability/model testing.
 - Hackathon-specific constraints and judging rubric.
-- Chosen implementation stack and hosting, based on the available environment and the simplest useful model.
+- Long-term implementation stack and hosting beyond the current single-file prototype, based on the available environment and the simplest useful model.
 - AI provider and budget, if AI is needed at all in the first demo.
 - Which visualizations should be original, linked, embedded, or adapted under a confirmed license.
 - Initial content review process and responsibility.
