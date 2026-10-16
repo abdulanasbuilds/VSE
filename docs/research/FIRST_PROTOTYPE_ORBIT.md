@@ -6,9 +6,9 @@
 
 ## Why this was useful as an engineering experiment
 
-This concept is narrow enough to build and review, yet it demonstrates VSE's core promise: intuition, a meaningful interactive visual, a deeper equation, visible assumptions, and source links. Official NASA learning materials describe orbital motion in terms of inward gravitational acceleration and sideways motion. A custom, dimensionless model can demonstrate the relationship without calling a paid service or copying a third-party simulation.
+This module is narrow enough to build and review. It demonstrates a few reusable VSE patterns—intuitive explanation, a meaningful interactive visual, a deeper equation, and visible assumptions—without external visual assets. It does not demonstrate the complete question-first VSE product, AI-assisted retrieval, or general-purpose visual explanation.
 
-The choice is provisional and reversible. It was chosen because of source quality, visual clarity, low implementation cost, and a testable learner outcome—not because all other topics have been researched. It does not imply that the unresolved event rules permit pre-existing code.
+Treat the orbit module as a reusable example only. The LLM question described in HACKATHON_SLICE_BRIEF.md is the leading candidate for the first VSE-facing hackathon experience, but event rules remain unknown and the choice is not final.
 
 ## Shortlist comparison
 
