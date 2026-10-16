@@ -1,99 +1,98 @@
 # VSE Product Specification
 
-Status: working product brief; subject to evidence and user testing.
+**Status:** Canonical working specification; see PRODUCT_CONCEPT.md for the full product thesis. The first hackathon slice remains to be chosen against the real event rules.
 
 ## 1. Purpose
 
-VSE (Visual Science Explorer) helps people understand how things work by converting reliable scientific knowledge into explanations that move from intuition to visual inspection and, where useful, mathematical detail.
+VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine for understanding how things work. A person can ask about an AI language model, mathematics, physics, biology, space, engineering, or another scientific/technical subject. VSE should turn the question into an understandable explanation, a visual model that reveals the key relationships, and meaningful interaction that helps a learner explore how it works.
 
-The product should do more than return an answer. It should help a learner form a mental model, explore that model, understand its limits, and follow the evidence back to source material.
+The complete learning journey belongs inside VSE. Do not substitute a list of external links for the explanation or send learners away to finish understanding elsewhere.
 
 ## 2. Problem
 
-Scientific information is spread across papers, repositories, institutional websites, datasets, textbooks, static diagrams, videos, and interactive demonstrations. These resources often assume prior knowledge. A reader can find information without understanding how its parts relate or what evidence supports it.
+Information is abundant but understanding is not. Explanations may assume prior knowledge, diagrams can be static, and important details can be scattered across many sources. People who missed some basics should still be able to begin with an intuitive explanation and then build toward precise terminology and mathematics.
 
-VSE investigates whether a guided, source-linked visual explanation can make a difficult concept easier to understand and explore.
+VSE should help someone progress from question to mental model, from mental model to exploration, and from intuitive understanding to evidence and deeper concepts.
 
-## 3. Primary initial audience
+## 3. Audience and depth
 
-Start with curious learners and self-directed beginners who want to understand a difficult concept but are not ready for dense papers or advanced notation. The user may be a school learner, a self-taught builder, or an adult exploring science.
+The primary audience is curious learners and self-directed beginners, while the product should allow more depth for experienced users. Start simple enough for someone with very little background. Then let them choose or reveal a standard explanation, technical terms, equations, assumptions, and deeper material. The “very simple” mode is a pedagogical starting point, not a claim that every scientific concept can be made accurate in one sentence.
 
-Do not design every screen for a toddler, a child, a general learner, a specialist, and a researcher simultaneously. Use progressive depth instead.
+## 4. Core product layers
 
-## 4. Product principles
+### A. Built-in knowledge library
+A growing collection of searchable and browsable concept packets, original summaries, relevant discoveries/results, claim-to-source metadata, step sequences, diagrams, interactive model specifications, caveats, and related concepts. Users can discover concepts without knowing technical search terms.
 
-1. Visual understanding over information volume.
-2. Evidence and attribution over confident-sounding text.
-3. Progressive depth: intuition, visual model, formal explanation, further reading.
-4. Honest simplification: explain what the model leaves out.
-5. Interaction should teach something, not exist only for decoration.
-6. A source's existence does not prove every claim in it.
-7. Narrow scope and demonstrated learning beat an enormous unverified catalogue.
-8. The product should remain useful when no generative AI is available.
+The library grows in deliberate, verifiable packets. VSE is not expected to download the whole internet, ingest every paper, or bulk-copy third-party educational material.
 
-## 5. Core user journey
+### B. AI-assisted question and research layer
+Interpret a natural-language question, search the built-in library first, and identify gaps. Where useful and permitted, use retrieval/research/data services and an LLM to draft a source-grounded explanation and structured plan for the visuals. Generated prose or a visual plan is not automatically true: evidence status, uncertainty, assumptions, and unsupported portions must remain visible. An LLM should not invent sources or turn missing evidence into confidence.
 
-1. A user asks a question or chooses a concept.
-2. VSE identifies the topic and an appropriate explanation level.
-3. The user receives a concise plain-language explanation and an analogy clearly labelled as an analogy.
-4. A diagram, chart, animation, or interactive model shows the relevant relationships.
-5. The user can click through stages or change a small number of meaningful parameters.
-6. A deeper section connects the intuition to the real terminology, equations, data, or mechanism.
-7. The page lists source references, source dates, verification status, assumptions, and limitations.
-8. The user can explore related concepts and original sources.
+### C. Interactive visual understanding engine
+Render a suitable visual based on the concept: a step sequence, node-and-edge relationship, diagram, plot, animation, or parameterized simulation. Let the user inspect stages or change a meaningful parameter, then explain what changed and why. Use a controlled visual schema/approved components, not arbitrary code generated by the LLM and executed in the browser.
 
-## 6. First prototype requirements
+### D. In-app evidence and limits
+Display relevant source titles, author/organization, date/version, source type, claim relationships, uncertainty, assumptions, and limitations inside VSE. The user should not have to navigate away just to understand the answer. Internal source records must retain exact provenance and rights notes; in-app presentation does not grant permission to copy whole sources.
 
-- One clearly defined scientific concept, selected through research rather than by breadth.
-- One complete explanation with at least two levels of depth.
-- One interactive visual or a clearly specified fallback if implementation is not feasible.
-- A visible reference list connected to claims.
-- A visible note explaining simplifications and uncertainty.
-- Responsive, accessible layout that works on a small screen.
-- A repeatable checklist that evaluates whether a learner can explain the key idea before and after using the experience.
+## 5. Expected user journey
 
-The prototype should be small enough to complete and test in a hackathon context. Confirm the actual event rules, deadline, judging criteria, required deployment, and available tools before tailoring the submission.
+1. **Ask:** a natural-language question or choose a concept from discovery.
+2. **Find:** retrieve relevant material from the built-in library; identify whether evidence is missing.
+3. **Understand:** show a concise intuitive explanation, with analogies clearly labelled and their limits stated.
+4. **See:** display a visual sequence or model tailored to the subject.
+5. **Explore:** provide a few meaningful controls, step-through states, comparisons, or parameter changes.
+6. **Go deeper:** reveal the actual mechanism, technical vocabulary, data, equations, and mathematical foundations where relevant.
+7. **Assess:** show what evidence supports the claims, what is simplified, and what remains uncertain inside the app.
+8. **Continue:** explore related topics within VSE rather than being pushed to another website.
 
-## 6A. Current prototype slice
+## 6. First hackathon experience
 
-The provisional first slice is a source-linked interactive explanation of orbital motion: the learner changes a satellite's initial sideways speed and compares impact, closed-path, and escape outcomes in an idealized Newtonian two-body model. The claim map, sources, limitations, and validation plan live in `docs/research/FIRST_PROTOTYPE_ORBIT.md`.
+The full vision is broad; the first deliverable must be small. It should demonstrate the complete core loop rather than claim universal coverage:
 
-The initial implementation is a static frontend with in-browser calculation. It deliberately has no backend, database, model API, external data API, authentication, or deployment promise. The hackathon identity/rules remain unresolved; the prototype is not yet confirmed as eligible for any event.
+**question → retrieval/answer → progressive explanation → meaningful visual interaction → deeper layer → in-app evidence.**
 
-## 7. AI role
+A promising candidate is “How does an AI language model generate an answer?” It aligns with the product owner's interest in AI and can demonstrate tokens, a simplified processing sequence, next-token prediction, an illustrative candidate distribution, user manipulation, and a deeper technical layer. Any such picture must be labelled as a teaching model, not a literal view of every real model computation. Other topic examples may communicate the cross-science ambition, but a small demo must clearly state which topics are actually supported.
 
-AI may help interpret a question, search or rank relevant material, create a first-draft explanation, propose visual forms, and suggest follow-up questions. Where practical, the system should use retrieved source material and structured content rather than invent details from memory.
+The candidate is not locked. Confirm the correct hackathon, official deadline, eligibility, rules on prior work, deliverables, judging and deployment before tailoring or submitting the demo. The event label “World Dot Name weekend hackathon” has not yet been reliably matched to an official event page.
 
-AI output is a draft until evidence and model behaviour have been checked. Keep generated text separate from verified claims. Do not claim an AI discovered a result unless the attribution and research record support it.
+## 7. What success means
 
-## 8. Initial non-goals
+The first experience succeeds when:
+- a new user can ask or select a supported question and get a coherent in-app learning journey;
+- the simple explanation, deeper explanation, and visual model agree with each other;
+- the visual makes a relationship inspectable, rather than only decorating a paragraph;
+- the user can change an input or navigate steps and see a meaningful result;
+- important claims can be traced to in-app source records and their support status is honest;
+- limitations and teaching simplifications are visible;
+- the app remains responsive and accessible on a phone and desktop;
+- a beginner can explain the key idea better after using the experience;
+- missing information leads to an honest limitation or retrieval step—not a fabricated diagram or unsupported certainty.
 
-- User accounts, authentication, and authorization.
-- Billing, paid plans, ads, or monetization.
-- Full coverage of all scientific fields or every published paper.
-- Automatically generating a unique scientifically validated simulation for any imaginable prompt.
-- Rehosting complete proprietary papers, textbooks, datasets, or visual assets.
-- Replacing teachers, textbooks, research databases, scientific peer review, or specialist tools.
-- A multi-agent orchestration platform as a product feature.
-- Premature decisions about frontend framework, database, vector store, hosting, or model vendor.
+## 8. Non-goals for the first release
 
-## 9. Success criteria for the first prototype
+- User accounts, authentication, authorization, billing, subscriptions, ads, or monetization.
+- A promise to answer every conceivable question perfectly from day one.
+- A static encyclopedia or gallery as the only experience.
+- A generic chatbot that only returns paragraphs.
+- An external-link directory or flow that sends the user elsewhere to learn.
+- Bulk ingestion/copying of all the internet or research papers.
+- Arbitrary model-generated browser code, unbounded simulations, or unreviewed claims.
+- Multi-agent infrastructure as a user-facing product feature.
+- Premature commitment to a framework, database, model provider, vector store, or hosting platform.
 
-A first milestone is successful when:
-- A new user can state the main idea in their own words after using the experience.
-- The visualization encodes the scientific relationship accurately within its declared assumptions.
-- Important factual claims can be traced to cited sources.
-- The explanation distinguishes an analogy from the underlying mechanism.
-- The interface behaves on mobile and has keyboard/screen-reader considerations documented.
-- The implementation can be changed without reconstructing the research notes.
-- The agent can resume from STATE.md without restarting work.
+## 9. Current repository reality
 
-## 10. Open decisions
+- The root index.html is an engineering experiment for one orbital-motion module; it is not the full VSE question-first experience.
+- The orbit regression test and GitHub Actions workflow passed the bounded regression suite under Node.js 22.
+- No full question interpreter, LLM-backed explainer, retrieval backend, structured visual-plan renderer, production database, or deployed VSE experience exists yet.
+- PRODUCT_CONCEPT.md, STATE.md, and ROADMAP.md record the current direction and next actions.
 
-The following decisions need evidence before commitment:
-- Later topic expansion and proof-of-learning test; the first orbital topic is provisional and needs usability/model testing.
-- Hackathon-specific constraints and judging rubric.
-- Long-term implementation stack and hosting beyond the current single-file prototype, based on the available environment and the simplest useful model.
-- AI provider and budget, if AI is needed at all in the first demo.
-- Which visualizations should be original, linked, embedded, or adapted under a confirmed license.
-- Initial content review process and responsibility.
+## 10. Open implementation decisions
+
+- The exact hackathon event and its official constraints.
+- The smallest question-first slice that convincingly expresses VSE; the LLM example is a candidate.
+- Which initial topics are built in and what the answer should do for unsupported topics.
+- Whether to use an LLM and which provider/available credits, based on actual requirements and budget.
+- How retrieval, source caching, and structured visual plans should work, if needed for the chosen slice.
+- The simplest suitable frontend/backend/storage/deployment arrangement.
+- The content schema, allowed visualization components, and evaluation process for the first slice.
