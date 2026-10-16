@@ -53,6 +53,16 @@ Research and prototype **one** concept end-to-end:
 
 The current first concept is provisional and documented in `docs/research/FIRST_PROTOTYPE_ORBIT.md`. The hackathon identity/rules remain unresolved, so don't claim the prototype is eligible or that existing code may be submitted. Do not build authentication, billing, a general-purpose agent platform, or a massive ingestion pipeline as part of this milestone.
 
+## Prototype regression tests
+
+The first orbit prototype has dependency-free checks for path outcomes, approximate circular-radius stability, finite SVG coordinates, presets, reset, quiz feedback, and reduced-motion stepping. With Node.js 22 or newer available, run:
+
+```sh
+node tests/orbit-model.test.mjs
+```
+
+GitHub Actions is configured to run these checks on relevant pushes and pull requests. The last documented V8 harness results are bounded checks, not a real-browser test or independent physics review; do not claim those broader checks passed unless they are run.
+
 ## How research status works
 
 Research is intentionally incomplete until the records say otherwise. Use [the Research Coverage Ledger](docs/research/RESEARCH_COVERAGE.md) to see what was checked, what is only a candidate, and what remains missing or blocked. The project records failed searches and unverified claims so another agent can continue without repeating work or pretending it is complete.
