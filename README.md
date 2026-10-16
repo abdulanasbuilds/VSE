@@ -1,17 +1,18 @@
 # VSE — Visual Science Explorer
 
-VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine that helps people understand how things work across AI, mathematics, physics, biology, space, engineering, and other subjects. It turns questions into progressive explanations, interactive visual models, and deeper evidence-aware learning—all inside VSE.
+VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine for understanding how things work across mathematics, physics, AI, and the wider sciences. It turns questions into progressive explanations, interactive visual models, and deeper evidence-aware learning—all inside VSE.
 
-**The product principle:** do not merely show people information; help them build a mental model they can inspect, question, and explore.
+**The north star: make knowledge visible, in the world.** Do not merely show information; help people build a mental model they can inspect, question, and explore—and then continue into the next connected idea.
 
 ## Project status
 
-The repository includes durable research/agent documentation and a tested satellite-orbit engineering experiment. That experiment is a sample visual module, not the definition of the product or the complete hackathon entry. The project owner has confirmed VSE—the built-in question-to-visual-understanding engine—as the project direction for the event they call the “World Dot Name weekend hackathon”. The exact official event page/rules and the first bounded demonstration topic are still unverified.
+The repository includes durable research/agent documentation and a tested satellite-orbit engineering experiment. That experiment is a sample visual module, not the definition of the product or the complete hackathon entry. The project owner has confirmed VSE—the built-in question-to-visual-understanding engine—as the project direction for the event they call the “World Dot Name weekend hackathon”. That event is one opportunity to demonstrate the idea, not the reason VSE exists or the boundary of its future. The exact official event page/rules and the first bounded demonstration topic are still unverified.
 
 - Authentication and authorization: out of scope for now.
 - Monetization, payments, subscriptions, and ads: out of scope for now.
 - User experience: people should be able to understand answers and explore visual models inside VSE; external sources are research/provenance inputs, not destinations the app sends learners to.
 - Architecture direction: built-in knowledge library + AI-assisted retrieval/explanation + a constrained interactive visualization renderer. The product direction is confirmed; the first learning slice, event requirements and long-term stack remain to be determined.
+- Long-term direction: a connected, cross-domain learning environment where concepts link to prerequisites, related ideas, applications, and next steps so a learner can keep exploring.
 - Research coverage: broad and ongoing. Never claim that all scientific knowledge has been collected.
 - AI answers: must not be presented as verified science by default.
 
