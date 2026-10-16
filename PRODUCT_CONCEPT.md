@@ -6,13 +6,13 @@
 
 VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine. Someone can ask how something works—an AI language model, electricity, the blue sky, a cell, an orbit, a mathematical idea, a machine, or another scientific/technical concept. VSE turns that question into a clear explanation, a step-by-step visual model, and meaningful interactions that let the person explore why the concept behaves as it does. People can start with very simple language and then go deeper into real terminology, equations, evidence, and limitations. The learning experience should happen **inside VSE**, rather than merely sending the person to articles, videos, or other websites.
 
-**The product's central value is not the number of facts collected. It is making the relationships behind those facts visible and explorable.**
+**The north star is: make knowledge visible, in the world.** The product's central value is not the number of facts collected; it is making the relationships behind those facts visible and explorable. In the long term, VSE should help a learner move from one idea to the next through clear connections—prerequisites, related concepts, consequences, and real-world applications—rather than treating each question as an isolated answer.
 
 ## Owner-confirmed direction — 2026-10-16
 
-The project owner has reaffirmed VSE as the project to pursue for the named **“World Dot Name weekend hackathon”**. The exact official event page/name has not yet been identified confidently, so event eligibility, deadline, submission rules and permitted prior work remain unverified. This uncertainty must not be misread as uncertainty about the product's direction.
+The project owner has reaffirmed VSE as the project to pursue for the named **“World Dot Name weekend hackathon”**. The hackathon is a near-term proving ground, not the purpose, identity, or long-term boundary of VSE. The exact official event page/name has not yet been identified confidently, so event eligibility, deadline, submission rules and permitted prior work remain unverified. This uncertainty must not be misread as uncertainty about the product's direction.
 
-The long-term ambition is for a person to be able to ask how something works across science and technology and learn through a self-contained visual experience. The interface should not assume that the learner already knows the technical vocabulary or every mathematical prerequisite. Start with an accurate intuitive explanation, then reveal the mechanism, a concept-appropriate visual, meaningful interaction, deeper science/mathematics and evidence in stages.
+The long-term ambition is for a person to be able to ask how something works across science and technology—especially mathematics and physics, alongside the wider sciences—and learn through a self-contained visual experience. After understanding one concept, they should be able to continue to a connected next idea, see why it relates, and build understanding cumulatively. The interface should not assume that the learner already knows the technical vocabulary or every mathematical prerequisite. Start with an accurate intuitive explanation, then reveal the mechanism, a concept-appropriate visual, meaningful interaction, deeper science/mathematics and evidence in stages.
 
 The hackathon version must be **small enough to research and validate properly**, not a claim that VSE already handles every question on Earth. Decide a narrow first learning journey and be honest about which questions are supported. If a question or evidence path is unsupported, explain the limitation rather than inventing an answer or rendering a plausible-looking but ungrounded model.
 
@@ -27,7 +27,8 @@ VSE should build a bridge:
 - from the key idea to a visual sequence or model;
 - from watching to interacting;
 - from a beginner-level intuition to the actual mechanism, terms, maths, and evidence;
-- from an answer generated for the user to an in-app record of what supports it and what remains uncertain.
+- from an answer generated for the user to an in-app record of what supports it and what remains uncertain;
+- from one concept to the next through meaningful, explained relationships rather than an arbitrary list of links.
 
 ## 3. The three product layers
 
@@ -54,6 +55,7 @@ A typical experience can include:
 4. **Explore it:** change an input, select a step, compare states, or inspect what changes and why.
 5. **Go deeper:** real terminology, equations, mechanisms, assumptions, and more precise explanations.
 6. **Evidence inside VSE:** source titles, authors/organizations, dates, relevant claim support, evidence status, and limitations shown in the app.
+7. **Continue learning:** offer relevant next concepts or prerequisites, with a short explanation of how each connects. This may be small in the first demo and grow into a richer cross-domain concept map over time.
 
 The renderer must choose a visual form suited to the concept. A physics system may need a simulation; an LLM explanation may need a token/processing flow plus an explicitly simplified illustration; a statistical idea may need a plot that changes with the data. Not every subject should be forced into the same diagram template.
 
@@ -81,7 +83,7 @@ Other topics—why the sky is blue, how a circuit works, what makes a satellite 
 
 ## 6. What the first hackathon should prove
 
-The product vision is broad; a weekend implementation must remain bounded. The first entry should demonstrate the core product loop clearly:
+The product vision is broad and long-term; a weekend implementation must remain bounded. The hackathon is a chance to validate and demonstrate the core idea, not a reason to shrink VSE into a one-off hackathon app. The first entry should demonstrate the core product loop clearly:
 
 **Question → understandable explanation → meaningful visual → user interaction → deeper understanding → evidence displayed in-app.**
 
@@ -98,6 +100,7 @@ The existing satellite-orbit page proves that a browser-based visual model can b
 - Not a generic chatbot that returns paragraphs and leaves the hard learning work to the user.
 - Not a prettier search engine that redirects people to third-party sites instead of explaining.
 - Not an automatic claim that an LLM explanation is scientifically true.
+- Not a hackathon-only project; the event demo is just one milestone in a longer cross-domain learning product.
 - Not a promise to answer every possible question perfectly from day one.
 - Not a pipeline that bulk-copies the internet or every research paper.
 - Not an all-at-once platform with account systems, payments, a giant backend, and agent orchestration before the core experience works.
