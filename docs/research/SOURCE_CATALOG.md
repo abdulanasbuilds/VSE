@@ -11,6 +11,8 @@ Last reviewed for this initial pass: 2026-10-15. This is a research inventory, n
 
 A landing page can be confirmed without confirming every claim or asset inside it. Never copy a full research corpus just because it is accessible.
 
+For current official data/API service candidates, record-by-record status and exact sample-inspection gaps, see [DATASET_AND_API_REGISTER.md](DATASET_AND_API_REGISTER.md). Service documentation being checked is not the same as a dataset sample, API integration, scientific claim, or license being verified.
+
 ## A. OpenAI and AI-generated scientific work
 
 | ID | Resource | Why it matters | Status and next check |
