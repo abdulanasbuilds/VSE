@@ -4,10 +4,12 @@ This is the explicit record of what VSE has not yet found, checked, or decided. 
 
 ## P0 — Immediate foundation tasks
 
+- [ ] **P0-06: Run reproducible prototype regression tests and browser checks.** Run `tests/orbit-model.test.mjs` from a local checkout; compare circular speed, impact, escape, finite values, and clipping with documented expectations. Then check the page in a real browser at mobile and desktop widths, including keyboard navigation and reduced-motion behavior. A V8 stub-DOM harness passed representative cases, but that is not a browser test or independent scientific validation.
+
 - [ ] **P0-01: Confirm hackathon rules.** Find the official event page, exact deadline and time zone, project eligibility, judging criteria, required AI/tools, deployment rules, use of existing work, demo expectations, and submission format. Record source URLs. Do not design around an unverified event name or rule.
 - [ ] **P0-02: Validate this source inventory.** Open the official source and documentation links that are still marked CANDIDATE. Record any dead link, redirect, changed API, licence, or access restriction.
 - [x] **P0-03: Select one concept provisionally.** A source-backed orbital-motion explainer is the first reusable prototype because its learning objective, NASA learning sources, and interactive path are tractable. The decision is recorded in `FIRST_PROTOTYPE_ORBIT.md`; it can be changed after learner testing. Do not imply hackathon eligibility while event rules remain unknown.
-- [x] **P0-04: Establish the initial claim map.** `FIRST_PROTOTYPE_ORBIT.md` records the learner outcome, individual orbit claims, NASA source links, assumptions, and caveats. The math/model still needs numerical tests and independent review.
+- [x] **P0-04: Establish the initial claim map.** `FIRST_PROTOTYPE_ORBIT.md` records the learner outcome, individual orbit claims, NASA source links, assumptions, and caveats. The math/model has passed bounded harness cases; broader numeric tests, local regression-script execution, and independent review remain open.
 - [x] **P0-05: Confirm the implementation path for this slice.** A single-file HTML/CSS/JavaScript frontend with an in-browser dimensionless model is sufficient; no backend, database, external API, account system, model key, or package install is needed for this first interaction. This is not a permanent stack decision for future VSE features.
 
 ## P1 — OpenAI mathematics release: inventory and interpretation
@@ -61,7 +63,7 @@ The following must not be represented as completed:
 - all named websites' full resource collections have not been exhaustively inspected;
 - all data APIs and licences have not been compared;
 - all scientific discovery sources have not been found;
-- no multi-topic app, backend, database, external API integration, deployment, browser accessibility review, or learner study has been completed; the initial single-file orbit prototype is still awaiting runtime and model tests;
+- no multi-topic app, backend, database, external API integration, deployment, browser accessibility review, or learner study has been completed; the initial single-file orbit prototype has passed bounded harness cases but still awaits local regression-script execution, real-browser and accessibility tests, broad numerical validation, and learner feedback;
 - the hackathon's official terms have not yet been confirmed.
 
 ## Backlog maintenance
