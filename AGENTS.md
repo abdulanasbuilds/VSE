@@ -24,6 +24,15 @@ If STATE.md is missing or contradicts the actual repository, inspect the actual 
 - Do not copy entire books, papers, research repositories, visual assets, or websites into VSE. Record source links, metadata, lawful short summaries, citations, and only materials whose reuse terms have been checked.
 - If the task is broader than the current milestone, document it in the backlog rather than expanding the implementation automatically.
 
+## Research-first build gate
+
+- Read `docs/BUILD_READINESS.md`, `docs/research/RESEARCH_BATCH_PLAN.md`, and `docs/research/DATASET_AND_API_REGISTER.md` before proposing implementation or selecting infrastructure.
+- If BUILD_READINESS.md says **HOLD**, do not implement frontend, backend, database, API integrations, model integrations/training, data pipelines, or production architecture. Documentation, bounded research, sample inspection, evidence mapping, and test planning are allowed.
+- Do not silently treat the leading LLM-explainer candidate as selected. Compare the documented concept-explainer, SPHEREx, Earth/environment, and ML-dataset candidates using evidence and a clear learner outcome.
+- For the selected candidate, inspect actual relevant source material and, where applicable, a small representative data/API sample. Record versions, schema, units, geography/time scope, transformations, access, quotas, privacy, source-specific rights, and unresolved issues.
+- Complete the applicable readiness gates and report the exact recommendation to the project owner. Stop and notify the owner before implementation; never build automatically in the same step that changes the gate to READY.
+- Do not research every discipline exhaustively before a small prototype. Produce a complete, defensible evidence packet for one scoped experience instead.
+
 ## Research discipline
 
 - Use primary sources when possible: original papers, official datasets, source repositories, institutional databases, and official documentation.
@@ -62,7 +71,7 @@ When the user says “continue”, resume from STATE.md and the latest committed
 
 ## Mandatory research and verification rules
 
-- Read `STATE.md`, `PRODUCT_CONCEPT.md`, `ROADMAP.md`, `docs/research/RESEARCH_COVERAGE.md`, `docs/research/SOURCE_CATALOG.md`, and the specific audit/backlog before doing work.
+- Read `STATE.md`, `PRODUCT_CONCEPT.md`, `ROADMAP.md`, `docs/BUILD_READINESS.md`, `docs/research/RESEARCH_BATCH_PLAN.md`, `docs/research/RESEARCH_COVERAGE.md`, `docs/research/SOURCE_CATALOG.md`, and the specific audit/backlog before doing work.
 - Search the repository for existing notes before repeating research. Continue from the latest recorded state; don't restart, broaden scope, or build a giant product just because the task is open-ended.
 - Every source and claim must have a status. Use the status vocabulary in `RESEARCH_COVERAGE.md`; distinguish “page opened” from “claim checked”, “model tested”, and “independently reviewed”.
 - Record useful negative results: source not found, inaccessible page, failed API call, unavailable PDF, missing proof, uncertain licence, contradiction, or unresolved question. Include the search performed and the next best action so the next agent can continue.
@@ -70,6 +79,6 @@ When the user says “continue”, resume from STATE.md and the latest committed
 - Prefer primary sources, versioned data, official APIs, original papers, repositories and institutional datasets. For important claims, seek independent corroboration where feasible.
 - Check revisions, errata, withdrawals, retractions, assumptions, dependencies, data definitions, uncertainty, and asset reuse rights. A machine-checked formal statement is not automatically proof that an informal paper claim has been faithfully represented.
 - Use original summaries and link to sources. Do not bulk-copy papers, books, videos, or third-party educational explanations.
-- After meaningful work, update `STATE.md`, `docs/research/RESEARCH_LOG.md`, `docs/research/RESEARCH_COVERAGE.md`, the relevant backlog/catalogue, and `ROADMAP.md` if phase status changed. Include commit or exact file paths when possible.
+- After meaningful work, update `STATE.md`, `docs/research/RESEARCH_LOG.md`, `docs/research/RESEARCH_COVERAGE.md`, `docs/research/DATASET_AND_API_REGISTER.md` when applicable, the relevant backlog/catalogue, and `ROADMAP.md` if phase status changed. Include commit or exact file paths when possible.
 - Keep changes small and reviewable. Do not add a framework, authentication, billing, database, or AI integration until the current phase and user constraints justify it.
 
