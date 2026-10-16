@@ -11,7 +11,7 @@
 
 ## 1. Product in one paragraph
 
-VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine: ask how something works, receive a progressive explanation, inspect and manipulate a meaningful visual model, go deeper into terms/math, and inspect the evidence—all inside VSE. Domains include AI/LLMs, mathematics, physics, astronomy, chemistry, biology, Earth/climate, engineering and other scientific/technical subjects. The orbit page is only one sample module, not the product direction.
+VSE (Visual Science Explorer) follows the north star **make knowledge visible, in the world**. It is a long-term, question-first visual learning environment across mathematics, physics, AI/CS, astronomy, chemistry, biology, Earth/climate, engineering and the wider sciences. A learner can start from a question, build a mental model through progressive explanation and interaction, inspect in-app evidence, then continue to a connected concept or prerequisite inside VSE. The hackathon is one chance to demonstrate the core loop, not the product's identity or limit. The orbit page is only one sample module, not the product direction.
 
 ## 2. Confirmed constraints
 
@@ -21,12 +21,17 @@ VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning e
 - Do not choose a framework, backend, model provider, database, or hosting before selecting the first concept and checking actual hackathon rules.
 - Prefer a small, carefully verified, visibly interactive explanation over a large unreviewed content pile.
 - Do not send learners to external sites to receive or finish the explanation. External research/data APIs may be used behind the scenes where permitted; show source provenance, claim support, and limitations within VSE.
-- The core product is the built-in question-to-visual-understanding experience, combining a growing knowledge library, AI-assisted retrieval/explanation, and an interactive visual renderer—not a static encyclopedia, a gallery of diagrams, or a generic chatbot.
+- The core product is the built-in question-to-visual-understanding experience, combining a growing knowledge library, AI-assisted retrieval/explanation, meaningful interactive visuals, and connections to the next concept—not a static encyclopedia, a gallery of diagrams, or a generic chatbot.
+- The hackathon is a proving ground for one small experience, not the reason VSE exists; the longer-term product should grow across fields and help learners move between connected ideas.
 - Use AI for discovery/retrieval/drafting only when helpful; AI output does not certify itself.
 - Preserve sources and missing work. Do not claim the research collection is exhaustive.
 - Agents should continue from this state; no restart or repeated setup without a concrete reason.
 
 See [PRODUCT_CONCEPT.md](PRODUCT_CONCEPT.md), [DECISIONS.md](docs/DECISIONS.md), [SPEC.md](SPEC.md), [AGENTS.md](AGENTS.md), and [QUALITY_AND_PROVENANCE.md](docs/QUALITY_AND_PROVENANCE.md).
+
+### Product clarification — 2026-10-16
+
+The owner has clarified that VSE is not only for hackathons and is not confined to one discipline. Mathematics and physics are major pillars, alongside the wider sciences and technology. The guiding idea is “make knowledge visible, in the world,” with a learner able to continue from one understood idea to a related next idea. Reflect this in product framing, concept relationships, and roadmap decisions. Keep the first build small for validation; do not confuse the bounded demo with the full ambition.
 
 ## 3. Repository reality
 
