@@ -5,7 +5,7 @@ These instructions apply to every AI coding agent, research agent, and human con
 ## First action on every session
 
 1. Inspect the working tree and current branch before making changes.
-2. Read README.md, AGENTS.md, STATE.md, PRODUCT_CONCEPT.md, SPEC.md, and ROADMAP.md.
+2. Read README.md, AGENTS.md, STATE.md, PRODUCT_CONCEPT.md, SPEC.md, ROADMAP.md, and `docs/BUILD_READINESS.md`.
 3. Read only the relevant supporting documents next, including the source catalogue and research backlog for research tasks.
 4. Identify the current milestone and the single next action already recorded in STATE.md.
 5. Continue from that checkpoint. Do not restart, re-scaffold, or replace the project merely because a new session started.
@@ -14,15 +14,24 @@ If STATE.md is missing or contradicts the actual repository, inspect the actual 
 
 ## Scope discipline
 
-- VSE means Visual Science Explorer: a question-first, AI-assisted visual learning engine that turns questions about scientific/technical concepts into progressive explanations, meaningful interactive visuals, deeper understanding, and in-app evidence.
+- VSE means Visual Science Explorer: a question-first learning environment guided by “make knowledge visible, in the world.” It should explain how and why concepts, processes, systems, and everyday objects work across mathematics, physics, AI, technology, nature, engineering, and other knowledge domains where trustworthy coverage is possible. Its experience combines progressive explanations, meaningful visuals, hands-on exploration or practice where appropriate, deeper understanding, in-app evidence, and pathways to connected ideas.
 - Read PRODUCT_CONCEPT.md as the canonical product thesis. Do not mistake index.html or the orbit module for the full product; it is an engineering experiment and reusable example only.
 - Do not send users out to external pages to receive the explanation. Keep source/provenance metadata and evidence visible inside VSE; external research/API calls may happen behind the scenes when permitted.
-- The immediate goal is a small, trustworthy prototype, not a complete encyclopaedia or autonomous research platform.
+- The long-term ambition is broad, cross-domain understanding supported by internal learning resources and connected concepts; the first prototype must still be small, trustworthy, and testable. Do not mistake a bounded first slice for the whole vision or try to ingest everything at once.
 - No authentication, authorization, accounts, payments, subscriptions, advertising, or monetization in the current phase.
 - Do not assume or install a framework, database, hosting provider, vector database, or paid API before the smallest product requirement justifies it.
-- Prefer reliable curated records and hand-built interactive models over a large unreviewed scraping pipeline.
+- Prefer reliable curated records, original explanations, and validated interactive models over a large unreviewed scraping pipeline. Add guided practice or a safe virtual experiment when it materially improves learning.
 - Do not copy entire books, papers, research repositories, visual assets, or websites into VSE. Record source links, metadata, lawful short summaries, citations, and only materials whose reuse terms have been checked.
 - If the task is broader than the current milestone, document it in the backlog rather than expanding the implementation automatically.
+
+## Research-first build gate
+
+- Read `docs/BUILD_READINESS.md`, `docs/research/RESEARCH_BATCH_PLAN.md`, and `docs/research/DATASET_AND_API_REGISTER.md` before proposing implementation or selecting infrastructure.
+- If BUILD_READINESS.md says **HOLD**, do not implement frontend, backend, database, API integrations, model integrations/training, data pipelines, or production architecture. Documentation, bounded research, sample inspection, evidence mapping, and test planning are allowed.
+- Treat VSE's question-first visual learning engine as the owner-confirmed, long-term project direction: its north star is “make knowledge visible, in the world.” The hackathon is one opportunity to demonstrate the product, not its purpose or boundary. VSE should grow across mathematics, physics, and the wider sciences/technology, helping learners continue from one concept to related ideas and prerequisites inside VSE. The first supported question/demo journey is still open. Compare possible learning topics and interactions within VSE using evidence and measurable learner outcomes; do not reframe the task as choosing between unrelated products such as a standalone environmental dashboard or ML benchmark. SPHEREx, environmental data or ML data may become future topics/capabilities only when they serve the VSE learning goal.
+- For the selected candidate, inspect actual relevant source material and, where applicable, a small representative data/API sample. Record versions, schema, units, geography/time scope, transformations, access, quotas, privacy, source-specific rights, and unresolved issues.
+- Complete the applicable readiness gates and report the exact recommendation to the project owner. Stop and notify the owner before implementation; never build automatically in the same step that changes the gate to READY.
+- Do not research every discipline exhaustively before a small prototype. Produce a complete, defensible evidence packet for one scoped experience instead.
 
 ## Research discipline
 
@@ -62,7 +71,7 @@ When the user says “continue”, resume from STATE.md and the latest committed
 
 ## Mandatory research and verification rules
 
-- Read `STATE.md`, `PRODUCT_CONCEPT.md`, `ROADMAP.md`, `docs/research/RESEARCH_COVERAGE.md`, `docs/research/SOURCE_CATALOG.md`, and the specific audit/backlog before doing work.
+- Read `STATE.md`, `PRODUCT_CONCEPT.md`, `ROADMAP.md`, `docs/BUILD_READINESS.md`, `docs/research/RESEARCH_BATCH_PLAN.md`, `docs/research/RESEARCH_COVERAGE.md`, `docs/research/SOURCE_CATALOG.md`, and the specific audit/backlog before doing work.
 - Search the repository for existing notes before repeating research. Continue from the latest recorded state; don't restart, broaden scope, or build a giant product just because the task is open-ended.
 - Every source and claim must have a status. Use the status vocabulary in `RESEARCH_COVERAGE.md`; distinguish “page opened” from “claim checked”, “model tested”, and “independently reviewed”.
 - Record useful negative results: source not found, inaccessible page, failed API call, unavailable PDF, missing proof, uncertain licence, contradiction, or unresolved question. Include the search performed and the next best action so the next agent can continue.
@@ -70,6 +79,6 @@ When the user says “continue”, resume from STATE.md and the latest committed
 - Prefer primary sources, versioned data, official APIs, original papers, repositories and institutional datasets. For important claims, seek independent corroboration where feasible.
 - Check revisions, errata, withdrawals, retractions, assumptions, dependencies, data definitions, uncertainty, and asset reuse rights. A machine-checked formal statement is not automatically proof that an informal paper claim has been faithfully represented.
 - Use original summaries and link to sources. Do not bulk-copy papers, books, videos, or third-party educational explanations.
-- After meaningful work, update `STATE.md`, `docs/research/RESEARCH_LOG.md`, `docs/research/RESEARCH_COVERAGE.md`, the relevant backlog/catalogue, and `ROADMAP.md` if phase status changed. Include commit or exact file paths when possible.
+- After meaningful work, update `STATE.md`, `docs/research/RESEARCH_LOG.md`, `docs/research/RESEARCH_COVERAGE.md`, `docs/research/DATASET_AND_API_REGISTER.md` when applicable, the relevant backlog/catalogue, and `ROADMAP.md` if phase status changed. Include commit or exact file paths when possible.
 - Keep changes small and reviewable. Do not add a framework, authentication, billing, database, or AI integration until the current phase and user constraints justify it.
 

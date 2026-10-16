@@ -1,16 +1,17 @@
 # VSE Project State and Agent Handoff
 
 **Last updated:** 2026-10-16 (UTC)  
-**Current branch:** `main`  
-**Current phase:** Phase 1 — define the VSE hackathon experience (in progress)  
-**Product code status:** one standalone orbit visualization experiment exists and its bounded Node 22 regression suite passed; the intended question-first VSE user experience has not yet been built
-**Next action:** define the first hackathon slice around VSE's question → in-app explanation → interactive visual → deeper understanding journey; keep event eligibility unresolved until the exact official event is identified.
+**Base branch audited:** `main` at `88fd17700c44a175ee3fa010f0486aeae4e059b8`  
+**Documentation review branch:** `docs/research-readiness-2026-10-16`  
+**Current phase:** Research readiness — compare first-experience candidates and inspect supporting evidence (in progress)  
+**Product code status:** one standalone orbit visualization experiment exists; the intended question-first VSE user experience has not yet been built
+**Next action:** use `docs/AGENT_RESEARCH_BRIEF.md` to organize source-grounded, reusable learning packets in bounded research batches: original explanations for multiple levels, practical/interactive lesson proposals, claim-to-source records, rights/access checks, concept relationships and a validation plan. Continue to evaluate one small first journey for the demo, but keep the long-term VSE scope cross-domain and practical. Verify event rules if the official page can be identified. Keep all application/frontend/backend/database/API implementation on HOLD until the evidence packet and owner-facing readiness recommendation are complete.
 
 > This is the durable checkpoint. Every agent must read it first after AGENTS.md and must update it after meaningful work. Do not assume work exists unless the current repository confirms it.
 
 ## 1. Product in one paragraph
 
-VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine: ask how something works, receive a progressive explanation, inspect and manipulate a meaningful visual model, go deeper into terms/math, and inspect the evidence—all inside VSE. Domains include AI/LLMs, mathematics, physics, astronomy, chemistry, biology, Earth/climate, engineering and other scientific/technical subjects. The orbit page is only one sample module, not the product direction.
+VSE (Visual Science Explorer) follows the north star **make knowledge visible, in the world**. It is a long-term, question-first visual learning environment across mathematics, physics, AI/CS, astronomy, chemistry, biology, Earth/climate, engineering and the wider sciences. A learner can start from a question, build a mental model through progressive explanation and interaction, inspect in-app evidence, then continue to a connected concept or prerequisite inside VSE. The hackathon is one chance to demonstrate the core loop, not the product's identity or limit. The orbit page is only one sample module, not the product direction.
 
 ## 2. Confirmed constraints
 
@@ -20,16 +21,28 @@ VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning e
 - Do not choose a framework, backend, model provider, database, or hosting before selecting the first concept and checking actual hackathon rules.
 - Prefer a small, carefully verified, visibly interactive explanation over a large unreviewed content pile.
 - Do not send learners to external sites to receive or finish the explanation. External research/data APIs may be used behind the scenes where permitted; show source provenance, claim support, and limitations within VSE.
-- The core product is the built-in question-to-visual-understanding experience, combining a growing knowledge library, AI-assisted retrieval/explanation, and an interactive visual renderer—not a static encyclopedia, a gallery of diagrams, or a generic chatbot.
+- The core product is the built-in question-to-visual-understanding experience, combining a growing knowledge library, AI-assisted retrieval/explanation, meaningful interactive visuals, and connections to the next concept—not a static encyclopedia, a gallery of diagrams, or a generic chatbot.
+- The hackathon is a proving ground for one small experience, not the reason VSE exists; the longer-term product should grow across fields and help learners move between connected ideas.
 - Use AI for discovery/retrieval/drafting only when helpful; AI output does not certify itself.
 - Preserve sources and missing work. Do not claim the research collection is exhaustive.
 - Agents should continue from this state; no restart or repeated setup without a concrete reason.
 
 See [PRODUCT_CONCEPT.md](PRODUCT_CONCEPT.md), [DECISIONS.md](docs/DECISIONS.md), [SPEC.md](SPEC.md), [AGENTS.md](AGENTS.md), and [QUALITY_AND_PROVENANCE.md](docs/QUALITY_AND_PROVENANCE.md).
 
+### Product clarification — 2026-10-16
+
+The owner has clarified that VSE is not only for hackathons and is not confined to one discipline. Mathematics and physics are major pillars, alongside the wider sciences and technology. The guiding idea is “make knowledge visible, in the world,” with a learner able to continue from one understood idea to a related next idea. Reflect this in product framing, concept relationships, and roadmap decisions. Keep the first build small for validation; do not confuse the bounded demo with the full ambition.
+
+
+## 3. Latest product clarification — 2026-10-16
+
+VSE must work for curious people who do not already know the technical vocabulary. The learner journey should move from plain-language intuition (including a beginner entry point simple enough for a very young learner), to a concept-appropriate visual, practical exploration or practice when it helps, deeper mechanisms/mathematics, evidence and limitations, and a next connected concept. Practical does not mean every topic requires a simulation; choose the most useful and truthful learning method for the topic. The ambition is broad and long-term, but coverage is added in researched, rights-aware, testable packets. No external page should be required to complete the learner's understanding; internal provenance and source rights must still be preserved.
+
+See `docs/AGENT_RESEARCH_BRIEF.md` for the research-team contract and ready-to-paste agent task.
+
 ## 3. Repository reality
 
-The GitHub repository was empty when connected. The following documentation now exists on `main`:
+The GitHub repository was initially empty when first connected during an earlier setup session. The baseline documentation below was present on `main` at the time of this audit:
 
 - `README.md`
 - `AGENTS.md`
@@ -51,7 +64,14 @@ The GitHub repository was empty when connected. The following documentation now 
 - `docs/research/RESEARCH_BACKLOG.md`
 - `docs/research/RESEARCH_LOG.md`
 
-Root index.html is a standalone satellite-orbit visualization experiment with a local calculation, controls, limitations and a knowledge check. Its regression suite passed under Node.js 22 in GitHub Actions. It is not the intended question-first VSE app: no question interpreter, LLM explanation/retrieval layer, structured visual-plan renderer, or complete in-app evidence workflow exists yet. The orbit module currently contains outbound source links; the self-contained user-journey requirement is recorded and should be applied when shaping the VSE-facing experience.
+The following five readiness documents were added on `docs/research-readiness-2026-10-16` and are not part of `main` until their pull request is merged:
+- `docs/PROJECT_AUDIT.md`
+- `docs/BUILD_READINESS.md`
+- `docs/DATA_AND_RESEARCH_PIPELINE.md`
+- `docs/research/DATASET_AND_API_REGISTER.md`
+- `docs/research/RESEARCH_BATCH_PLAN.md`
+
+Root index.html is a standalone satellite-orbit visualization experiment with a local calculation, controls, limitations and a knowledge check. Its regression suite passed under Node.js 22 in GitHub Actions. It is not the intended question-first VSE app: no question interpreter, LLM explanation/retrieval layer, structured visual-plan renderer, or complete in-app evidence workflow exists yet. The orbit module currently displays source identities/descriptions in-page and has no outbound HTTP(S) source anchors in the audited `index.html`; canonical URLs remain in research records. PR #2 adds a regression assertion for this requirement, but that PR's test currently fails to parse because of an invalid regular expression.
 
 ## 4. Work completed in this pass
 
@@ -118,20 +138,22 @@ Read [SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md), [SCIENCE_DOMAIN_MAP.m
 
 ## 7. Ordered next actions
 
-### Next action A — define the first hackathon VSE experience
-1. Start from PRODUCT_CONCEPT.md, not from the orbit demo. Define one question-first experience that demonstrates explanation plus meaningful visual interaction plus a deeper level and in-app evidence.
-2. Keep “How does an AI language model generate an answer?” as the leading candidate, not an irreversible product choice. A simple built-in orbit example may remain a second example only if it helps demonstrate cross-topic range.
-3. Decide the smallest supported question set and a graceful fallback for unsupported questions or missing evidence. Do not promise that every global question will work perfectly from day one.
-4. Record the scope and learner-success test in HACKATHON_SLICE_BRIEF.md before choosing technology; this brief is now present as a candidate, but remains unconfirmed pending event research.
+Follow `docs/research/RESEARCH_BATCH_PLAN.md` in order. Do not skip ahead to implementation.
 
-### Next action B — resolve event constraints without guessing
-Searches did not identify a definitive official page for “World Dot Name weekend hackathon.” If the owner supplies the exact event URL/name, inspect the official deadline/time zone, eligibility, theme, prior-code policy, allowed AI/services, team rules, submission and judging requirements. Until then, plan a reusable VSE prototype but do not claim event eligibility.
+### Next action A — choose the first VSE learning journey
+The owner-confirmed project is VSE. Compare a small number of candidate lesson topics within this project—led by “How does an AI language model generate an answer?”—based on beginner learning value, primary evidence, a truthful interactive visual, validation feasibility and effort. Do not compare against unrelated products or assume the broad long-term goal requires universal coverage in the first demo.
 
-### Next action C — design the in-app evidence/visual pipeline
-Specify how the question is matched to built-in concept packets, how permitted external research/model services might supply missing evidence behind the scenes, how results become a validated structured explanation/visual plan, and how sources, claim support and limitations are shown within VSE. Do not run arbitrary LLM-generated browser code.
+### Next action B — inspect evidence and a real sample
+For data-driven options, inspect one small actual data/API sample or cutout and record its exact product/release, schema, units, missingness/quality fields, geographic/time scope, size, access path, quotas, and item-specific rights. For concept-explainer options, write a bounded claim/source map from authoritative references and explicitly label analogy limits. Update `docs/research/DATASET_AND_API_REGISTER.md`, `RESEARCH_COVERAGE.md`, and `RESEARCH_LOG.md`.
 
-### Next action D — continue targeted research
-Research the actual chosen flagship question and selected visual technique. Continue the broader scientific/source inventory in bounded batches, but do not let completing every field become a prerequisite for a demonstrable product. Do not add authentication or monetization.
+### Next action C — prepare one publishable research packet
+Use `docs/CONTENT_SCHEMA.md` and `docs/DATA_AND_RESEARCH_PIPELINE.md` to record the learner outcome, progressive explanation, claims/evidence, visual concept, controlled inputs, assumptions, validation cases, failure behavior, access/privacy/cost, and accessibility. Research broadly enough to select; do not attempt an exhaustive global science index.
+
+### Next action D — complete the build gate and notify the owner
+Resolve applicable gates in `docs/BUILD_READINESS.md`. Also track the unrelated PR #2 regex-test failure in `docs/PROJECT_AUDIT.md`; do not silently merge it or assume the preview failure is diagnosed. When the evidence packet is ready, present the smallest recommended first build, reasons, costs, risks and remaining unknowns. **Stop and notify the project owner. Do not begin frontend/backend/database/API work automatically after preparing the recommendation.**
+
+### Event research
+The exact “World Dot Name weekend hackathon” page has not been identified confidently. If a link becomes available, check official deadline/time zone, eligibility, theme, judging, prior-code policy, AI/API rules, deployment and submission requirements. Do not borrow terms from unrelated events.
 
 ## 8. Definition of done for the current phase
 
@@ -144,13 +166,23 @@ Research the actual chosen flagship question and selected visual technique. Cont
 - [ ] In-app source/evidence UX and structured visual-rendering contract defined for that slice.
 - [ ] First question-to-visual-understanding experience built and tested with a real beginner.
 
+### Repository readiness and no-build gate (2026-10-16)
+
+- Audited the remote `main` tree at `88fd17700c44a175ee3fa010f0486aeae4e059b8`; 29 tracked paths were returned and the recursive tree was not truncated.
+- Opened a separate documentation branch, `docs/research-readiness-2026-10-16`, to avoid changing `main` or the unrelated open PR #2.
+- Added `docs/PROJECT_AUDIT.md`, `docs/BUILD_READINESS.md`, `docs/DATA_AND_RESEARCH_PIPELINE.md`, `docs/research/DATASET_AND_API_REGISTER.md`, and `docs/research/RESEARCH_BATCH_PLAN.md`.
+- Reviewed official data/API documentation for SPHEREx/IRSA, NASA Earthdata CMR, USGS water data, NOAA NCEI, Copernicus Data Space, World Bank Indicators, Crossref, OpenAlex and dataset-card practices. These are service-documentation checks; no representative source/data sample has yet been inspected end-to-end for the selected VSE experience.
+- No `LICENSE` file appears in the audited main tree. Do not infer reuse rights from public visibility or automatically choose a license without the owner's decision.
+- PR #2's new regex assertion causes the test file to fail to parse in CI with “Invalid regular expression flags”. No runtime or test code was changed in this documentation pass. A separate Cloudflare preview failure was noted but its logs were not inspected.
+- Current decision remains HOLD: VSE is the confirmed product direction, but the first bounded learning journey, its full source/claim and validation packet, and owner-facing readiness sign-off are not complete. The exact event identity/rules remain unverified. See `docs/BUILD_READINESS.md`.
+
 ## 9. Last verified session summary
 
 - State timestamp: 2026-10-16 UTC.
-- Current branch: main.
-- PRODUCT_CONCEPT.md is now the canonical statement of intent: a broad visual learning engine that takes questions about science/technology and delivers explanation, interaction, depth, and evidence within VSE.
-- The root orbit page is an engineering experiment and must not be mistaken for the full VSE product or the chosen hackathon submission.
-- Current regression result: GitHub Actions run #38836368258 passed the dependency-free Node.js 22 suite; merged PR #1 is commit bead3c078e5651f64f3407618584e44a438fb698.
-- Event identity/rules remain unresolved. No question-first LLM layer, retrieval pipeline, constrained visual-plan renderer, or deployed VSE-facing experience exists yet.
-- Next agent action: scope the first hackathon experience around the core product concept, while keeping AI/cost/event constraints explicit.
+- Base state audited: `main` at `88fd17700c44a175ee3fa010f0486aeae4e059b8`; documentation review branch: `docs/research-readiness-2026-10-16`.
+- PRODUCT_CONCEPT.md remains the canonical intent: turn questions into explanation, meaningful interaction, depth and evidence inside VSE.
+- The root orbit page is an engineering experiment, not the VSE product or a confirmed hackathon entry.
+- Node.js 22 CI regression runs passed for earlier main/PR #1 commits; the separate open PR #2 currently fails to parse due to its new regex assertion. See `docs/PROJECT_AUDIT.md`.
+- VSE is the confirmed product direction. The first bounded learning journey and the exact official “World Dot Name weekend hackathon” identity/rules remain unresolved. No complete selected-topic source/claim packet exists yet.
+- Current decision is HOLD. Continue from `docs/research/RESEARCH_BATCH_PLAN.md`; do not begin implementation until the readiness report has been presented and the owner has explicitly authorized the scoped build.
 

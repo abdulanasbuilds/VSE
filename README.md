@@ -1,17 +1,18 @@
 # VSE — Visual Science Explorer
 
-VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine that helps people understand how things work across AI, mathematics, physics, biology, space, engineering, and other subjects. It turns questions into progressive explanations, interactive visual models, and deeper evidence-aware learning—all inside VSE.
+VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine for understanding how things work across mathematics, physics, AI, and the wider sciences. It turns questions into progressive explanations, interactive visual models, and deeper evidence-aware learning—all inside VSE.
 
-**The product principle:** do not merely show people information; help them build a mental model they can inspect, question, and explore.
+**The north star: make knowledge visible, in the world.** Do not merely show information; help people build a mental model they can inspect, question, and explore—and then continue into the next connected idea.
 
 ## Project status
 
-The repository includes durable research/agent documentation and a tested satellite-orbit engineering experiment. That experiment is a sample visual module, not the definition of the product and not the chosen hackathon entry. The intended VSE experience is a built-in question-to-visual-understanding journey across scientific and technical domains.
+The repository includes durable research/agent documentation and a tested satellite-orbit engineering experiment. That experiment is a sample visual module, not the definition of the product or the complete hackathon entry. The project owner has confirmed VSE—the built-in question-to-visual-understanding engine—as the project direction for the event they call the “World Dot Name weekend hackathon”. That event is one opportunity to demonstrate the idea, not the reason VSE exists or the boundary of its future. The exact official event page/rules and the first bounded demonstration topic are still unverified.
 
 - Authentication and authorization: out of scope for now.
 - Monetization, payments, subscriptions, and ads: out of scope for now.
 - User experience: people should be able to understand answers and explore visual models inside VSE; external sources are research/provenance inputs, not destinations the app sends learners to.
-- Architecture: built-in knowledge library + AI-assisted retrieval/explanation + a constrained interactive visualization renderer. First hackathon scope and long-term stack remain to be chosen.
+- Architecture direction: built-in knowledge library + AI-assisted retrieval/explanation + a constrained interactive visualization renderer. The product direction is confirmed; the first learning slice, event requirements and long-term stack remain to be determined.
+- Long-term direction: a connected, cross-domain learning environment where concepts link to prerequisites, related ideas, applications, and next steps so a learner can keep exploring.
 - Research coverage: broad and ongoing. Never claim that all scientific knowledge has been collected.
 - AI answers: must not be presented as verified science by default.
 
@@ -38,14 +39,24 @@ The repository includes durable research/agent documentation and a tested satell
 - docs/CONTENT_SCHEMA.md — format for lessons, claims, visualizations, source records, and review status.
 - docs/QUALITY_AND_PROVENANCE.md — verification, citation, uncertainty, and reuse rules.
 - docs/AGENT_WORKFLOW.md — how agents resume work safely and avoid scope drift.
-- docs/research/SOURCE_CATALOG.md — verified starting sources and additional candidates.
+- docs/research/SOURCE_CATALOG.md — source leads and candidates with explicit review statuses.
 - docs/research/OPENAI_MATH_RELEASE.md — specific research plan for OpenAI's mathematics release.
 - docs/research/RESEARCH_BACKLOG.md — known gaps and ordered investigation queue.
 - docs/research/RESEARCH_LOG.md — dated notes on work actually performed.
+- docs/PROJECT_AUDIT.md — remote repository integrity, CI findings, and current gaps.
+- docs/BUILD_READINESS.md — the mandatory hold/ready gate; no implementation while on hold.
+- docs/AGENT_RESEARCH_BRIEF.md — the multi-agent research and content-compilation brief for the practical, cross-domain VSE vision.
+- docs/DATA_AND_RESEARCH_PIPELINE.md — how sources become claims, data transformations, visuals, and learning packets.
+- docs/research/DATASET_AND_API_REGISTER.md — data/API candidates, what was actually checked, and outstanding access/rights work.
+- docs/research/RESEARCH_BATCH_PLAN.md — bounded research steps leading to an owner-reviewed build decision.
 
 ## Non-negotiable research rule
 
 Track each item as **verified**, **partially verified**, **candidate**, **blocked**, or **not started**. A link being listed is not the same as its content having been reviewed; a paper's claim is not the same as an independently verified result; a visually convincing demonstration is not evidence on its own.
+
+## Research-before-build gate
+
+The project owner explicitly requires structured research, source/data checks, and a bounded product decision before implementation. Read [docs/BUILD_READINESS.md](docs/BUILD_READINESS.md) and follow [docs/research/RESEARCH_BATCH_PLAN.md](docs/research/RESEARCH_BATCH_PLAN.md). While the build gate says **HOLD**, do not start frontend, backend, database, API, model integration, or training work. A passing gate requires an owner-facing readiness recommendation; do not treat research completion as automatic permission to start building.
 
 ## First milestone
 
@@ -74,4 +85,4 @@ Research is intentionally incomplete until the records say otherwise. Use [the R
 
 ## Give any coding/research agent this prompt
 
-Read `AGENTS.md`, `STATE.md`, `PRODUCT_CONCEPT.md`, `HACKATHON_SLICE_BRIEF.md`, `ROADMAP.md`, and `docs/research/RESEARCH_COVERAGE.md` first. Treat the orbit page as an engineering experiment, not the product definition. Keep the explanation, interaction, depth, and evidence inside VSE. Continue VSE from its recorded state: do the next highest-priority unfinished task, research and verify from traceable sources, record what you checked and what you could not find, update the Markdown logs/state/backlog, and keep changes small. Never invent sources or claim verification you did not perform. Do not build a giant product, add authentication, or add monetization. Follow the current scope and leave an exact next step for the next agent.
+Read `AGENTS.md`, `STATE.md`, `PRODUCT_CONCEPT.md`, `SPEC.md`, `HACKATHON_SLICE_BRIEF.md`, `ROADMAP.md`, `docs/BUILD_READINESS.md`, `docs/AGENT_RESEARCH_BRIEF.md`, `docs/research/RESEARCH_BATCH_PLAN.md`, `docs/research/DATASET_AND_API_REGISTER.md`, and `docs/research/RESEARCH_COVERAGE.md` first. Treat the orbit page as an engineering experiment, not the product definition. VSE's north star is “make knowledge visible, in the world”: explain concepts simply, make mechanisms visible, add concept-specific practical exploration where it helps, and connect one learning step to the next. Keep the explanation, interaction, depth, and evidence inside VSE. Continue from the recorded checkpoint, inspect traceable sources, and record what was and was not checked. If the build gate is HOLD, do not implement frontend/backend/database/API/model/data-pipeline work; proceed with bounded research and documentation only. Compare a small number of candidate lesson topics within VSE rather than reopening the project direction; keep the LLM explanation as a leading topic candidate, not an irrevocable choice. Never invent sources or claim verification you did not perform. Keep changes small, maintain the research logs/state/backlog, and leave an exact next step for the next agent.

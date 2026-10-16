@@ -4,7 +4,7 @@
 
 ## 1. Purpose
 
-VSE (Visual Science Explorer) is a question-first, AI-assisted visual learning engine for understanding how things work. A person can ask about an AI language model, mathematics, physics, biology, space, engineering, or another scientific/technical subject. VSE should turn the question into an understandable explanation, a visual model that reveals the key relationships, and meaningful interaction that helps a learner explore how it works.
+VSE (Visual Science Explorer) is a question-first, AI-assisted learning environment for understanding how and why things work across mathematics, physics, AI, everyday objects and technology, nature, engineering, and other knowledge domains where reliable explanations are possible. Its north star is **make knowledge visible, in the world**. VSE should not require people to know technical terms before asking. It should turn a question into an accessible explanation, a meaningful visual, and a chance to explore, test, or practise the idea, then help the learner continue to a connected concept. A hackathon can demonstrate this vision, but it is not the product's identity or long-term limit.
 
 The complete learning journey belongs inside VSE. Do not substitute a list of external links for the explanation or send learners away to finish understanding elsewhere.
 
@@ -12,7 +12,7 @@ The complete learning journey belongs inside VSE. Do not substitute a list of ex
 
 Information is abundant but understanding is not. Explanations may assume prior knowledge, diagrams can be static, and important details can be scattered across many sources. People who missed some basics should still be able to begin with an intuitive explanation and then build toward precise terminology and mathematics.
 
-VSE should help someone progress from question to mental model, from mental model to exploration, and from intuitive understanding to evidence and deeper concepts.
+VSE should help someone progress from question to mental model, from mental model to exploration or guided practice, and from intuitive understanding to evidence and deeper concepts—then show useful ways to continue through prerequisites, related concepts, and applications.
 
 ## 3. Audience and depth
 
@@ -40,10 +40,11 @@ Display relevant source titles, author/organization, date/version, source type, 
 2. **Find:** retrieve relevant material from the built-in library; identify whether evidence is missing.
 3. **Understand:** show a concise intuitive explanation, with analogies clearly labelled and their limits stated.
 4. **See:** display a visual sequence or model tailored to the subject.
-5. **Explore:** provide a few meaningful controls, step-through states, comparisons, or parameter changes.
-6. **Go deeper:** reveal the actual mechanism, technical vocabulary, data, equations, and mathematical foundations where relevant.
-7. **Assess:** show what evidence supports the claims, what is simplified, and what remains uncertain inside the app.
-8. **Continue:** explore related topics within VSE rather than being pushed to another website.
+5. **Explore:** provide meaningful controls, step-through states, comparisons, or parameter changes.
+6. **Practise:** where appropriate, let the learner predict an outcome, try a worked example, solve a small exercise, or explore a safe virtual experiment; explain why the result follows.
+7. **Go deeper:** reveal the actual mechanism, technical vocabulary, data, equations, and mathematical foundations where relevant.
+8. **Assess:** show what evidence supports the claims, what is simplified, and what remains uncertain inside the app.
+9. **Continue:** explore related topics within VSE rather than being pushed to another website; explain why a next concept connects so learning can build from one idea to another.
 
 ## 6. First hackathon experience
 
@@ -72,6 +73,7 @@ The first experience succeeds when:
 
 - User accounts, authentication, authorization, billing, subscriptions, ads, or monetization.
 - A promise to answer every conceivable question perfectly from day one.
+- Actionable instructions that enable harm; broad scientific curiosity must be served through age-appropriate, safe explanations and suitable limits.
 - A static encyclopedia or gallery as the only experience.
 - A generic chatbot that only returns paragraphs.
 - An external-link directory or flow that sends the user elsewhere to learn.

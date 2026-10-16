@@ -7,10 +7,12 @@ This document exists so work continues coherently when an agent, device, model, 
 At the beginning:
 1. Check the current branch, working tree, and latest commit.
 2. Read AGENTS.md, STATE.md, and PRODUCT_CONCEPT.md.
-3. Confirm the current state against files actually present.
-4. Read the related SPEC/ROADMAP/research document.
-5. Start with the next incomplete action in STATE.md unless actual evidence shows it is obsolete.
-6. Do not ask the user to repeat decisions already recorded here.
+3. Read `docs/BUILD_READINESS.md`, `docs/research/RESEARCH_BATCH_PLAN.md`, and `docs/research/DATASET_AND_API_REGISTER.md`.
+4. Confirm the current state against files actually present.
+5. Read the related SPEC/ROADMAP/research document.
+6. Start with the next incomplete action in STATE.md unless actual evidence shows it is obsolete.
+7. Do not ask the user to repeat decisions already recorded here.
+8. If the build gate is HOLD, continue research only. Do not begin implementation until the evidence packet is complete and the owner has been notified and has explicitly authorized building.
 
 ## Research task protocol
 
@@ -26,6 +28,8 @@ At the beginning:
 10. Report what was checked and what remains unchecked.
 
 ## Implementation task protocol
+
+Implementation is not currently authorized by default. First confirm that `docs/BUILD_READINESS.md` permits the scoped work and that the project owner has explicitly authorized implementation. If the gate is HOLD or owner sign-off is missing, do not proceed with code; return to the bounded research plan.
 
 1. Confirm that a product requirement exists and belongs to the current milestone.
 2. Inspect existing code and dependencies before choosing a design.

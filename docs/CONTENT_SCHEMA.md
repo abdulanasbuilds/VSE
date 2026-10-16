@@ -14,10 +14,11 @@ Every publishable topic should have:
 - Analogy, if useful, labelled as an analogy and paired with its breaking points.
 - Explanation of the actual mechanism.
 - Mathematical or quantitative layer when relevant.
-- Visualization record(s).
+- Practical layer where suitable: worked example, guided exercise, prediction task, or safe virtual experiment with explanatory feedback.
+- Visualization record(s) with the purpose and meaning of any simplifications stated.
 - Claim list with claim-level source links.
 - Limitations, uncertainty, known disagreements, and common misconceptions.
-- Related topics.
+- Related concepts with typed relationships such as prerequisite, builds-on, related principle, contrast, application, consequence, or example-of; include a short reason for each relationship.
 - Content status and review history.
 - Date created, last reviewed, and review trigger.
 
@@ -92,6 +93,8 @@ A topic record should be renderable entirely inside VSE and should support the f
 - an analogy marker plus an explicit note for where the analogy stops being accurate;
 - an approved visual-plan type, validated parameters, allowed user interactions, and a text fallback;
 - “what changed and why” feedback after a user manipulates the model;
+- practical task/prediction, expected reasoning, feedback explanation, and target learning outcome where applicable;
+- next-concept suggestions with a reason each connects to the current topic;
 - in-app evidence items with source title, author/organization, version/date, claim association, status, limitations, and rights notes;
 - unsupported-question behavior and uncertainty/failure messages;
 - accessibility labels, focus behavior, reduced-motion alternative, and mobile fallback.
@@ -100,7 +103,7 @@ A topic record should be renderable entirely inside VSE and should support the f
 
 The AI service, if used, should return a constrained declarative plan rather than arbitrary JavaScript/HTML to execute. A plan may reference only approved renderer components (for example, ordered-step sequence, labeled relationship graph, chart, annotated diagram, or bounded parameterized model). Every component must validate required fields, value ranges, claim/source IDs, and fallback text before it is rendered.
 
-The shape of the visual plan is concept-specific. A model pipeline may need sequential steps and illustrative probability values; a physical system may need state variables and an equation-backed simulation; a statistical explanation may need a plot. Never reuse one generic graphic for every question merely because the same renderer supports it.
+The shape of the visual plan is concept-specific. A model pipeline may need sequential steps and illustrative values; a physical system may need state variables and an equation-backed simulation; a statistical explanation may need a plot; a mathematical idea may need a manipulable graph or worked example. Never reuse one generic graphic for every question merely because the same renderer supports it.
 
 ## Source presentation rule
 

@@ -1,6 +1,6 @@
 # Hackathon Slice Brief — Question-to-Visual Explainer
 
-**Status:** Proposal for planning and evaluation, not a locked implementation decision or confirmed event submission. Read PRODUCT_CONCEPT.md first. The official “World Dot Name weekend hackathon” page/rules have not been identified confidently.
+**Status:** VSE is the owner-confirmed project direction for the event the owner calls the “World Dot Name weekend hackathon”. This brief is for planning, not a confirmed event submission. The exact official event page/name and rules have not been identified confidently, so eligibility, deadline, prior-code policy and submission requirements remain unverified. The event is a proving ground for one small learning journey, not the purpose or long-term boundary of VSE. Read PRODUCT_CONCEPT.md first.
 
 ## 1. What the first demo must prove
 
@@ -10,7 +10,7 @@ Core loop:
 
 **Ask a question → retrieve relevant built-in/evidence records → explain simply → visualize the mechanism → let the user explore → reveal deeper science/AI/maths → show in-app evidence and limitations.**
 
-The overall vision can cover many domains. The first demo must say plainly which questions are supported.
+The long-term vision spans mathematics, physics, AI, and the wider sciences, with learners able to continue between connected concepts inside VSE. The first demo must stay small and say plainly which questions are supported; it does not define the full product. The product direction is not up for comparison against a separate environmental dashboard or ML benchmark product; the unresolved decision is the first bounded learning journey inside VSE.
 
 ## 2. Leading candidate question
 
@@ -71,7 +71,8 @@ Include an in-app evidence panel that states source titles, authors/organization
 - a repeatable test and a tiny beginner-learning evaluation.
 
 **Optional only if event scope/time/capacity allow:**
-- two additional built-in example questions that illustrate the cross-domain direction, such as one physics concept and one natural-world concept;
+- two additional built-in example questions that illustrate the cross-domain direction, such as one mathematics or physics concept and one from another scientific field;
+- one small “continue learning” path to a genuinely related concept, if it can be supported and explained well;
 - live LLM-assisted wording or retrieval, provided keys are protected, cost is known, and generated output is treated as a draft.
 
 **Not in the first deliverable:**

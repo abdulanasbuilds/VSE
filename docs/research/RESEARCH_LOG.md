@@ -177,3 +177,46 @@ Run the committed Node test file or obtain a confirmed CI run; then test the act
 
 ### Next action
 Verify the exact hackathon event if possible, then decide the smallest implementation that proves the question → explanation → interactive visual → deeper layer → in-app evidence loop. Continue from STATE.md; do not restart or treat the orbit experiment as the complete project.
+
+## 2026-10-16 — Repository readiness audit and data-source planning
+
+### Remote repository state
+- Audited `abdulanasbuilds/VSE` at main SHA `88fd17700c44a175ee3fa010f0486aeae4e059b8`. The recursive tree returned 29 tracked paths and was not truncated.
+- Confirmed the product/spec/agent/research documents, orbit experiment, Node.js 22 regression suite and CI workflow are present. The orbit page remains a bounded engineering experiment, not the complete question-to-visual VSE application.
+- The current main revision is documented separately from the research branch. No runtime code, test source, framework, database, frontend, backend, model integration or API integration was changed during this documentation pass.
+- Added `docs/PROJECT_AUDIT.md`, `docs/BUILD_READINESS.md`, `docs/DATA_AND_RESEARCH_PIPELINE.md`, `docs/research/DATASET_AND_API_REGISTER.md`, and `docs/research/RESEARCH_BATCH_PLAN.md` on `docs/research-readiness-2026-10-16`. The branch is isolated from main and from open PR #2.
+
+### Tests and repository hygiene
+- Confirmed PR #1's Node.js 22 regression run and a subsequent run on main succeeded.
+- Inspected PR #2 and its GitHub Actions log. Its added regular-expression assertion at the beginning of `tests/orbit-model.test.mjs` is syntactically invalid and throws “Invalid regular expression flags” before the existing tests run. PR #2 remains a separate issue; this research pass did not fix or merge it.
+- A deployment bot reported a failed Cloudflare preview build for the PR #2 branch. The linked build logs were not inspected; the cause remains unknown.
+- No LICENSE file exists in the audited main tree. This does not establish that all project code or source materials are reusable; licensing is an owner decision and third-party source/data/media rights require separate checks.
+
+### Official data/API source-document checks
+- SPHEREx: IRSA's official Quick Release overview describes QR3, started in September 2026, and access through the Data Explorer, Astroquery, SIA, browsable directories and cloud paths. IRSA already offers discovery and analysis tools, so VSE must establish a distinct learning outcome before considering an explorer route. Sources: [IRSA QR overview](https://irsa.ipac.caltech.edu/data/SPHEREx/docs/overview_qr.html), [IRSA archive/tools](https://irsa.ipac.caltech.edu/Missions/spherex.html), [NASA SPHEREx context](https://science.nasa.gov/open-science/spherex-universe-map/).
+- NASA CMR, USGS Water Data, NOAA NCEI, Copernicus Data Space, World Bank Indicators, Crossref and OpenAlex official docs were checked as possible service candidates. The details and exact follow-up checks are recorded in `docs/research/DATASET_AND_API_REGISTER.md`.
+- Dataset-card documentation from Hugging Face was reviewed as a possible template for a future ML dataset route. An author-supplied dataset card is not independent validation of the files or their license.
+- All of these checks are source/service documentation checks only; no sample data has been fetched and validated for a selected product slice. These rows must not be described as API integrations or completed source verification.
+
+### Current decision and next actions
+- At the time of this earlier entry, product-route choice was recorded as open. The owner's later clarification below supersedes that framing: VSE itself is confirmed; only the first bounded lesson remains to be selected.
+- The build gate remains **HOLD** until a bounded learner question, source/evidence packet, real sample where relevant, rights/access notes, visualization contract, validation plan, accessibility/failure behavior, cost/privacy assessment and success measure are documented.
+- Next action: follow `docs/research/RESEARCH_BATCH_PLAN.md` beginning with route comparison and then inspect a bounded representative sample for the leading candidate. Present the readiness memo to the project owner and stop before implementation.
+
+
+## 2026-10-16 — Owner reaffirmed VSE concept and first hackathon intention
+
+- The project owner clarified that VSE is the project they intend to pursue for the event they call the “World Dot Name weekend hackathon”. The concept is a question-first visual learning engine across AI, mathematics and broader science/technology; it should not be reframed as a separate dashboard or ML benchmark project.
+- The core differentiator is a built-in learning journey: simple explanation, a concept-appropriate visual model, meaningful interaction, deeper technical/mathematical detail, and evidence/limitations presented within VSE. Learners should not be sent to external websites to finish understanding the concept. Exact source identities and canonical references remain in internal research records for accuracy/audit, not as a substitute for the in-app explanation.
+- The long-term ambition is broad question coverage. The first hackathon demonstration must be narrow enough to verify honestly; “How does an AI language model generate an answer?” remains a leading topic example, not an irrevocably chosen question.
+- Searched the exact event phrase and close variants using current web search on 2026-10-16. No matching official page could be confidently identified. The name may be a transcription/stylization mismatch; deadline, eligibility, permitted prior work, AI/API rules, judging and submission format remain unverified. Do not borrow rules from unrelated events.
+- Updated the research-first framing to compare lesson topics inside VSE, not different product categories. The no-build gate remains HOLD until the first bounded lesson, source/claim packet, validation/failure/accessibility plan and cost/access assumptions are sufficiently documented; owner notification is required before implementation.
+
+## 2026-10-16 — Owner clarified practical, all-level VSE learning and multi-agent research handoff
+
+- The owner clarified that VSE's purpose is not limited to hackathons or one discipline. The core promise is making how things work understandable and visible to anyone, without assuming prior vocabulary; start with an intuitive beginner explanation, then move toward meaningful visuals, practical exploration/practice where useful, deeper mechanisms and math, evidence, and connected next concepts.
+- The owner wants to compile trustworthy internal learning resources before frontend/backend/database/API implementation. User-facing learning should remain inside VSE, but the research process must keep exact provenance, evidence status, version/date, license/terms, and gaps; this does not authorize wholesale copying of external materials or claiming universal coverage before it is earned.
+- Added `docs/AGENT_RESEARCH_BRIEF.md` as a reusable multi-agent contract. It defines content-packet fields, source/claim/data/visual/practice records, concept relationship types, review statuses, research workstreams, required batch outputs, and a paste-ready Manus research task. It also explains how to treat Google AI Studio and Bolt.new as later implementation environments without allowing them to start code while the build gate is HOLD.
+- Updated `PRODUCT_CONCEPT.md`, `SPEC.md`, `docs/CONTENT_SCHEMA.md`, `AGENTS.md`, `README.md`, and `STATE.md` to preserve this practical, cross-domain learning journey.
+- Verified official platform documentation on 2026-10-16: Google AI Studio Build mode documents GitHub import and two-way repository sync; Manus documents GitHub connectors; Bolt documents GitHub/context connectors and a Plan mode that can discuss an existing project without changing code. These are tool options, not a reason to select an app stack now.
+- No runtime/application code, API, database, frontend, or backend work was done. The build gate remains **HOLD** pending a bounded first learning journey, a reviewed evidence/validation packet, the relevant event rules, and owner-facing readiness recommendation.
