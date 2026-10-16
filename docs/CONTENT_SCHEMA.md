@@ -81,3 +81,27 @@ Never collapse these meanings into a single generic “verified” badge.
 ## Lightweight Markdown layout
 
 For an early record, use headings for overview, intuitive explanation, visual model, deeper explanation, caveats, source list, claim review, and change history. Keep source metadata in a consistent section. A schema or file format can be formalized after a few real records reveal which fields are necessary.
+
+
+## User-facing explanation package
+
+A topic record should be renderable entirely inside VSE and should support the following structured parts:
+- question and a short statement of what the user will understand;
+- progressive explanation levels (very simple, standard, deeper/technical) without changing the underlying facts;
+- a sequence of explanation steps connected to specific claims;
+- an analogy marker plus an explicit note for where the analogy stops being accurate;
+- an approved visual-plan type, validated parameters, allowed user interactions, and a text fallback;
+- “what changed and why” feedback after a user manipulates the model;
+- in-app evidence items with source title, author/organization, version/date, claim association, status, limitations, and rights notes;
+- unsupported-question behavior and uncertainty/failure messages;
+- accessibility labels, focus behavior, reduced-motion alternative, and mobile fallback.
+
+## Structured visual plan
+
+The AI service, if used, should return a constrained declarative plan rather than arbitrary JavaScript/HTML to execute. A plan may reference only approved renderer components (for example, ordered-step sequence, labeled relationship graph, chart, annotated diagram, or bounded parameterized model). Every component must validate required fields, value ranges, claim/source IDs, and fallback text before it is rendered.
+
+The shape of the visual plan is concept-specific. A model pipeline may need sequential steps and illustrative probability values; a physical system may need state variables and an equation-backed simulation; a statistical explanation may need a plot. Never reuse one generic graphic for every question merely because the same renderer supports it.
+
+## Source presentation rule
+
+Store canonical URLs, identifiers, versions, rights, and retrieved dates in VSE's internal records. Present relevant source identities and claim-level evidence in the app so users can understand why a claim is included without being redirected to an external page. The internal record must remain auditable, but the user-facing lesson should be self-contained.
