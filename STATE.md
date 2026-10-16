@@ -30,7 +30,7 @@ See [PRODUCT_CONCEPT.md](PRODUCT_CONCEPT.md), [DECISIONS.md](docs/DECISIONS.md),
 
 ## 3. Repository reality
 
-The GitHub repository was empty when connected. The following documentation now exists on `main`:
+The GitHub repository was initially empty when first connected during an earlier setup session. The baseline documentation below was present on `main` at the time of this audit:
 
 - `README.md`
 - `AGENTS.md`
@@ -45,17 +45,19 @@ The GitHub repository was empty when connected. The following documentation now 
 - `docs/CONTENT_SCHEMA.md`
 - `docs/QUALITY_AND_PROVENANCE.md`
 - `docs/AGENT_WORKFLOW.md`
-- `docs/PROJECT_AUDIT.md` — current remote-tree, CI and repository-readiness audit
-- `docs/BUILD_READINESS.md` — current no-build gate and required evidence
-- `docs/DATA_AND_RESEARCH_PIPELINE.md` — source-to-learning packet process
-- `docs/research/DATASET_AND_API_REGISTER.md` — current service candidates and sample-inspection gaps
-- `docs/research/RESEARCH_BATCH_PLAN.md` — staged research plan before owner sign-off
 - `docs/research/SOURCE_CATALOG.md`
 - `docs/research/SCIENCE_DOMAIN_MAP.md`
 - `docs/research/RESOURCE_REVIEW_TEMPLATE.md`
 - `docs/research/OPENAI_MATH_RELEASE.md`
 - `docs/research/RESEARCH_BACKLOG.md`
 - `docs/research/RESEARCH_LOG.md`
+
+The following five readiness documents were added on `docs/research-readiness-2026-10-16` and are not part of `main` until their pull request is merged:
+- `docs/PROJECT_AUDIT.md`
+- `docs/BUILD_READINESS.md`
+- `docs/DATA_AND_RESEARCH_PIPELINE.md`
+- `docs/research/DATASET_AND_API_REGISTER.md`
+- `docs/research/RESEARCH_BATCH_PLAN.md`
 
 Root index.html is a standalone satellite-orbit visualization experiment with a local calculation, controls, limitations and a knowledge check. Its regression suite passed under Node.js 22 in GitHub Actions. It is not the intended question-first VSE app: no question interpreter, LLM explanation/retrieval layer, structured visual-plan renderer, or complete in-app evidence workflow exists yet. The orbit module currently displays source identities/descriptions in-page and has no outbound HTTP(S) source anchors in the audited `index.html`; canonical URLs remain in research records. PR #2 adds a regression assertion for this requirement, but that PR's test currently fails to parse because of an invalid regular expression.
 
@@ -165,10 +167,10 @@ The exact “World Dot Name weekend hackathon” page has not been identified co
 ## 9. Last verified session summary
 
 - State timestamp: 2026-10-16 UTC.
-- Current branch: main.
-- PRODUCT_CONCEPT.md is now the canonical statement of intent: a broad visual learning engine that takes questions about science/technology and delivers explanation, interaction, depth, and evidence within VSE.
-- The root orbit page is an engineering experiment and must not be mistaken for the full VSE product or the chosen hackathon submission.
-- Current regression result: GitHub Actions run #38836368258 passed the dependency-free Node.js 22 suite; merged PR #1 is commit bead3c078e5651f64f3407618584e44a438fb698.
-- Event identity/rules remain unresolved. No question-first LLM layer, retrieval pipeline, constrained visual-plan renderer, or deployed VSE-facing experience exists yet.
-- Next agent action: scope the first hackathon experience around the core product concept, while keeping AI/cost/event constraints explicit.
+- Base state audited: `main` at `88fd17700c44a175ee3fa010f0486aeae4e059b8`; documentation review branch: `docs/research-readiness-2026-10-16`.
+- PRODUCT_CONCEPT.md remains the canonical intent: turn questions into explanation, meaningful interaction, depth and evidence inside VSE.
+- The root orbit page is an engineering experiment, not the VSE product or a confirmed hackathon entry.
+- Node.js 22 CI regression runs passed for earlier main/PR #1 commits; the separate open PR #2 currently fails to parse due to its new regex assertion. See `docs/PROJECT_AUDIT.md`.
+- Product-route selection and event identity/rules remain unresolved. No full selected-topic source/data packet exists yet.
+- Current decision is HOLD. Continue from `docs/research/RESEARCH_BATCH_PLAN.md`; do not begin implementation until the readiness report has been presented and the owner has explicitly authorized the scoped build.
 
