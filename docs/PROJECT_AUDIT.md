@@ -66,7 +66,7 @@ Do not add a license automatically as part of the research pass. The repository 
 ## Research-readiness findings
 
 1. The research catalogue is broad but many resources remain candidates or only partially checked.
-2. There is no chosen first product/data vertical. The current LLM question is a candidate, not a final commitment.
+2. The owner-confirmed project direction is VSE, the question-first visual learning engine. The first bounded lesson/topic remains open; the current LLM question is a leading example, not a final commitment.
 3. The current source catalogue does not yet contain a fully inspected, versioned sample dataset packet with schema, units, transformations, size, access requirements, license and reproducibility notes.
 4. Source discovery, claim verification, dataset inspection, model testing and independent review are correctly distinguished in the project documents. Keep those distinctions.
 5. SPHEREx is a current data-first candidate worth evaluating: the official IRSA release overview says Quick Release 3 began in September 2026, spectral-image products cover 0.75–5.0 microns, and several programmatic access routes are available. The actual files, format, calibration caveats, item-level rights, query behavior and practical client experience have not yet been reviewed for VSE.
