@@ -158,3 +158,10 @@ Run the committed regression script locally or inspect a confirmed GitHub Action
 ### Next step
 
 Run the committed Node test file or obtain a confirmed CI run; then test the actual page in a real browser and inspect keyboard, reduced-motion, mobile layout, and accessibility behavior.
+
+## 2026-10-16 — Regression suite confirmed in GitHub Actions
+
+- Opened PR #1 (`https://github.com/abdulanasbuilds/VSE/pull/1`) with a focused assertion for the trajectory just above the escape threshold. GitHub Actions run #38836368258 completed successfully; job `orbit-model` and step `Run dependency-free regression tests` both reported success using Node.js 22.
+- Merged PR #1 into `main` with squash merge commit `bead3c078e5651f64f3407618584e44a438fb698`.
+- This confirms the committed Node regression assertions execute successfully in CI. It does not independently validate the physics, prove every trajectory numerically correct, or replace real-browser, device, accessibility, and learner testing.
+- Next action is a real-browser/mobile accessibility review of the prototype before any broader feature work.
