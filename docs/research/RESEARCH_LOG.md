@@ -99,3 +99,30 @@
 - Searched web for the exact phrase “World Dot Name weekend hackathon”, “World.Name weekend hackathon”, and variants describing a current global weekend AI hackathon.
 - No authoritative event page matching that exact name was confidently identified during this pass. Search results included other unrelated or already-past October 2026 events; do not substitute their requirements or imply they are the user's intended event.
 - The official event identity, deadline and time zone, judging rubric, submission format, age/eligibility rules, rules about prior code, and required deployment remain **unverified**. Keep this as a P0 blocker before narrowing the build plan.
+
+
+## 2026-10-16 — First orbital concept and static frontend slice
+
+### Source review
+- Opened NASA Science Chapter 3: Gravity & Mechanics (https://science.nasa.gov/learn/basics-of-space-flight/chapter3-4/) and read the “How Orbits Work” and “Key to Space Flight” sections. NASA describes Newton's cannonball analogy and explicitly names simplifications such as ignored atmospheric drag. This supports the conceptual explanation, not a validation of VSE code.
+- Opened NASA's What Is an Orbit? (Grades 5–8) (https://www.nasa.gov/solar-system/what-is-an-orbit-grades-5-8/). It explains the role of gravity and sideways motion at a beginner level.
+- Opened NASA JPL Education's Modeling the Orbits of Planets (https://www.jpl.nasa.gov/edu/resources/lesson-plan/modeling-the-orbits-of-planets/), a lesson connecting gravity, mass, and motion.
+- Opened PhET's Licensing Information (https://phet.colorado.edu/en/licensing). Regular HTML simulation files are described as CC BY-NC 4.0 and carry separate attribution/brand and commercial-use constraints. VSE does not embed or copy PhET code/assets for this prototype.
+- Searches did not identify a definitive official event page for “World Dot Name weekend hackathon.” Do not infer its requirements from unrelated events.
+
+### Product decision and implementation
+- Created docs/research/FIRST_PROTOTYPE_ORBIT.md, including a bounded shortlist, learner objective, claim map, sources, assumptions, limitations, and test plan.
+- Created root index.html: one standalone HTML/CSS/JavaScript frontend, original SVG presentation, dimensionless Newtonian central-gravity integration, speed control, presets, reset, progressive explanation, equations, citations, limitations, and a short knowledge check.
+- The first slice deliberately has no database, server, external API, model call, credentials, framework, or external asset dependency. It is intended to stay lightweight and work without network calls after the page is loaded.
+- The orbital choice is provisional and does not make VSE a space-only product. The frontend is not confirmed eligible for any unidentified hackathon; check code-preexistence and submission rules before submitting.
+
+### Verification state
+- Source pages were opened and relevant sections inspected. Source metadata and the first concept-level claim map are recorded; no independent physics reviewer has checked the model.
+- Current status is prototype created; model not yet tested. Do not mark the visualization MODEL TESTED until the exact committed file has repeatable numerical and interaction tests.
+- Not performed: browser execution, mobile-device check, keyboard/screen-reader audit, independent reference calculation check, performance review, learner study, or deployment.
+
+### Immediate follow-up
+1. Fetch and syntax-check the exact committed JavaScript.
+2. Exercise speed cases near 0.70x, 1.00x, and 1.50x; check collision/orbit/escape labels and finite output.
+3. Check reset, preset buttons, quiz feedback, responsive layout, and reduced-motion behavior.
+4. Record failures and fix them before a public demo.
