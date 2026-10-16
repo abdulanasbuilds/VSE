@@ -1,6 +1,6 @@
 # Hackathon Slice Brief — Question-to-Visual Explainer
 
-**Status:** Proposal for planning and evaluation, not a locked implementation decision or confirmed event submission. Read PRODUCT_CONCEPT.md first. The official “World Dot Name weekend hackathon” page/rules have not been identified confidently.
+**Status:** VSE is the owner-confirmed project direction for the event the owner calls the “World Dot Name weekend hackathon”. This brief is for planning, not a confirmed event submission. The exact official event page/name and rules have not been identified confidently, so eligibility, deadline, prior-code policy and submission requirements remain unverified. Read PRODUCT_CONCEPT.md first.
 
 ## 1. What the first demo must prove
 
@@ -10,7 +10,7 @@ Core loop:
 
 **Ask a question → retrieve relevant built-in/evidence records → explain simply → visualize the mechanism → let the user explore → reveal deeper science/AI/maths → show in-app evidence and limitations.**
 
-The overall vision can cover many domains. The first demo must say plainly which questions are supported.
+The overall vision can cover many domains. The first demo must say plainly which questions are supported. The product direction is not up for comparison against a separate environmental dashboard or ML benchmark product; the unresolved decision is the first bounded learning journey inside VSE.
 
 ## 2. Leading candidate question
 
