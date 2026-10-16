@@ -1,6 +1,6 @@
 # VSE Roadmap
 
-This roadmap follows the product thesis in PRODUCT_CONCEPT.md. It separates the broad vision from the smallest hackathon deliverable. A small first build is not a restriction on what VSE may become.
+This roadmap follows the product thesis in PRODUCT_CONCEPT.md: **make knowledge visible, in the world**. It separates the broad, long-term cross-domain learning vision from the smallest first demonstration. A hackathon is one milestone, not the purpose or boundary of VSE.
 
 ## Phase 0 — Keep the project resumable
 
@@ -16,7 +16,7 @@ Exit gate: a new agent understands the real product intent, current repository s
 
 ## Phase 1 — Research and define the first VSE experience
 
-Status: in progress. Product-route selection is unresolved; the LLM explainer remains a candidate, not a final choice.
+Status: in progress. The first bounded learning journey is unresolved; the product direction is confirmed, and the LLM explainer remains a candidate, not a final choice.
 
 Before any implementation, complete the applicable checklist in [docs/BUILD_READINESS.md](docs/BUILD_READINESS.md) and the ordered research work in [docs/research/RESEARCH_BATCH_PLAN.md](docs/research/RESEARCH_BATCH_PLAN.md). The project owner explicitly asked for the source/data/requirements packet before frontend, backend, database, API, model, or pipeline work begins. While the gate is **HOLD**, this roadmap authorizes research and documentation only.
 
@@ -49,15 +49,18 @@ The existing orbit experiment can be reused as one built-in topic/module, but it
 
 Exit gate: a new user can ask or select a supported question, explore an accurate visual, deepen their explanation, and inspect evidence without leaving VSE.
 
-## Phase 3 — Add a small set of topic packets
+## Phase 3 — Add connected concept journeys
 
-- Add a few carefully chosen questions across related subjects only after the first flow is validated.
+- Add a few carefully chosen questions across mathematics, physics, and other scientific/technical subjects only after the first flow is validated.
+- Record meaningful relationships between concepts, including prerequisites, related principles, applications, and possible next steps.
+- Let a learner continue from a lesson to a connected concept inside VSE, with a short explanation of why that next idea matters.
+- Treat any concept-map or cross-domain navigation as a navigable learning aid, not a decorative graph of unreviewed links.
 - Use a consistent content/source/visual schema.
 - Add search/discovery so people do not need perfect technical keywords.
 - Track source freshness, claim review, model tests, rights, and uncertainty.
 - Test whether the same interaction architecture can serve different kinds of scientific concepts without forcing the same visual style.
 
-Exit gate: new topics can be added reliably without turning the product into passive text cards or unreviewed generated diagrams.
+Exit gate: new topics can be added reliably and connected into useful learning paths without turning the product into passive text cards or unreviewed generated diagrams.
 
 ## Phase 4 — AI-assisted expansion, only when justified
 
