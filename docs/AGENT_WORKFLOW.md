@@ -6,7 +6,7 @@ This document exists so work continues coherently when an agent, device, model, 
 
 At the beginning:
 1. Check the current branch, working tree, and latest commit.
-2. Read AGENTS.md and STATE.md.
+2. Read AGENTS.md, STATE.md, and PRODUCT_CONCEPT.md.
 3. Confirm the current state against files actually present.
 4. Read the related SPEC/ROADMAP/research document.
 5. Start with the next incomplete action in STATE.md unless actual evidence shows it is obsolete.
@@ -55,4 +55,4 @@ Prefer one explicit next task over an unprioritized list of 30 ideas.
 
 ## Response when the user says “continue”
 
-Continue from the most recent saved checkpoint. If the next task is clear, execute it without asking for confirmation. If the task needs a missing external permission or a user-specific decision, do the independent research first and record the dependency clearly. Never promise background work or claim to be working after the current response ends.
+Continue from the most recent saved checkpoint and the canonical PRODUCT_CONCEPT.md. Treat the orbit page as an engineering experiment, not VSE's whole concept. If the next task is clear, execute it without asking for confirmation. If the task needs a missing external permission or a user-specific decision, do the independent research first and record the dependency clearly. Never promise background work or claim to be working after the current response ends.
