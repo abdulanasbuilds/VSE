@@ -1,7 +1,7 @@
 # First Prototype Research Packet — Satellite Orbits
 
 **Prepared:** 2026-10-16  
-**Status:** Provisional concept selected; initial model/control checks passed in a stub-DOM V8 harness on 2026-10-16. Not a confirmed hackathon submission or independent physics review.  
+**Status:** Provisional concept selected; bounded model/control checks and the dependency-free Node regression suite passed on 2026-10-16. Not an independent physics review or confirmed hackathon submission.
 **Concept question:** Why does a satellite stay in orbit instead of falling straight back to Earth?
 
 ## Why this is the current best first slice
@@ -59,7 +59,7 @@ Evaluation should be lightweight and honest: ask the learner the same concept qu
 - Let the user adjust initial tangential speed as a multiple of circular-orbit speed at the same starting radius.
 - Distinguish path outcome from scientific confidence. Include a fallback text explanation, keyboard-operable controls, reduced-motion handling, and a visible caveat list.
 - Bounded V8 harness checks passed on 2026-10-16 for seven speed settings: 0.70x and 0.84x were Impact (minimum displayed radius ~0.99810 and ~0.99971); 0.85x was Elliptical and cleared the modeled surface (minimum radius ~1.01797); 1.00x remained nearly circular (radius 1.79988–1.80012 around 1.8); 1.414x remained bound/elliptical; and 1.415x and 1.50x were Escape. All inspected trajectory coordinates were finite.
-- A dependency-free Node regression test was added at `tests/orbit-model.test.mjs`, and GitHub Actions is configured to run it on relevant pushes and pull requests. The action result has not yet been confirmed through the available connector.
+- The dependency-free Node regression test is `tests/orbit-model.test.mjs`, with GitHub Actions workflow `.github/workflows/orbit-model-tests.yml`. GitHub Actions run #38836368258 (PR #1) completed successfully under Node.js 22, including the regression-test step. The PR was squash-merged into `main` as commit `bead3c078e5651f64f3407618584e44a438fb698`.
 - These harness checks do not validate real-browser behavior, arbitrary numerical cases, long-term integration error, or the underlying physics independently.
 - This does not validate real-browser behavior, all numerical cases, conservation error across arbitrary trajectories, or underlying physics independently. The committed Node regression script is `tests/orbit-model.test.mjs` and still needs to be run in a local checkout.
 
@@ -68,4 +68,4 @@ Evaluation should be lightweight and honest: ask the learner the same concept qu
 - Do not use a database, backend, model API, or third-party embed for the initial page. Static, version-controlled content plus in-browser calculation is enough.
 - The hackathon identity and terms remain unresolved. This prototype must not be represented as eligible for an unidentified event; check rules before submitting or assuming that pre-existing code is allowed.
 - No qualified external reviewer has reviewed the numerical model; no browser, screen-reader, real-device, or learner study has been completed yet.
-- Next action: run `tests/orbit-model.test.mjs` in CI or a local checkout, then perform real-browser/mobile/accessibility checks and obtain beginner feedback.
+- Next action: inspect the page in an actual browser at mobile and desktop sizes; check keyboard, reduced-motion, screen-reader, and overflow behavior; then obtain beginner feedback.
