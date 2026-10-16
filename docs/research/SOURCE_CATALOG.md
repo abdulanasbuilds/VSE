@@ -139,3 +139,15 @@ Before a source becomes primary support for a VSE topic, answer:
 ## Next catalogue maintenance action
 
 Turn promising source records into a structured table with date checked, exact items reviewed, source owner, rights state, API/embed method, supported topics, and next task. Work in bounded subject batches. Do not call this catalogue exhaustive.
+
+
+## First-prototype source addendum — orbital motion (checked 2026-10-16)
+
+| ID | Resource | Specific contribution checked | Status and remaining work |
+|---|---|---|---|
+| ORB-001 | [NASA Science — Chapter 3: Gravity & Mechanics](https://science.nasa.gov/learn/basics-of-space-flight/chapter3-4/) | The “How Orbits Work” and “Key to Space Flight” sections explain the Newton cannonball analogy, continuous falling around Earth, and changes to orbit from energy changes. The page explicitly notes the simplifying assumptions behind the diagrams. | PARTIALLY CHECKED — page opened and relevant sections read. Strong primary institutional learning source for the intended conceptual explanation; not an independent check of VSE code or equations. |
+| ORB-002 | [NASA — What Is an Orbit? (Grades 5–8)](https://www.nasa.gov/solar-system/what-is-an-orbit-grades-5-8/) | Beginner-level description of straight-line motion without gravity, inward gravitational pull, sideways motion, and the effects of too little or too much speed. | PARTIALLY CHECKED — page opened. Use for beginner explanation with its educational scope; check a technical reference before relying on quantitative statements beyond this prototype. |
+| ORB-003 | [NASA JPL Education — Modeling the Orbits of Planets](https://www.jpl.nasa.gov/edu/resources/lesson-plan/modeling-the-orbits-of-planets/) | Learning activity describing gravity, mass, and planetary motion for grades 6–12. | PARTIALLY CHECKED — lesson page opened. Reference for learning objectives; VSE does not reuse its classroom activity or media. |
+| ORB-004 | [PhET — Licensing Information](https://phet.colorado.edu/en/licensing) | Official statement that regular HTML simulation files use CC BY-NC 4.0, with additional commercial-use, attribution, and brand guidance. | PARTIALLY CHECKED — page reviewed as a rights constraint only. VSE's initial orbital diagram is original; PhET simulation assets/code are not embedded or copied. |
+
+These sources support the concept-level explanation but do not certify the numerical simulation, validate the implementation, or represent independent expert review. See [the first prototype research packet](FIRST_PROTOTYPE_ORBIT.md) for the claim map and caveats.
