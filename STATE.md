@@ -5,7 +5,7 @@
 **Documentation review branch:** `docs/research-readiness-2026-10-16`  
 **Current phase:** Research readiness — compare first-experience candidates and inspect supporting evidence (in progress)  
 **Product code status:** one standalone orbit visualization experiment exists; the intended question-first VSE user experience has not yet been built
-**Next action:** research the first bounded learning journey inside the confirmed VSE project, starting with the AI-language-model explanation as a leading example; compare it with a small number of concept lessons such as orbit, light scattering or circuits. Verify the exact official event page/rules if identifiable, prepare claim/source evidence and a repeatable validation plan, and keep implementation on HOLD until the project owner receives the readiness recommendation. Do not pivot to a separate dashboard or ML-benchmark project.
+**Next action:** use `docs/AGENT_RESEARCH_BRIEF.md` to organize source-grounded, reusable learning packets in bounded research batches: original explanations for multiple levels, practical/interactive lesson proposals, claim-to-source records, rights/access checks, concept relationships and a validation plan. Continue to evaluate one small first journey for the demo, but keep the long-term VSE scope cross-domain and practical. Verify event rules if the official page can be identified. Keep all application/frontend/backend/database/API implementation on HOLD until the evidence packet and owner-facing readiness recommendation are complete.
 
 > This is the durable checkpoint. Every agent must read it first after AGENTS.md and must update it after meaningful work. Do not assume work exists unless the current repository confirms it.
 
@@ -32,6 +32,13 @@ See [PRODUCT_CONCEPT.md](PRODUCT_CONCEPT.md), [DECISIONS.md](docs/DECISIONS.md),
 ### Product clarification — 2026-10-16
 
 The owner has clarified that VSE is not only for hackathons and is not confined to one discipline. Mathematics and physics are major pillars, alongside the wider sciences and technology. The guiding idea is “make knowledge visible, in the world,” with a learner able to continue from one understood idea to a related next idea. Reflect this in product framing, concept relationships, and roadmap decisions. Keep the first build small for validation; do not confuse the bounded demo with the full ambition.
+
+
+## 3. Latest product clarification — 2026-10-16
+
+VSE must work for curious people who do not already know the technical vocabulary. The learner journey should move from plain-language intuition (including a beginner entry point simple enough for a very young learner), to a concept-appropriate visual, practical exploration or practice when it helps, deeper mechanisms/mathematics, evidence and limitations, and a next connected concept. Practical does not mean every topic requires a simulation; choose the most useful and truthful learning method for the topic. The ambition is broad and long-term, but coverage is added in researched, rights-aware, testable packets. No external page should be required to complete the learner's understanding; internal provenance and source rights must still be preserved.
+
+See `docs/AGENT_RESEARCH_BRIEF.md` for the research-team contract and ready-to-paste agent task.
 
 ## 3. Repository reality
 
