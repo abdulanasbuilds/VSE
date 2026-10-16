@@ -58,7 +58,7 @@ Evaluation should be lightweight and honest: ask the learner the same concept qu
 - Use normalized distance and time for the picture. State that its size and speed are not mission-grade measurements.
 - Let the user adjust initial tangential speed as a multiple of circular-orbit speed at the same starting radius.
 - Distinguish path outcome from scientific confidence. Include a fallback text explanation, keyboard-operable controls, reduced-motion handling, and a visible caveat list.
-- Basic harness checks passed: the 1.00x path stayed between radii 1.7998769 and 1.8001231 (starting radius 1.8); 0.70x reached radius about 0.9981 and was classified as impact; 1.50x reached radius about 4.0023 and was classified as escape. Coordinates were finite. Preset, reset, and knowledge-check feedback also passed in a stub-DOM harness.
+- Bounded V8 harness checks passed on 2026-10-16 for seven speed settings: 0.70x and 0.84x were Impact (minimum displayed radius ~0.99810 and ~0.99971); 0.85x was Elliptical and cleared the modeled surface (minimum radius ~1.01797); 1.00x remained nearly circular (radius 1.79988–1.80012 around 1.8); 1.414x remained bound/elliptical; and 1.415x and 1.50x were Escape. All inspected trajectory coordinates were finite.
 - A dependency-free Node regression test was added at `tests/orbit-model.test.mjs`, and GitHub Actions is configured to run it on relevant pushes and pull requests. The action result has not yet been confirmed through the available connector.
 - These harness checks do not validate real-browser behavior, arbitrary numerical cases, long-term integration error, or the underlying physics independently.
 - This does not validate real-browser behavior, all numerical cases, conservation error across arbitrary trajectories, or underlying physics independently. The committed Node regression script is `tests/orbit-model.test.mjs` and still needs to be run in a local checkout.
@@ -68,4 +68,4 @@ Evaluation should be lightweight and honest: ask the learner the same concept qu
 - Do not use a database, backend, model API, or third-party embed for the initial page. Static, version-controlled content plus in-browser calculation is enough.
 - The hackathon identity and terms remain unresolved. This prototype must not be represented as eligible for an unidentified event; check rules before submitting or assuming that pre-existing code is allowed.
 - No qualified external reviewer has reviewed the numerical model; no browser, screen-reader, real-device, or learner study has been completed yet.
-- Next action: confirm the regression script in GitHub Actions or a local checkout, then check real-browser/mobile/accessibility behavior and ask a beginner to try the explanation.
+- Next action: run `tests/orbit-model.test.mjs` in CI or a local checkout, then perform real-browser/mobile/accessibility checks and obtain beginner feedback.
