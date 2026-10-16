@@ -6,9 +6,9 @@ This is the explicit record of what VSE has not yet found, checked, or decided. 
 
 - [ ] **P0-01: Confirm hackathon rules.** Find the official event page, exact deadline and time zone, project eligibility, judging criteria, required AI/tools, deployment rules, use of existing work, demo expectations, and submission format. Record source URLs. Do not design around an unverified event name or rule.
 - [ ] **P0-02: Validate this source inventory.** Open the official source and documentation links that are still marked CANDIDATE. Record any dead link, redirect, changed API, licence, or access restriction.
-- [ ] **P0-03: Select one concept.** Compare a short list using learner value, source quality, feasibility, visual clarity, source/licensing ease, and potential to test learning. Do not pick the concept merely because it is trendy.
-- [ ] **P0-04: Establish the first claim map.** For the chosen concept, list what it claims, supporting primary sources, uncertainty, caveats, and the intended visual mapping.
-- [ ] **P0-05: Confirm implementation path.** Only after P0-01 to P0-04, decide the smallest suitable framework/tools and whether a static application is sufficient.
+- [x] **P0-03: Select one concept provisionally.** A source-backed orbital-motion explainer is the first reusable prototype because its learning objective, NASA learning sources, and interactive path are tractable. The decision is recorded in `FIRST_PROTOTYPE_ORBIT.md`; it can be changed after learner testing. Do not imply hackathon eligibility while event rules remain unknown.
+- [x] **P0-04: Establish the initial claim map.** `FIRST_PROTOTYPE_ORBIT.md` records the learner outcome, individual orbit claims, NASA source links, assumptions, and caveats. The math/model still needs numerical tests and independent review.
+- [x] **P0-05: Confirm the implementation path for this slice.** A single-file HTML/CSS/JavaScript frontend with an in-browser dimensionless model is sufficient; no backend, database, external API, account system, model key, or package install is needed for this first interaction. This is not a permanent stack decision for future VSE features.
 
 ## P1 — OpenAI mathematics release: inventory and interpretation
 
@@ -61,7 +61,7 @@ The following must not be represented as completed:
 - all named websites' full resource collections have not been exhaustively inspected;
 - all data APIs and licences have not been compared;
 - all scientific discovery sources have not been found;
-- no VSE visualization or application code has been implemented yet;
+- no multi-topic app, backend, database, external API integration, deployment, browser accessibility review, or learner study has been completed; the initial single-file orbit prototype is still awaiting runtime and model tests;
 - the hackathon's official terms have not yet been confirmed.
 
 ## Backlog maintenance
