@@ -4,7 +4,7 @@
 **Current stage:** Pre-implementation research.  
 **Current decision:** Do not build yet; the product owner requested that structured data, information, sources and requirements be assembled before frontend/backend/database/API work begins.
 
-This is a sequence of bounded research batches, not a commitment to complete all scientific research before the first prototype. The purpose is to select one narrow, defensible slice and prepare the records needed to build it responsibly.
+This is a sequence of bounded research batches, not a commitment to complete all scientific research before the first prototype. The purpose is to select one narrow, defensible learning journey within the confirmed VSE project and prepare the records needed to build it responsibly.
 
 ## Working principle
 
@@ -24,20 +24,20 @@ Use the companion documents:
 **Deliverable:** PROJECT_AUDIT.md.  
 **Finding:** The remote tree contains 29 paths and the planned research records; PR #2 has a failing regular-expression parse error in its newly added test assertion. No runtime code or test file was changed by this documentation pass.
 
-## Batch 1 — Compare candidate first experiences
+## Batch 1 — Compare candidate learning journeys inside VSE
 
-**Status:** NOT STARTED. This is the next research batch.
+**Status:** NOT STARTED. This is the next research batch. The owner-confirmed project is VSE, the question-first visual learning engine. Do not compare this project against separate dashboard or benchmark product ideas; select a small, evidence-backed learning journey within VSE.
 
-Compare these routes without choosing the technology stack:
-
-| Candidate | The learner job | Evidence/data likely needed | Primary risk to test |
+| Candidate learning journey | Learner job | Evidence packet needed | Primary risk to test |
 |---|---|---|---|
-| Question-to-visual concept explainer | Understand a mechanism, then explore its model and deeper terms | A small claim-reviewed concept packet; perhaps AI-assisted wording later | It becomes a generic chatbot or a decorative diagram rather than a verifiable interactive model |
-| SPHEREx sky-observation explorer | Explore/filter/compare actual sky observations and learn what spectral differences mean | A small versioned SPHEREx QR data sample, metadata, wavelength/band/quality details and authoritative explanation | IRSA already provides discovery and analysis tools; VSE needs a clear additional learning benefit and must handle calibration/file-format details correctly |
-| Earth/environment investigation | Investigate one question across time/location using observed or modeled environmental data | One well-defined dataset or pair of compatible datasets with units, dates, spatial coverage, quality flags and transformations | Combining incompatible datasets or displaying a trend without explaining definitions, uncertainty, gaps and causal limits |
-| ML dataset/benchmark investigation | Inspect a dataset, build/compare a model and interpret measured performance | Dataset documentation and license, defined task, splits, baseline, metric and repeatable evaluation | Compute cost, dataset leakage/contamination, data rights, biased labels, irreproducible leaderboard comparisons |
+| How does an AI language model generate an answer? | Follow a simplified generation sequence, explore one behavior, then go deeper into real terminology and limitations | Authoritative technical sources on tokenization, transformer inference and next-token selection; explicit claim/source map; distinction between illustrative teaching values and actual model internals | An appealing visual presents an inaccurate picture of real model inference, or the toy interaction is mistaken for real model output |
+| Why does a satellite stay in orbit? | Inspect how initial motion and gravity relate to trajectory | Existing NASA-based concept packet, original orbit model, relevant equations, assumptions and independent/broader test plan | Existing prototype is mistaken for a complete VSE question-first experience, or numeric behavior is not sufficiently validated |
+| Why does the sky appear blue? | Compare how light wavelengths interact with the atmosphere | Authoritative optics/atmosphere sources, wavelength/scattering claim map and a carefully labelled illustration | Colour/scale is misleading or the diagram is confused with a real photograph/observation |
+| How does a simple electric circuit work? | Change a bounded circuit condition and see how the relationship changes | Foundational electrical sources, exact simple circuit assumptions, units, expected calculations and safe illustrative visual | Incorrect analogy, hidden assumptions, or mismatch between visual and the stated model |
 
-Do not score candidates before the relevant source and feasibility checks. Use the 0–5 rubric in BUILD_READINESS.md and record evidence for each score. Avoid arbitrary precise estimates of compute or data costs until a sample and access method have been inspected.
+These are topic candidates, not four features to build. Research them only enough to choose one first learning journey. A sky/environment dataset can support a later lesson if it directly advances the same VSE learning purpose; an ML training/benchmark route is not the current project direction.
+
+Use the evidence-based criteria in BUILD_READINESS.md: beginner learning value, authoritative evidence, meaningful interaction, genuine added value over static search, access and rights, mobile/bandwidth fit, effort/cost, and ease of correctness checks. Record reasons and uncertainty. Avoid fabricated numerical scores or precise cost estimates before actual evidence/sample review.
 
 ### Required output for Batch 1
 
