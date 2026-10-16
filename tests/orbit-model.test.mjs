@@ -75,6 +75,28 @@ assert.equal(ids["outcome-stat"].textContent, "Impact", "0.70x circular speed sh
 radii = radiiFromPath(ids.trajectory.attrs.d);
 assert.ok(Math.min(...radii) <= 1.001, "low-speed path should reach the planet surface");
 
+ids.speed.value = "0.84";
+ids.speed.listeners.input();
+assert.equal(ids["outcome-stat"].textContent, "Impact", "0.84x should still intersect the planet near the impact boundary");
+radii = radiiFromPath(ids.trajectory.attrs.d);
+assert.ok(Math.min(...radii) <= 1.001, "0.84x trajectory should reach the surface");
+
+ids.speed.value = "0.85";
+ids.speed.listeners.input();
+assert.equal(ids["outcome-stat"].textContent, "Elliptical", "0.85x should remain bound and clear the planet in this starting setup");
+radii = radiiFromPath(ids.trajectory.attrs.d);
+assert.ok(Math.min(...radii) > 1.01, "0.85x trajectory should pass just outside the planet");
+
+ids.speed.value = "1.414";
+ids.speed.listeners.input();
+assert.equal(ids["outcome-stat"].textContent, "Elliptical", "a speed just below sqrt(2) times circular speed remains bound");
+radii = radiiFromPath(ids.trajectory.attrs.d);
+assert.ok(Math.max(...radii) >= 3.99, "the high-eccentricity bound path may reach the view boundary");
+
+ids.speed.value = "1.415";
+ids.speed.listeners.input();
+assert.equal(ids["outcome-stat"].textContent, "Escape", "a speed just above sqrt(2) times circular speed is unbound");
+
 ids.speed.value = "1.50";
 ids.speed.listeners.input();
 assert.equal(ids["outcome-stat"].textContent, "Escape", "1.50x circular speed should be unbound");
