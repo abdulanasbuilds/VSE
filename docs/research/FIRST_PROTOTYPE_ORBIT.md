@@ -32,8 +32,8 @@ Evaluation should be lightweight and honest: ask the learner the same concept qu
 |---|---|---|---|---|
 | ORB-CL-001 | Gravity remains active during an orbit; orbital motion can be described as continuous falling around the planet. | NASA Science, “Gravity & Mechanics”; NASA “What Is an Orbit?” | Beginner explanation; real spacecraft may perform engine burns and are affected by perturbations. | CLAIM CHECKED against the cited NASA explanations; no independent scientific review |
 | ORB-CL-002 | Sideways motion plus inward gravitational acceleration can produce a closed orbit; changing speed changes the trajectory. | NASA Science, “Gravity & Mechanics”; NASA JPL “Modeling the Orbits of Planets” | A specific orbit depends on initial position and velocity as well as gravitational parameters. Too little speed from this chosen start can intersect the planet; escape requires meeting the energy/speed condition. | CLAIM CHECKED at the conceptual level; the VSE implementation has not had a scientific model review |
-| ORB-CL-003 | Circular-orbit speed in an ideal Newtonian two-body model is (v=\sqrt{\mu/r}\), with (\mu=GM\). | The equation follows from equating Newtonian gravitational acceleration (\mu/r^2\) to circular centripetal acceleration (v^2/r\); NASA's mechanics page supplies orbital-mechanics context. | Explicit idealized derivation; not a complete real mission model. Add a specialist source and test calculation cases before labeling the quantitative implementation verified. | Equation derivation documented; basic trajectory behavior tested in a harness; numerical reference cases and independent review remain open |
-| ORB-CL-004 | A satellite can escape rather than follow a closed orbit if its speed reaches the escape threshold at the chosen radius in the idealized two-body model. | NASA orbital-mechanics learning context; further primary/technical source audit recommended. | The threshold depends on the central body's gravitational parameter and starting radius. This UI uses dimensionless scaled values. | Conceptual threshold is consistent with ideal two-body mechanics; one escape case tested; a technical source audit and independent review remain open |
+| ORB-CL-003 | Circular-orbit speed in an ideal Newtonian two-body model is v = √(μ/r), with μ = GM. | The equation follows from equating gravitational acceleration μ/r² to circular inward acceleration v²/r; see NASA's orbital-velocity learning reference. | This is an idealized derivation, not a complete real-mission model. The reference page is archived and not updated; independent technical review is still needed. | Formula derivation documented; basic trajectory behavior tested in a harness; the calculation has not been independently reviewed. |
+| ORB-CL-004 | Escape speed at distance r in the idealized two-body model is vₑ = √(2μ/r), or √2 times circular speed at that same radius. | NASA GSFC archived orbital-velocity lesson; see source addendum ORB-005. | Escape from Earth does not mean escape from the Sun or all gravity. The threshold assumes an idealized isolated two-body setup. | One above-threshold escape path was tested; threshold behavior and scientific implementation still need broader review. |
 
 ## Sources reviewed on 2026-10-16
 
@@ -47,6 +47,8 @@ Evaluation should be lightweight and honest: ask the learner the same concept qu
    Lesson plan about the relationship between mass, gravity, and orbital motion. Page opened; the lesson's physical activities are reference material, not assets copied into VSE.
 
 4. **PhET — Licensing Information**: https://phet.colorado.edu/en/licensing  
+5. **NASA GSFC archive — Kepler's Third Law / orbital velocity**: https://pwg.gsfc.nasa.gov/stargaze/Skepl3rd.htm
+   The page derives circular-orbit velocity and escape velocity, including the √2 relationship. It explicitly warns that the material is archival and no longer updated (last updated 2008). It is supporting educational material, not current independent model validation.
    Reviewed as a rights warning, not as a simulation to embed. Regular HTML simulation files are described as CC BY-NC 4.0; PhET separately addresses commercial use and brand/logo requirements. VSE should not reuse its simulation code/assets for this prototype.
 
 ## Visual model specification
@@ -57,6 +59,8 @@ Evaluation should be lightweight and honest: ask the learner the same concept qu
 - Let the user adjust initial tangential speed as a multiple of circular-orbit speed at the same starting radius.
 - Distinguish path outcome from scientific confidence. Include a fallback text explanation, keyboard-operable controls, reduced-motion handling, and a visible caveat list.
 - Basic harness checks passed: the 1.00x path stayed between radii 1.7998769 and 1.8001231 (starting radius 1.8); 0.70x reached radius about 0.9981 and was classified as impact; 1.50x reached radius about 4.0023 and was classified as escape. Coordinates were finite. Preset, reset, and knowledge-check feedback also passed in a stub-DOM harness.
+- A dependency-free Node regression test was added at `tests/orbit-model.test.mjs`, and GitHub Actions is configured to run it on relevant pushes and pull requests. The action result has not yet been confirmed through the available connector.
+- These harness checks do not validate real-browser behavior, arbitrary numerical cases, long-term integration error, or the underlying physics independently.
 - This does not validate real-browser behavior, all numerical cases, conservation error across arbitrary trajectories, or underlying physics independently. The committed Node regression script is `tests/orbit-model.test.mjs` and still needs to be run in a local checkout.
 
 ## Decisions and unresolved work
@@ -64,4 +68,4 @@ Evaluation should be lightweight and honest: ask the learner the same concept qu
 - Do not use a database, backend, model API, or third-party embed for the initial page. Static, version-controlled content plus in-browser calculation is enough.
 - The hackathon identity and terms remain unresolved. This prototype must not be represented as eligible for an unidentified event; check rules before submitting or assuming that pre-existing code is allowed.
 - No qualified external reviewer has reviewed the numerical model; no browser, screen-reader, real-device, or learner study has been completed yet.
-- Next action: run `tests/orbit-model.test.mjs` in a local checkout, check real-browser/mobile/accessibility behavior, extend numerical reference tests, and then ask a beginner to try the explanation.
+- Next action: confirm the regression script in GitHub Actions or a local checkout, then check real-browser/mobile/accessibility behavior and ask a beginner to try the explanation.
