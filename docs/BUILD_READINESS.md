@@ -70,6 +70,6 @@ The correct goal is **a complete, defensible evidence packet for one small exper
 
 ## Current gate status and release rule
 
-Current verdict: **HOLD**. The product slice has not been chosen, the data-first alternatives have not been compared with the LLM explainer, no selected-topic data packet has been inspected end-to-end, and the owner has not received a final readiness recommendation. PR #2 also currently has a known test-parse failure; see docs/PROJECT_AUDIT.md.
+Current verdict: **HOLD**. VSE is the confirmed project direction; the first bounded learning journey and official weekend-event identity/rules remain unresolved. No completed first-topic claim/source packet and validation plan exist yet, and the owner has not received a final readiness recommendation. PR #2 also currently has a known test-parse failure; see docs/PROJECT_AUDIT.md.
 
 When all applicable gates are complete, update this file with evidence and direct links, change the verdict only if justified, and notify the project owner with the exact proposed first build and the remaining risks. Do not start implementation in the same step as marking this gate ready.
