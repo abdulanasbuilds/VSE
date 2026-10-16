@@ -126,3 +126,23 @@
 2. Exercise speed cases near 0.70x, 1.00x, and 1.50x; check collision/orbit/escape labels and finite output.
 3. Check reset, preset buttons, quiz feedback, responsive layout, and reduced-motion behavior.
 4. Record failures and fix them before a public demo.
+
+
+## 2026-10-16 — Bounded model/control checks and regression automation
+
+### Checks actually performed
+- Fetched the committed `index.html` and compiled/executed its exact inline script in a V8 harness with a stub DOM.
+- At 1.00x circular speed, the generated path radius ranged from 1.7998768736 to 1.8001230471 around a starting radius of 1.8.
+- At 0.70x, the path reached a minimum radius of about 0.9981, crossed the modeled planet radius of 1, and was labeled Impact.
+- At 1.50x, the path reached the visualization boundary at radius about 4.0023 and was labeled Escape.
+- The inspected SVG path coordinates were finite. Preset selection, reset, correct/incorrect quiz feedback, and answer pressed-state behavior also passed in the stub-DOM harness.
+- These are bounded harness checks only. No real browser, phone, screen reader, external scientific reviewer, or learner evaluation was used. The output boundary at radius ~4.0 clips the displayed escape path; this is now described in the model caveats.
+
+### Reproducibility
+- Added `tests/orbit-model.test.mjs` (Node.js built-ins only) to repeat the basic path and control checks.
+- Added `.github/workflows/orbit-model-tests.yml` to run the regression script on relevant pushes and pull requests, using Node.js 22 without installing project dependencies.
+- The current connector did not provide a confirmed run result for the push commit. Do not claim GitHub Actions or the committed test script passed until that result is observed or the exact file is run in a checkout.
+- Added NASA GSFC's archived orbital-velocity learning page as a supporting equation reference: https://pwg.gsfc.nasa.gov/stargaze/Skepl3rd.htm. It derives circular velocity and the sqrt(2) escape-speed relationship but warns that the page is archival and no longer updated (last updated 2008). It is supporting educational material, not independent verification.
+
+### Immediate next step
+Run the committed regression script locally or inspect a confirmed GitHub Actions run, add impact-boundary tests, then check the exact page in an actual browser at mobile and desktop widths. Keep the source/claim status separate from model-test status.
