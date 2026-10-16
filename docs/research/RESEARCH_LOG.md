@@ -177,3 +177,28 @@ Run the committed Node test file or obtain a confirmed CI run; then test the act
 
 ### Next action
 Verify the exact hackathon event if possible, then decide the smallest implementation that proves the question → explanation → interactive visual → deeper layer → in-app evidence loop. Continue from STATE.md; do not restart or treat the orbit experiment as the complete project.
+
+## 2026-10-16 — Repository readiness audit and data-source planning
+
+### Remote repository state
+- Audited `abdulanasbuilds/VSE` at main SHA `88fd17700c44a175ee3fa010f0486aeae4e059b8`. The recursive tree returned 29 tracked paths and was not truncated.
+- Confirmed the product/spec/agent/research documents, orbit experiment, Node.js 22 regression suite and CI workflow are present. The orbit page remains a bounded engineering experiment, not the complete question-to-visual VSE application.
+- The current main revision is documented separately from the research branch. No runtime code, test source, framework, database, frontend, backend, model integration or API integration was changed during this documentation pass.
+- Added `docs/PROJECT_AUDIT.md`, `docs/BUILD_READINESS.md`, `docs/DATA_AND_RESEARCH_PIPELINE.md`, `docs/research/DATASET_AND_API_REGISTER.md`, and `docs/research/RESEARCH_BATCH_PLAN.md` on `docs/research-readiness-2026-10-16`. The branch is isolated from main and from open PR #2.
+
+### Tests and repository hygiene
+- Confirmed PR #1's Node.js 22 regression run and a subsequent run on main succeeded.
+- Inspected PR #2 and its GitHub Actions log. Its added regular-expression assertion at the beginning of `tests/orbit-model.test.mjs` is syntactically invalid and throws “Invalid regular expression flags” before the existing tests run. PR #2 remains a separate issue; this research pass did not fix or merge it.
+- A deployment bot reported a failed Cloudflare preview build for the PR #2 branch. The linked build logs were not inspected; the cause remains unknown.
+- No LICENSE file exists in the audited main tree. This does not establish that all project code or source materials are reusable; licensing is an owner decision and third-party source/data/media rights require separate checks.
+
+### Official data/API source-document checks
+- SPHEREx: IRSA's official Quick Release overview describes QR3, started in September 2026, and access through the Data Explorer, Astroquery, SIA, browsable directories and cloud paths. IRSA already offers discovery and analysis tools, so VSE must establish a distinct learning outcome before considering an explorer route. Sources: [IRSA QR overview](https://irsa.ipac.caltech.edu/data/SPHEREx/docs/overview_qr.html), [IRSA archive/tools](https://irsa.ipac.caltech.edu/Missions/spherex.html), [NASA SPHEREx context](https://science.nasa.gov/open-science/spherex-universe-map/).
+- NASA CMR, USGS Water Data, NOAA NCEI, Copernicus Data Space, World Bank Indicators, Crossref and OpenAlex official docs were checked as possible service candidates. The details and exact follow-up checks are recorded in `docs/research/DATASET_AND_API_REGISTER.md`.
+- Dataset-card documentation from Hugging Face was reviewed as a possible template for a future ML dataset route. An author-supplied dataset card is not independent validation of the files or their license.
+- All of these checks are source/service documentation checks only; no sample data has been fetched and validated for a selected product slice. These rows must not be described as API integrations or completed source verification.
+
+### Current decision and next actions
+- Product-route choice remains open: compare question-to-visual explainer, SPHEREx explorer, Earth/environment investigation and ML dataset/benchmark route.
+- The build gate remains **HOLD** until a bounded learner question, source/evidence packet, real sample where relevant, rights/access notes, visualization contract, validation plan, accessibility/failure behavior, cost/privacy assessment and success measure are documented.
+- Next action: follow `docs/research/RESEARCH_BATCH_PLAN.md` beginning with route comparison and then inspect a bounded representative sample for the leading candidate. Present the readiness memo to the project owner and stop before implementation.
