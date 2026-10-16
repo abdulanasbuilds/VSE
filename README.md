@@ -6,11 +6,11 @@ VSE is a research-first project exploring how to help people understand how the 
 
 ## Project status
 
-The repository was empty at initialization. This first phase establishes project direction, research practices, source provenance, and durable agent handoff instructions. It is **not** a request to build a large platform immediately.
+The repository was empty at initialization and now contains the research/agent handoff documents plus a first single-file interactive prototype about satellite orbits. VSE remains an evidence-led project, not a complete multi-science platform.
 
 - Authentication and authorization: out of scope for now.
 - Monetization, payments, subscriptions, and ads: out of scope for now.
-- Stack and hosting: not locked; decide only after the smallest useful prototype is specified.
+- First slice: static HTML/CSS/JavaScript with local calculation; long-term stack/hosting remain undecided.
 - Research coverage: broad and ongoing. Never claim that all scientific knowledge has been collected.
 - AI answers: must not be presented as verified science by default.
 
@@ -51,7 +51,7 @@ Research and prototype **one** concept end-to-end:
 - a deeper explanation with relevant mathematics/science;
 - cited sources, limitations, and a visible verification state.
 
-Choose the first concept after reviewing the source catalogue and the hackathon requirements. Do not build authentication, billing, a general-purpose agent platform, or a massive ingestion pipeline as part of this milestone.
+The current first concept is provisional and documented in `docs/research/FIRST_PROTOTYPE_ORBIT.md`. The hackathon identity/rules remain unresolved, so don't claim the prototype is eligible or that existing code may be submitted. Do not build authentication, billing, a general-purpose agent platform, or a massive ingestion pipeline as part of this milestone.
 
 ## How research status works
 
