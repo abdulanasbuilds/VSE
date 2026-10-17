@@ -15,7 +15,7 @@ If STATE.md is missing or contradicts the actual repository, inspect the actual 
 ## Scope discipline
 
 - VSE means Visual Science Explorer: a question-first learning environment guided by “make knowledge visible, in the world.” It should explain how and why concepts, processes, systems, and everyday objects work across mathematics, physics, AI, technology, nature, engineering, and other knowledge domains where trustworthy coverage is possible. Its experience combines progressive explanations, meaningful visuals, hands-on exploration or practice where appropriate, deeper understanding, in-app evidence, and pathways to connected ideas.
-- Read PRODUCT_CONCEPT.md as the canonical product thesis. Do not mistake index.html or the orbit module for the full product; it is an engineering experiment and reusable example only.
+- Read PRODUCT_CONCEPT.md as the canonical product thesis. The former `index.html` orbit demo has been removed from the current working tree; Git history preserves it. Do not restore or rebuild it unless the owner explicitly chooses to.
 - Do not send users out to external pages to receive the explanation. Keep source/provenance metadata and evidence visible inside VSE; external research/API calls may happen behind the scenes when permitted.
 - The long-term ambition is broad, cross-domain understanding supported by internal learning resources and connected concepts; the first prototype must still be small, trustworthy, and testable. Do not mistake a bounded first slice for the whole vision or try to ingest everything at once.
 - No authentication, authorization, accounts, payments, subscriptions, advertising, or monetization in the current phase.
