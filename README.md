@@ -49,6 +49,7 @@ The repository is now intentionally research-first: the earlier standalone satel
 - docs/DATA_AND_RESEARCH_PIPELINE.md — how sources become claims, data transformations, visuals, and learning packets.
 - docs/research/DATASET_AND_API_REGISTER.md — data/API candidates, what was actually checked, and outstanding access/rights work.
 - docs/research/RESEARCH_BATCH_PLAN.md — bounded research steps leading to an owner-reviewed build decision.
+- docs/research/DESIGN_INSPIRATION_RESEARCH.md — first-pass design references across Framer, Webflow, 21st.dev, Dribbble, and Pinterest, with reuse cautions and the next visual research batch.
 
 ## Non-negotiable research rule
 
@@ -67,7 +68,7 @@ Research and prototype **one** concept end-to-end:
 - a deeper explanation with relevant mathematics/science;
 - cited sources, limitations, and a visible verification state.
 
-The orbit demo is an engineering experiment only. The initial hackathon slice should demonstrate the question → simple explanation → interactive visual → deeper explanation → in-app evidence loop. The LLM question is a natural candidate, but the precise slice is not locked until the event rules and a feasible plan are confirmed. The event identity is still unresolved; do not claim eligibility or permission to submit pre-existing code. Do not build authentication, billing, or a massive ingestion pipeline.
+The former orbit demo has been removed from the active working tree. The initial VSE experience should demonstrate the question → simple explanation → concept-specific interactive visual → deeper explanation → in-app evidence loop. The LLM question is a natural candidate, but the precise slice is not locked until the event rules and a feasible plan are confirmed. The event identity is still unresolved; do not claim eligibility or permission to submit pre-existing code. Do not build authentication, billing, or a massive ingestion pipeline.
 
 ## Prototype regression tests
 
