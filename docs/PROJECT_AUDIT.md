@@ -10,7 +10,7 @@
 
 **Remote repository integrity: structurally intact. Product readiness: not ready for implementation.**
 
-The GitHub recursive tree returned all 29 tracked paths without indicating truncation. The expected product documents, agent handoff documents, research catalogues, orbit experiment, regression test and GitHub Actions workflow are present. Core links in the root README point to existing files at the audited revision.
+The GitHub recursive tree returned all 29 tracked paths without indicating truncation. The product documents, agent handoff documents, and research catalogues were present at the audited revision; the orbit experiment, its regression test, and its dedicated workflow have since been removed on the research-only branch. Core links in the root README point to existing files at the audited revision.
 
 “Structurally intact” means the remote tree and expected files are present. It does not mean every research claim is verified, every source can legally be reused, the production application exists, or all checks are passing.
 
@@ -28,8 +28,8 @@ The GitHub recursive tree returned all 29 tracked paths without indicating trunc
 - docs/research/ — source catalogue, domain map, resource template, research coverage/log/backlog, OpenAI math audit and orbit research packet.
 
 ### Runtime and test files
-- index.html — a standalone satellite-orbit teaching/engineering experiment.
-- tests/orbit-model.test.mjs — dependency-free Node.js regression tests for the orbit experiment.
+- `index.html` — former standalone satellite-orbit demo; removed from the current working tree in the research-only branch.
+- `tests/orbit-model.test.mjs` — former demo regression test; removed along with the demo.
 - .github/workflows/orbit-model-tests.yml — Node.js 22 CI workflow.
 - There is no application-wide question-to-visual flow, production backend, database, model integration, or general visual-plan renderer in the audited tree. This is documented project state, not evidence of accidental deletion.
 - There is no package manifest or selected application framework. A dependency-free static experiment does not need to have one; do not add a stack merely to make the repository look conventional.
@@ -93,4 +93,4 @@ Current SPHEREx sources:
 - Not every Markdown reference was crawled and checked for link rot.
 - The Cloudflare preview build log was not accessible through the GitHub bot comment and was not diagnosed.
 - No browser, screen reader, mobile device, or scientific expert review was performed during this documentation audit.
-- No frontend, backend, database, API integration, or runtime code was built or changed by this audit.
+- No replacement frontend, backend, database, API integration, or runtime code has been built. The existing demo was intentionally removed in a separate branch so work can focus on research and product planning.

@@ -1,6 +1,6 @@
 # VSE Conceptual Architecture
 
-**Status:** Product architecture proposal; not a final technology selection. This describes the intended visual question engine, not the current one-topic orbit experiment.
+**Status:** Product architecture proposal; not a final technology selection. This describes the intended visual question engine; no active frontend implementation is retained in the current working tree.
 
 ## Product flow
 
@@ -108,4 +108,4 @@ Choose the smallest stack only after deciding the first hackathon experience and
 - API/model choices depend on the event rules, available free credits, cost, quality, latency, and terms;
 - choose frontend visualization tools to fit the approved visual schema and available device/testing resources.
 
-No long-term framework, database, model provider, or hosting platform is locked by the current orbit experiment.
+No frontend framework, database, model provider, or hosting platform is locked. The former orbit demo has been removed from the current working tree; do not let it dictate the future architecture.

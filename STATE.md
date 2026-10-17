@@ -1,17 +1,17 @@
 # VSE Project State and Agent Handoff
 
-**Last updated:** 2026-10-16 (UTC)  
+**Last updated:** 2026-10-17 (UTC)  
 **Base branch audited:** `main` at `88fd17700c44a175ee3fa010f0486aeae4e059b8`  
-**Documentation review branch:** `docs/research-readiness-2026-10-16`  
+**Current research-only branch:** `docs/research-only-remove-orbit-demo` (branched from `docs/research-readiness-2026-10-16`)  
 **Current phase:** Research readiness — compare first-experience candidates and inspect supporting evidence (in progress)  
-**Product code status:** one standalone orbit visualization experiment exists; the intended question-first VSE user experience has not yet been built
-**Next action:** use `docs/AGENT_RESEARCH_BRIEF.md` to organize source-grounded, reusable learning packets in bounded research batches: original explanations for multiple levels, practical/interactive lesson proposals, claim-to-source records, rights/access checks, concept relationships and a validation plan. Continue to evaluate one small first journey for the demo, but keep the long-term VSE scope cross-domain and practical. Verify event rules if the official page can be identified. Keep all application/frontend/backend/database/API implementation on HOLD until the evidence packet and owner-facing readiness recommendation are complete.
+**Product code status:** no frontend/application demo is currently retained in the working tree; the earlier orbit experiment, its test, and its workflow were removed in a separate research-only branch. Git history preserves the prior versions.
+**Next action:** continue research and product planning only. Compile source-grounded learning packets; map features, pages, sections, navigation, and learner journeys; inspect design references and record usage rights. Do not rebuild frontend, backend, database, API, or model integrations until the evidence packet and owner-facing readiness recommendation are complete and the owner explicitly authorizes the next phase.
 
 > This is the durable checkpoint. Every agent must read it first after AGENTS.md and must update it after meaningful work. Do not assume work exists unless the current repository confirms it.
 
 ## 1. Product in one paragraph
 
-VSE (Visual Science Explorer) follows the north star **make knowledge visible, in the world**. It is a long-term, question-first visual learning environment across mathematics, physics, AI/CS, astronomy, chemistry, biology, Earth/climate, engineering and the wider sciences. A learner can start from a question, build a mental model through progressive explanation and interaction, inspect in-app evidence, then continue to a connected concept or prerequisite inside VSE. The hackathon is one chance to demonstrate the core loop, not the product's identity or limit. The orbit page is only one sample module, not the product direction.
+VSE (Visual Science Explorer) follows the north star **make knowledge visible, in the world**. It is a long-term, question-first visual learning environment across mathematics, physics, AI/CS, astronomy, chemistry, biology, Earth/climate, engineering and the wider sciences. A learner can start from a question, build a mental model through progressive explanation and interaction, inspect in-app evidence, then continue to a connected concept or prerequisite inside VSE. The hackathon is one chance to demonstrate the core loop, not the product's identity or limit. The previous orbit demo was an experiment, not the product direction, and has been removed from the working tree; Git history preserves it.
 
 ## 2. Confirmed constraints
 
@@ -71,7 +71,7 @@ The following five readiness documents were added on `docs/research-readiness-20
 - `docs/research/DATASET_AND_API_REGISTER.md`
 - `docs/research/RESEARCH_BATCH_PLAN.md`
 
-Root index.html is a standalone satellite-orbit visualization experiment with a local calculation, controls, limitations and a knowledge check. Its regression suite passed under Node.js 22 in GitHub Actions. It is not the intended question-first VSE app: no question interpreter, LLM explanation/retrieval layer, structured visual-plan renderer, or complete in-app evidence workflow exists yet. The orbit module currently displays source identities/descriptions in-page and has no outbound HTTP(S) source anchors in the audited `index.html`; canonical URLs remain in research records. PR #2 adds a regression assertion for this requirement, but that PR's test currently fails to parse because of an invalid regular expression.
+At the audited starting revision, `index.html` contained a standalone satellite-orbit experiment and `tests/orbit-model.test.mjs` tested its inline script. In this research-only branch, the demo, its test, and its dedicated workflow are removed from the working tree. The earlier code remains in Git history for recovery/reference, but it is not an active product frontend. The intended question-first VSE app has not yet been built.
 
 ## 4. Work completed in this pass
 
@@ -109,10 +109,10 @@ Each source row includes a status and next research action. The catalogue is not
 Details and task list: [OpenAI mathematics release audit](docs/research/OPENAI_MATH_RELEASE.md).
 
 ### Orbit engineering experiment and product-direction correction (2026-10-16)
-- Built a self-contained orbit page as one possible interactive science module, and its bounded Node.js 22 regression suite passed in GitHub Actions. It is not the overall VSE product or the chosen hackathon entry.
+- Historical note: a self-contained orbit page was built as an engineering experiment and its bounded regression suite passed on an earlier revision. The demo and its test were later removed from the current research-only working tree; Git history preserves them.
 - Added PRODUCT_CONCEPT.md as the canonical explanation of VSE, HACKATHON_SLICE_BRIEF.md as a provisional first-question proposal, and rewrote SPEC.md, ROADMAP.md and ARCHITECTURE.md accordingly.
 - The leading question candidate is “How does an AI language model generate an answer?” because it expresses the intended question-first, step-by-step, interactive, deeper-learning flow. It is still a candidate, not an irreversible decision.
-- The orbit page's external source links were removed. Source identities are displayed inside its lesson while canonical URLs and rights notes remain in internal research documents. Apply this in-app-only journey to the VSE-facing experience.
+- Historical note: the former orbit demo displayed source identities inside its lesson. The current product design remains committed to keeping explanations, interactions, depth, and evidence inside VSE.
 - The exact hackathon identity/rules remain unresolved; no eligibility or allowance for pre-existing code is claimed.
 - No VSE-wide question input, live AI/retrieval pipeline, constrained visual-plan renderer, deployment, or beginner study exists yet. No independent physics reviewer has reviewed the orbit model.
 
@@ -131,8 +131,8 @@ Read [SOURCE_CATALOG.md](docs/research/SOURCE_CATALOG.md), [SCIENCE_DOMAIN_MAP.m
 
 1. Hackathon identity: searches for “World Dot Name weekend hackathon” and close variants did not identify a matching official event page. Deadline/time zone, eligibility, theme, judging criteria, allowed prior work, AI requirements, submission format, and deployment requirements remain unverified. Do not substitute unrelated events.
 2. First VSE-facing hackathon slice: not selected yet. “How does an AI language model generate an answer?” is a strong candidate because it aligns with the owner's interest in AI and can demonstrate a step-based, interactive visual explanation, but it should remain a candidate until the event constraints are known.
-3. Product experience not yet built: the current index.html is an orbit experiment, not a general question-first product. There is no end-to-end flow that takes a natural-language question, retrieves evidence, constructs a progressive explanation and safe visual plan, and presents it all in-app.
-4. Self-contained UI: the orbit experiment's outbound source links have been removed; source identities/descriptions are shown in-page, while canonical URLs stay in internal research records. The VSE-facing experience should keep the explanation, visual interaction, deeper material and evidence inside the app.
+3. Product experience not yet built: no active frontend exists in the working tree. There is no end-to-end flow that takes a natural-language question, retrieves evidence, constructs a progressive explanation and safe visual plan, and presents it all in-app.
+4. Self-contained learning experience: the future VSE-facing experience should keep explanations, visual interactions, deeper material, and evidence inside the app; external research sources remain inputs with traceable provenance.
 5. Orbit model status: bounded model/control checks passed in a stub-DOM V8 harness, and GitHub Actions run #38836368258 passed the Node.js 22 regression suite in PR #1, merged as bead3c078e5651f64f3407618584e44a438fb698. This is not independent physics review or real-browser testing.
 6. Scientific research remains partial: the OpenAI mathematics family map has not been indexed end-to-end; the overview PDF was not reviewed page-by-page; no full Lean build or independent proof review was performed; most other scientific APIs/resources still require bounded source/rights checks.
 
@@ -160,7 +160,7 @@ The exact “World Dot Name weekend hackathon” page has not been identified co
 - [x] Repository connected; durable handoff and research records exist.
 - [x] VSE's broad visual question-engine concept is documented in PRODUCT_CONCEPT.md and SPEC.md.
 - [x] Self-contained in-app learning experience and AI-assisted retrieval layers are specified.
-- [x] One separate orbit visualization experiment exists and its bounded Node regression suite passed in GitHub Actions.
+- [x] The earlier orbit experiment was audited and documented. (It has since been removed from the current working tree; Git history preserves it.)
 - [ ] Exact hackathon event and official rules verified.
 - [ ] First VSE-facing hackathon slice selected and scoped.
 - [ ] In-app source/evidence UX and structured visual-rendering contract defined for that slice.
@@ -181,7 +181,7 @@ The exact “World Dot Name weekend hackathon” page has not been identified co
 - State timestamp: 2026-10-16 UTC.
 - Base state audited: `main` at `88fd17700c44a175ee3fa010f0486aeae4e059b8`; documentation review branch: `docs/research-readiness-2026-10-16`.
 - PRODUCT_CONCEPT.md remains the canonical intent: turn questions into explanation, meaningful interaction, depth and evidence inside VSE.
-- The root orbit page is an engineering experiment, not the VSE product or a confirmed hackathon entry.
+- The former root orbit page was an engineering experiment, not the VSE product or a confirmed hackathon entry; it is no longer present in the current working tree.
 - Node.js 22 CI regression runs passed for earlier main/PR #1 commits; the separate open PR #2 currently fails to parse due to its new regex assertion. See `docs/PROJECT_AUDIT.md`.
 - VSE is the confirmed product direction. The first bounded learning journey and the exact official “World Dot Name weekend hackathon” identity/rules remain unresolved. No complete selected-topic source/claim packet exists yet.
 - Current decision is HOLD. Continue from `docs/research/RESEARCH_BATCH_PLAN.md`; do not begin implementation until the readiness report has been presented and the owner has explicitly authorized the scoped build.

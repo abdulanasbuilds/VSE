@@ -1,14 +1,14 @@
 # Engineering Experiment — Satellite-Orbit Module
 
 **Prepared:** 2026-10-16  
-**Status:** Bounded model/control checks and the dependency-free Node regression suite passed on 2026-10-16. This is one reusable visualization module, not VSE's overall product direction or the selected hackathon entry. It has not received independent physics review.
+**Status:** Archived engineering record only. The demo, its regression test, and its dedicated workflow were removed from the active working tree on 2026-10-17. Earlier model/control checks passed in a stub-DOM harness, but the work did not receive independent physics review or real-browser/accessibility validation. Git history preserves the implementation.
 **Concept question:** Why does a satellite stay in orbit instead of falling straight back to Earth?
 
 ## Why this was useful as an engineering experiment
 
 This module is narrow enough to build and review. It demonstrates a few reusable VSE patterns—intuitive explanation, a meaningful interactive visual, a deeper equation, and visible assumptions—without external visual assets. It does not demonstrate the complete question-first VSE product, AI-assisted retrieval, or general-purpose visual explanation.
 
-Treat the orbit module as a reusable example only. The LLM question described in HACKATHON_SLICE_BRIEF.md is the leading candidate for the first VSE-facing hackathon experience, but event rules remain unknown and the choice is not final.
+Treat this file as a historical design/research record, not an active implementation plan. The LLM question described in HACKATHON_SLICE_BRIEF.md is the leading candidate for the first VSE-facing hackathon experience, but event rules remain unknown and the choice is not final.
 
 ## Shortlist comparison
 

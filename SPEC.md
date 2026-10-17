@@ -84,7 +84,7 @@ The first experience succeeds when:
 
 ## 9. Current repository reality
 
-- The root index.html is an engineering experiment for one orbital-motion module; it is not the full VSE question-first experience.
+- The former root `index.html` orbit demo has been removed from the current working tree; its history is retained. No active product frontend exists yet.
 - The orbit regression test and GitHub Actions workflow passed the bounded regression suite under Node.js 22.
 - No full question interpreter, LLM-backed explainer, retrieval backend, structured visual-plan renderer, production database, or deployed VSE experience exists yet.
 - PRODUCT_CONCEPT.md, STATE.md, and ROADMAP.md record the current direction and next actions.

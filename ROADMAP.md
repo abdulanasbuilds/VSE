@@ -45,7 +45,7 @@ Exit gate: the first experience can be described as a testable end-to-end journe
 - [ ] Keep API keys off the client and validate any model-generated visual plan against an approved schema.
 - [ ] Test accuracy, layout, keyboard access, reduced motion, mobile behavior, and beginner understanding.
 
-The existing orbit experiment can be reused as one built-in topic/module, but it does not by itself complete this phase.
+The former orbit experiment is not part of the active working tree. Do not rebuild or reuse it by default; first finish the research packet and product/page plan, then decide what should be implemented.
 
 Exit gate: a new user can ask or select a supported question, explore an accurate visual, deepen their explanation, and inspect evidence without leaving VSE.
 

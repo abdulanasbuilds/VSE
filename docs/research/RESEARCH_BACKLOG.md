@@ -74,3 +74,10 @@ The following must not be represented as completed:
 ## Backlog maintenance
 
 When a task is done, retain a short outcome rather than deleting the history. For a blocked task, write the blocker and the smallest way to unblock it. Promote a backlog item only when it is needed for the current milestone.
+
+## Product and design planning (owner-confirmed priority, 2026-10-17)
+
+- [ ] Build a complete VSE feature inventory and page/section/navigation map before choosing an implementation stack.
+- [ ] Continue the design-reference shortlist in [DESIGN_INSPIRATION_RESEARCH.md](DESIGN_INSPIRATION_RESEARCH.md): inspect actual previews at desktop and mobile sizes, trace inspiration to original creators, and record accessibility and exact usage rights.
+- [ ] Compare candidate visual directions against VSE's question → progressive explanation → concept-specific visual/interaction → deeper detail/evidence → connected-next-concept learning journey.
+- [ ] Convert the best findings into an original VSE design specification and low-fidelity wireframe plan. Do not copy reference designs or begin implementation while BUILD_READINESS remains HOLD.
