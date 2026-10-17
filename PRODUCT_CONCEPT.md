@@ -92,7 +92,7 @@ A strong first version can include a question input, a polished flagship concept
 
 The AI/LLM question is a natural **candidate** flagship because it aligns with the product owner's interest in AI and demonstrates VSE's central method. It is not locked as the entry until the precise event requirements and a practical build plan are confirmed.
 
-The existing satellite-orbit page proves that a browser-based visual model can be implemented and regression-tested. It is a reusable example module, **not** a complete representation of VSE and not, by itself, the chosen hackathon product.
+A former satellite-orbit page served as a narrow engineering experiment showing how a browser-based visual model could be tested. It has been removed from the current working tree and remains only in Git history; it was never a complete representation of VSE or a confirmed hackathon product.
 
 ## 7. Explicitly not the goal
 
