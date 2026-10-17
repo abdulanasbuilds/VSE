@@ -1,8 +1,8 @@
 # VSE Project State and Agent Handoff
 
-**Last updated:** 2026-10-16 (UTC)  
+**Last updated:** 2026-10-17 (UTC)  
 **Base branch audited:** `main` at `88fd17700c44a175ee3fa010f0486aeae4e059b8`  
-**Documentation review branch:** `docs/research-readiness-2026-10-16`  
+**Current research-only branch:** `docs/research-only-remove-orbit-demo` (branched from `docs/research-readiness-2026-10-16`)  
 **Current phase:** Research readiness — compare first-experience candidates and inspect supporting evidence (in progress)  
 **Product code status:** no frontend/application demo is currently retained in the working tree; the earlier orbit experiment, its test, and its workflow were removed in a separate research-only branch. Git history preserves the prior versions.
 **Next action:** continue research and product planning only. Compile source-grounded learning packets; map features, pages, sections, navigation, and learner journeys; inspect design references and record usage rights. Do not rebuild frontend, backend, database, API, or model integrations until the evidence packet and owner-facing readiness recommendation are complete and the owner explicitly authorizes the next phase.
